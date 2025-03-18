@@ -3,50 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Launch Countdown</title>
+    <title>Cricket Masterclass - Under Maintenance</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-        #countdown {
-            font-size: 2em;
-            background: #333;
-            color: #fff;
-            display: inline-block;
+        
+        body {
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             padding: 20px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .maintenance-container {
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
             border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #f8c300;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .maintenance-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .coming-soon {
+            font-size: 1.5rem;
+            margin: 30px 0;
+            color: #f8c300;
+            font-weight: bold;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>Our Website is Launching Soon as Expeccted!</h1>
-    <div id="countdown"></div>
-
-    <script>
-        // Set the launch date (YYYY, MM (0-indexed), DD, HH, MM, SS)
-        const launchDate = new Date("2025-04-01T00:00:00").getTime();
-
-        const timer = setInterval(() => {
-            const now = new Date().getTime();
-            const timeLeft = launchDate - now;
-
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "We're Live!";
-                return;
-            }
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = 
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    </script>
+    <div class="maintenance-container">
+        <div class="logo">Cricket Masterclass</div>
+        
+        <div class="maintenance-icon">🏏</div>
+        
+        <h1>Under Maintenance</h1>
+        
+        <p>We're currently updating our website to bring you the best cricket masterclass experience. We'll be back online soon!</p>
+        
+        <div class="coming-soon">Coming Soon</div>
+        
+        <p>We're working hard to improve your experience. Thank you for your patience.</p>
+        
+        <div class="social-links">
+            <a href="#" title="Facebook">📱</a>
+            <a href="#" title="Twitter">📧</a>
+            <a href="#" title="Instagram">💬</a>
+        </div>
+    </div>
 </body>
 </html>
