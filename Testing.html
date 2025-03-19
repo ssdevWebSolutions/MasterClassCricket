@@ -389,72 +389,78 @@
 
         /* Modified Team Image Style */
         .headerHero-team-image-container {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 
-        .headerHero-team-image {
-            position: absolute;
-            margin-top: 5%;
-            /* padding: 10%; */
-            right: 5%;
-            width: 35%;
-            height: 100%;
-            /* background-image: url('img/logo_\ \(1\).png'); */
-            /* border: 1px solid red; */
-            background-size: cover;
-            background-position: center;
-            opacity: 15;
-            /* filter: grayscale(30%) contrast(1.1) brightness(1); */
-        }
+.headerHero-team-image {
+    position: absolute;
+    margin-top: 5%;
+    right: 5%;
+    width: 35%;
+    height: 100%;
+    /* Make the iframe fill the container */
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Reset opacity for the video */
+    overflow: hidden;
+    z-index: 0; /* Ensures the video stays below the overlay */
+}
 
-        /* Color Overlay with Golden Gradient */
-        .headerHero-team-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* background: linear-gradient(135deg,
+/* Embed iframe to cover the container */
+#youtube-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Color Overlay with Golden Gradient */
+.headerHero-team-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.9) 0%,
         rgba(0, 0, 0, 0.85) 50%,
-        rgba(212, 175, 55, 0.2) 100%); */
-            z-index: 1;
-        }
+        rgba(212, 175, 55, 0.2) 100%);
+    z-index: 1; /* Make sure overlay is above the video */
+}
 
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            .headerHero-team-image {
-                right: -15%;
-            }
-        }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .headerHero-team-image {
+        right: -15%;
+    }
+}
 
-        @media screen and (max-width: 480px) {
-            .headerHero-team-image-container {
-                height: 80vh;
-                /* Slightly smaller on mobile */
-            }
+@media screen and (max-width: 480px) {
+    .headerHero-team-image-container {
+        height: 80vh;
+    }
 
-            .headerHero-team-image {
-                right: -5%;
-            }
-        }
+    .headerHero-team-image {
+        right: -5%;
+    }
+}
 
-        @media screen and (max-width: 320px) {
-            .headerHero-team-image-container {
-                height: 70vh;
-                /* Even smaller on very small screens */
-            }
+@media screen and (max-width: 320px) {
+    .headerHero-team-image-container {
+        height: 70vh;
+    }
 
-            .headerHero-team-image {
-                right: 0;
-                background-position: 60% center;
-                /* Adjust focus point for small screens */
-            }
-        }
+    .headerHero-team-image {
+        right: 0;
+        background-position: 60% center;
+    }
+}
 
         /* Navigation Bar */
         .headerHero-navbar {
@@ -7304,8 +7310,11 @@
 
             <!-- Modified Team Image -->
             <div class="headerHero-team-image-container">
-                <div class="headerHero-team-image" id="headerHeroTeamImage"></div>
+                <div class="headerHero-team-image" id="headerHeroTeamImage">
+                    <iframe id="youtube-video" src="https://youtu.be/m6zSJQf_W94?si=7O8e_2a9n9hyE9_V" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
+            
 
             <!-- Hero Pattern Overlay -->
             <div class="headerHero-pattern-overlay"></div>
@@ -9542,6 +9551,73 @@
 
 
 
+        <!-- social-stats-section -->
+        <section class="social-stats-section ">
+            <!-- Cricket-themed background elements -->
+            <div class="cricket-field-pattern"></div>
+            <div class="cricket-element-1"></div>
+            <div class="cricket-element-2"></div>
+            <div class="cricket-element-3"></div>
+            <div class="cricket-element-4"></div>
+            <div class="cricket-pitch"></div>
+
+            <div class="social-stats-container">
+                <h2 class="social-stats-title">MasterClass Community</h2>
+                <p class="social-stats-subtitle">No matter whether your a coach, parent, student or cricket enthusiast. Our videos are game changing in giving you vital information in a way that's not been done before</p>
+
+                <div class="social-stats-grid">
+                    <a href="https://www.instagram.com/masterclasscricket" target="_blank"
+                        class="social-stat-card instagram-card">
+                        <div class="social-stat-icon-wrapper">
+                            <i class="fab fa-instagram social-stat-icon"></i>
+                        </div>
+                        <div class="social-stat-number" data-target="80000">0</div>
+                        <div class="social-stat-label">Instagram</div>
+                    </a>
+
+                    <a href="https://www.facebook.com/masterclasscricket" target="_blank"
+                        class="social-stat-card facebook-card">
+                        <div class="social-stat-icon-wrapper">
+                            <i class="fab fa-facebook-f social-stat-icon"></i>
+                        </div>
+                        <div class="social-stat-number" data-target="22000">0</div>
+                        <div class="social-stat-label">Facebook</div>
+                    </a>
+                    <a href="https://www.tiktok.com/@masterclasscricket?_t=ZN-8uo9sqlW9hO&_r=1" target="_blank"
+                        class="social-stat-card tiktok-card">
+                        <div class="social-stat-icon-wrapper tiktok-icon">
+                            <!-- <i class="fab fa-tiktok social-stat-icon"></i> -->
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="social-stat-number" data-target="21000">0</div>
+                        <div class="social-stat-label">Tiktok</div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/uzi-arif-946674203/?originalSubdomain=uk" target="_blank"
+                        class="social-stat-card twitter-card">
+                        <div class="social-stat-icon-wrapper">
+                            <i class="fab fa-linkedin social-stat-icon"></i> <!-- Updated icon -->
+                        </div>
+                        <div class="social-stat-number" data-target="150">0</div>
+                        <div class="social-stat-label">Linkedin</div> <!-- Updated label -->
+                    </a>
+
+
+                    <a href=" https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu" target="_blank"
+                        class="social-stat-card youtube-card">
+                        <div class="social-stat-icon-wrapper">
+                            <i class="fab fa-youtube social-stat-icon"></i>
+                        </div>
+                        <div class="social-stat-number" data-target="500">0</div>
+                        <div class="social-stat-label">YouTube</div>
+                    </a>
+                </div>
+
+                <div class="social-cta">
+                    <a href="#follow-all" class="social-cta-button">Follow Us & Grow With Us</a>
+                </div>
+            </div>
+        </section>
 
 
         <!-- contact us section -->
@@ -9848,73 +9924,7 @@
                 </div>
             </div>
         </section>.
-        <!-- social-stats-section -->
-        <section class="social-stats-section ">
-            <!-- Cricket-themed background elements -->
-            <div class="cricket-field-pattern"></div>
-            <div class="cricket-element-1"></div>
-            <div class="cricket-element-2"></div>
-            <div class="cricket-element-3"></div>
-            <div class="cricket-element-4"></div>
-            <div class="cricket-pitch"></div>
-
-            <div class="social-stats-container">
-                <h2 class="social-stats-title">MasterClass Community</h2>
-                <p class="social-stats-subtitle">No matter whether your a coach, parent, student or cricket enthusiast. Our videos are game changing in giving you vital information in a way that's not been done before</p>
-
-                <div class="social-stats-grid">
-                    <a href="https://www.instagram.com/masterclasscricket" target="_blank"
-                        class="social-stat-card instagram-card">
-                        <div class="social-stat-icon-wrapper">
-                            <i class="fab fa-instagram social-stat-icon"></i>
-                        </div>
-                        <div class="social-stat-number" data-target="80000">0</div>
-                        <div class="social-stat-label">Instagram</div>
-                    </a>
-
-                    <a href="https://www.facebook.com/masterclasscricket" target="_blank"
-                        class="social-stat-card facebook-card">
-                        <div class="social-stat-icon-wrapper">
-                            <i class="fab fa-facebook-f social-stat-icon"></i>
-                        </div>
-                        <div class="social-stat-number" data-target="22000">0</div>
-                        <div class="social-stat-label">Facebook</div>
-                    </a>
-                    <a href="https://www.tiktok.com/@masterclasscricket?_t=ZN-8uo9sqlW9hO&_r=1" target="_blank"
-                        class="social-stat-card tiktok-card">
-                        <div class="social-stat-icon-wrapper tiktok-icon">
-                            <!-- <i class="fab fa-tiktok social-stat-icon"></i> -->
-                            <i class="fa-brands fa-tiktok"></i>
-                        </div>
-                        <div class="social-stat-number" data-target="21000">0</div>
-                        <div class="social-stat-label">Tiktok</div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/uzi-arif-946674203/?originalSubdomain=uk" target="_blank"
-                        class="social-stat-card twitter-card">
-                        <div class="social-stat-icon-wrapper">
-                            <i class="fab fa-linkedin social-stat-icon"></i> <!-- Updated icon -->
-                        </div>
-                        <div class="social-stat-number" data-target="150">0</div>
-                        <div class="social-stat-label">Linkedin</div> <!-- Updated label -->
-                    </a>
-
-
-                    <a href=" https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu" target="_blank"
-                        class="social-stat-card youtube-card">
-                        <div class="social-stat-icon-wrapper">
-                            <i class="fab fa-youtube social-stat-icon"></i>
-                        </div>
-                        <div class="social-stat-number" data-target="500">0</div>
-                        <div class="social-stat-label">YouTube</div>
-                    </a>
-                </div>
-
-                <div class="social-cta">
-                    <a href="#follow-all" class="social-cta-button">Follow Us & Grow With Us</a>
-                </div>
-            </div>
-        </section>
+        
 
 
 
@@ -9959,7 +9969,7 @@
 
         <!-- Footer -->
         <!-- Footer -->
-        <footer class="bg-black text-white pt-5 pb-3">
+        <footer class="bg-black text-white  pb-3">
             <div class="container">
                 <div class="row g-4 text-start">
                     <!-- Column 1: About -->
