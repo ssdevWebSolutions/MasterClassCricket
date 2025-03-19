@@ -402,7 +402,7 @@
             right: 5%;
             width: 35%;
             height: 100%;
-            background-image: url('img/aaaaa.png');
+            /* background-image: url('img/logo_\ \(1\).png'); */
             /* border: 1px solid red; */
             background-size: cover;
             background-position: center;
@@ -9909,6 +9909,80 @@
                 </div>
             </div>
         </section>
+
+
+
+
+        <!-- contact form -->
+         <!-- Contact Form -->
+            <div class="contact-us-form-container">
+                <form id="contact-form" class="contact-us-form" name="contact-form" method="POST" action="">
+                    <h3 class="contact-us-form-title">Send us a message</h3>
+                    
+                    <!-- Name Field -->
+                    <div class="contact-us-form-group">
+                        <label for="name" class="contact-us-label">Your Name</label>
+                        <input type="text" name="Name" id="name" class="contact-us-input" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="contact-us-form-group">
+                        <label for="email" class="contact-us-label">Email Address</label>
+                        <input type="email" id="Email" name="Email" class="contact-us-input" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <!-- Subject Field -->
+                    <div class="contact-us-form-group">
+                        <label for="subject" class="contact-us-label">Subject</label>
+                        <input type="text" id="Subject" name="Subject" class="contact-us-input" placeholder="What's this about?">
+                    </div>
+                    
+                    <!-- Message Field -->
+                    <div class="contact-us-form-group">
+                        <label for="message" class="contact-us-label">Message</label>
+                        <textarea id="message" class="contact-us-textarea" name="Message" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="contact-us-submit">Send Message</button>
+                </form>
+                
+            </div>
+            </div>
+            <script>
+                function doPost(e) {
+        var sheet = SpreadsheetApp.openById("YOUR_SPREADSHEET_ID").getSheetByName("Sheet1");
+
+        sheet.appendRow([
+            new Date(), 
+            e.parameter.Name, 
+            e.parameter.Email, 
+            e.parameter.Subject, 
+            e.parameter.Message
+        ]);
+
+        return ContentService.createTextOutput("Success").setMimeType(ContentService.MimeType.TEXT);
+        }
+
+            </script>
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(this);
+        fetch("https://script.google.com/macros/s/AKfycbwE3r5mbEhwhMUOv-beY-m7GwrWMOzvJEjFq2Xv_CCs3Gdky3O1ksJgYmsNOI12avNXfA/exec", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("Message sent successfully!");
+            document.getElementById("contact-form").reset();
+        })
+        .catch(error => console.error("Error!", error.message));
+    });
+
+        </script>
 
         <!-- Footer -->
         <!-- Footer -->
