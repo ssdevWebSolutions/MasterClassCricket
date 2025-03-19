@@ -404,9 +404,9 @@
     /* Make the iframe fill the container */
     background-size: cover;
     background-position: center;
-    opacity: 1; /* Reset opacity for the video */
+   
     overflow: hidden;
-    z-index: 0; /* Ensures the video stays below the overlay */
+    z-index: 1; /* Ensures the video stays below the overlay */
 }
 
 /* Embed iframe to cover the container */
@@ -427,10 +427,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg,
+    /* background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.9) 0%,
         rgba(0, 0, 0, 0.85) 50%,
-        rgba(212, 175, 55, 0.2) 100%);
+        rgba(212, 175, 55, 0.2) 100%); */
     z-index: 1; /* Make sure overlay is above the video */
 }
 
@@ -7311,9 +7311,15 @@
             <!-- Modified Team Image -->
             <div class="headerHero-team-image-container">
                 <div class="headerHero-team-image" id="headerHeroTeamImage">
-                    <iframe id="youtube-video" src="https://youtu.be/m6zSJQf_W94?si=7O8e_2a9n9hyE9_V" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="youtube-video" 
+                            src="https://www.youtube.com/embed/kTaTjtVWVyE" 
+                            frameborder="0" 
+                            allow="encrypted-media" 
+                            allowfullscreen>
+                    </iframe>
                 </div>
             </div>
+            
             
 
             <!-- Hero Pattern Overlay -->
