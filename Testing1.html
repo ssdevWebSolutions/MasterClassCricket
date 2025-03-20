@@ -375,54 +375,66 @@
                 font-size: 14px;
             }
         }
+            /* Header & Hero Variables */
+            :root {
+  --headerHero-primary-color: #d4af37; /* Gold */
+  --headerHero-secondary-color: #ffffff; /* White */
+  --headerHero-dark-color: #121212; /* Black */
+  --headerHero-accent-color: #9e0b0f; /* Cricket ball red */
+  --headerHero-transition: all 0.3s ease;
+}
+
 /* Header & Hero Section */
 .headerHero-section {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--headerHero-dark-color);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--headerHero-dark-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation Bar */
 .headerHero-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .headerHero-navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headerHero-navbar-logo {
-    display: flex;
-    align-items: center;
-    z-index: 1001;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
 }
 
 .headerHero-logo-image {
     height: 50px;
+    margin-left: 15%;
     width: auto;
     margin-right: 15px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .headerHero-logo-text {
+    /* border: 1px solid red; */
+    margin-right: 15%;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--headerHero-primary-color);
@@ -431,224 +443,206 @@
 }
 
 .headerHero-navbar-menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .headerHero-nav-item {
-    margin: 0 15px;
-    position: relative;
+  margin: 0 15px;
+  position: relative;
 }
 
 .headerHero-nav-link {
-    color: var(--headerHero-secondary-color);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: var(--headerHero-transition);
-    padding: 5px 0;
-    position: relative;
-    display: inline-block;
+  color: var(--headerHero-secondary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--headerHero-transition);
+  padding: 5px 0;
+  position: relative;
+  display: inline-block;
 }
 
 .headerHero-nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--headerHero-primary-color);
-    transition: width 0.3s ease;
-}
-
-.animated-skill {
-    color: #eab308;
-    font-weight: bold;
-    display: inline-block;
-    animation: fadeInBounce 1.5s ease-in-out infinite alternate;
-    animation-delay: 0s;
-    /* Starts immediately */
-}
-
-.animated-drill {
-    color: #fff;
-    font-weight: bold;
-    display: inline-block;
-    animation: fadeInBounce 1.5s ease-in-out infinite alternate;
-    animation-delay: 1s;
-    /* Delayed by 1 second */
-}
-
-@keyframes fadeInBounce {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(5px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--headerHero-primary-color);
+  transition: width 0.3s ease;
 }
 
 .headerHero-nav-link:hover,
 .headerHero-nav-link.active {
-    color: var(--headerHero-primary-color);
+  color: var(--headerHero-primary-color);
 }
 
 .headerHero-nav-link:hover::after,
 .headerHero-nav-link.active::after {
-    width: 100%;
+  width: 100%;
 }
 
 .headerHero-book-now-btn {
-    display: inline-block;
-    background-color: var(--headerHero-primary-color);
-    color: var(--headerHero-dark-color);
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  background-color: var(--headerHero-primary-color);
+  color: var(--headerHero-dark-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .headerHero-book-now-btn:hover {
-    background-color: var(--headerHero-secondary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  background-color: var(--headerHero-secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 .headerHero-navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .headerHero-navbar-toggle span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: var(--headerHero-secondary-color);
-    margin: 3px 0;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+  display: block;
+  width: 30px;
+  height: 3px;
+  
+  background-color: var(--headerHero-secondary-color);
+  margin: 3px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 /* Hero Content */
 .headerHero-content-wrapper {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-    margin-top: 120px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 120px;
 }
 
 .headerHero-content {
-    margin-top: 5vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 50px;
+  margin-top: 5vh;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .headerHero-text-content {
-    max-width: 700px;
-    position: relative;
+  position: relative;
 }
 
 .headerHero-title {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 30px;
-    line-height: 1.2;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .headerHero-title-container {
-    perspective: 1000px;
-    display: inline-block;
-    position: relative;
+  perspective: 1000px;
+  display: inline-block;
+  position: relative;
 }
 
 .headerHero-title-top {
-    font-size: 4rem;
-    font-weight: 900;
-    color: var(--headerHero-primary-color);
-    margin-bottom: 35px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 0.2s;
+  font-size: 4rem;
+  font-weight: 900;
+  
 
-    /* Enhanced 3D Text Effect */
-    text-shadow: 3px 3px 0px rgb(255, 215, 0),
-        6px 6px 0px rgb(51, 51, 51);
-    background: linear-gradient(45deg, var(--headerHero-primary-color), rgb(62, 62, 61));
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
+  color: var(--headerHero-primary-color);
+  margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerHeroFadeInUp 0.8s ease forwards 0.2s;
 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    position: relative;
+  /* Enhanced 3D Text Effect */
+  text-shadow: 3px 3px 0px rgb(255, 215, 0),
+    6px 6px 0px rgb(51, 51, 51);
+  background: linear-gradient(45deg, var(--headerHero-primary-color), rgb(62, 62, 61));
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
 }
 
 .headerHero-title-main {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--headerHero-secondary-color);
-    margin-bottom: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 0.4s;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--headerHero-secondary-color);
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerHeroFadeInUp 0.8s ease forwards 0.4s;
 }
 
 .headerHero-title-bottom {
-    font-size: 1.5rem;
-    color: var(--headerHero-primary-color);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 0.6s;
+  font-size: 1.5rem;
+  color: var(--headerHero-primary-color);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerHeroFadeInUp 0.8s ease forwards 0.6s;
+}
+
+.animated-skill {
+  color: #eab308;
+  font-weight: bold;
+  display: inline-block;
+  animation: fadeInBounce 1.5s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+
+.animated-drill {
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  animation: fadeInBounce 1.5s ease-in-out infinite alternate;
+  animation-delay: 1s;
 }
 
 .headerHero-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 40px;
-    max-width: 600px;
-    line-height: 1.6;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 0.8s;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerHeroFadeInUp 0.8s ease forwards 0.8s;
 }
 
 .headerHero-cta-buttons {
+    
     display: flex;
     gap: 20px;
     opacity: 0;
     transform: translateY(20px);
     animation: headerHeroFadeInUp 0.8s ease forwards 1s;
 }
-
 .headerHero-btn {
     display: flex;
     align-items: center;
@@ -695,11 +689,13 @@
 }
 
 .headerHero-btn:hover {
+
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .headerHero-btn:hover::before {
+    
     width: 100%;
 }
 
@@ -713,513 +709,387 @@
 }
 
 .headerHero-btn:hover .headerHero-btn-icon {
+        border: 1px solid red;
     transform: translateX(5px);
 }
-
-/* Achievement Badges */
 /* Achievement Badges */
 .headerHero-achievement-badges {
-            display: flex;
-            justify-content: flex-start;
-            gap: 30px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
-        }
+    margin-top: 5%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
+}
 
-        .headerHero-achievement-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px 25px;
-            background-color: rgba(26, 26, 26, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            transition: 0.3s ease-in-out;
-            backdrop-filter: blur(5px);
-        }
+.headerHero-achievement-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: rgba(26, 26, 26, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
 
-        .headerHero-achievement-badge:hover {
-            transform: translateY(-5px);
-            border-color: gold;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
+.headerHero-achievement-badge:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
-        .headerHero-badge-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: gold;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
+.headerHero-badge-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: gold;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 
-        .headerHero-badge-text {
-            font-size: 0.9rem;
-            color: #ddd;
-            margin-top: 5px;
-        }
+.headerHero-badge-text {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 5px;
+}
 
-        /* Animation Keyframes */
-        @keyframes headerHeroFadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* Video Container */
+.headerHero-video-container {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  animation: headerHeroFadeInRight 1s ease forwards 1.5s;
+}
+
+.headerHero-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.headerHero-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Hero Patterns and Gradients */
 .headerHero-pattern-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.5;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .headerHero-gradient {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    z-index: 0;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
 }
 
 .headerHero-gradient-1 {
-    top: -10%;
-    right: -10%;
-    width: 60%;
-    height: 60%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-    animation: headerHeroPulseGradient 10s infinite alternate;
+  top: -10%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  animation: headerHeroPulseGradient 10s infinite alternate;
 }
 
 .headerHero-gradient-2 {
-    bottom: -20%;
-    left: -10%;
-    width: 50%;
-    height: 50%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-    animation: headerHeroPulseGradient 8s infinite alternate-reverse;
+  bottom: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  animation: headerHeroPulseGradient 8s infinite alternate-reverse;
 }
 
-/* 3D Text Hover Animation */
-@keyframes headerHero3DRotate {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-
-    25% {
-        transform: rotateX(2deg) rotateY(2deg);
-    }
-
-    50% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-
-    75% {
-        transform: rotateX(-2deg) rotateY(-2deg);
-    }
-
-    100% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-}
-
-.headerHero-title-top:hover {
-    animation: headerHero3DRotate 2s infinite;
-}
-
-@keyframes headerHeroPulseGradient {
-    0% {
-        opacity: 0.6;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0.8;
-        transform: scale(1.2);
-    }
+/* Animation Keyframes */
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0.7;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes headerHeroFadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Modified Team Image Style with updated responsive behavior */
-.headerHero-team-image-container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+@keyframes headerHeroFadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.headerHero-team-image {
-    position: absolute;
-    margin-top: 5%;
-    right: 5%;
-    width: 35%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    z-index: 1;
+@keyframes headerHero3DRotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(2deg) rotateY(2deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  75% {
+    transform: rotateX(-2deg) rotateY(-2deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
 }
 
-/* Embed iframe to cover the container */
-#youtube-video {
-    width: 100%;
-    height: 100%;
-    border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* Color Overlay with Golden Gradient */
-.headerHero-team-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+@keyframes headerHeroPulseGradient {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
 }
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-    .headerHero-title-top {
-        font-size: 3.5rem;
-        text-shadow: 3px 3px 0px rgb(255, 215, 0),
-            6px 6px 0px rgba(244, 239, 239, 0.5);
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .headerHero-title-main {
-        font-size: 3.5rem;
-    }
-
-    .headerHero-title-bottom {
-        font-size: 3rem;
-    }
-
-    .headerHero-achievement-badges {
-        flex-wrap: wrap;
-    }
+  .headerHero-title-top {
+    font-size: 3.5rem;
+  }
 }
 
-@media (max-width: 992px) {
-    .headerHero-navbar-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        flex-direction: column;
-        width: 80%;
-        max-width: 350px;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
-        padding: 100px 40px 40px;
-        transition: right 0.4s ease-in-out;
-        z-index: 999;
-        box-shadow: -5px 0 15px rgb(255, 215, 0);
-        overflow-y: auto;
-    }
-
-    .headerHero-navbar-menu.active {
-        right: 0;
-    }
-
-    .headerHero-nav-item {
-        margin: 15px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .headerHero-nav-link {
-        display: block;
-        padding: 10px 0;
-        font-size: 1.1rem;
-    }
-
-    .headerHero-nav-cta {
-        margin-top: 25px;
-    }
-
-    .headerHero-book-now-btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    .headerHero-navbar-toggle {
-        display: flex;
-    }
-
-    .headerHero-navbar-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-        background-color: var(--headerHero-primary-color);
-    }
-
-    .headerHero-navbar-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .headerHero-navbar-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-        background-color: var(--headerHero-primary-color);
-    }
-
-    body.menu-open {
-        overflow: hidden;
-    }
-
-    .headerHero-title-top {
-        text-shadow: 3px 3px 0px rgb(255, 215, 0),
-            6px 6px 0px rgb(255, 215, 0, 0.1);
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3rem;
-    }
-
-    .headerHero-title-main {
-        font-size: 3rem;
-    }
-
-    .headerHero-title-bottom {
-        font-size: 2.5rem;
-    }
+@media (max-width: 991px) {
+  .headerHero-navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(18, 18, 18, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 30px 30px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .headerHero-navbar-menu.active {
+    left: 0;
+  }
+  
+  .headerHero-nav-item {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .headerHero-nav-link {
+    display: block;
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+  
+  .headerHero-navbar-toggle {
+    display: flex;
+  }
+  
+  .headerHero-navbar-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .headerHero-navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .headerHero-navbar-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .headerHero-content {
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .headerHero-text-content {
+    margin-bottom: 50px;
+  }
+  
+  .headerHero-cta-buttons {
+    justify-content: center;
+  }
+  
+  .headerHero-achievement-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .headerHero-video-container {
+    margin-top: 30px;
+  }
 }
 
-@media (max-width: 768px) {
-    /* Reorganize section layout for mobile */
-    .headerHero-section {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Adjust navbar for mobile */
-    .headerHero-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 15px 0;
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .headerHero-navbar-container {
-        padding: 0 15px;
-    }
-
-    .headerHero-logo-image {
-        height: 40px;
-    }
-
-    .headerHero-logo-text {
-        font-size: 1.2rem;
-    }
-
-    /* Adjust content wrapper for mobile */
-    .headerHero-content-wrapper {
-        margin-top: 80px;
-        padding: 0 15px;
-        order: 1; /* Place content first */
-    }
-
-    .headerHero-title-top {
-        font-size: 2.5rem;
-        text-shadow: 3px 3px 0px rgb(255, 215, 0),
-            6px 6px 0px rgb(255, 215, 0, 0.1);
-        letter-spacing: 1px;
-    }
-
-    .headerHero-title-main {
-        font-size: 2.5rem;
-    }
-
-    .headerHero-title-bottom {
-        font-size: 2rem;
-    }
-
-    .headerHero-description {
-        font-size: 1rem;
-    }
-
-    /* Stack buttons vertically on mobile */
-    .headerHero-cta-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .headerHero-btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Adjust achievement badges for mobile */
-    .headerHero-achievement-badge {
-        padding: 10px 20px;
-    }
-
-    .headerHero-badge-number {
-        font-size: 1.8rem;
-    }
-
-    .headerHero-badge-text {
-        font-size: 0.8rem;
-    }
-
-    /* Move YouTube video below content on mobile */
-    .headerHero-team-image-container {
-        position: relative;
-        height: 300px;
-        margin-top: 20px;
-        order: 2; /* Place video second */
-    }
-    
-    .headerHero-team-image {
-        position: relative;
-        width: 90%;
-        height: 100%;
-        right: auto;
-        margin: 0 auto;
-    }
-    
-    /* Change subscribe button text on mobile */
-    .headerHero-btn.headerHero-secondary-btn .headerHero-btn-text {
-        content: "Newsletter Subscribe";
-    }
-}
-
-@media (max-width: 576px) {
-    .headerHero-title-top {
-        text-shadow: 3px 3px 0px rgb(255, 215, 0),
-            6px 6px 0px rgb(255, 215, 0, 0.1);
-        font-size: 2rem;
-    }
-
-    .headerHero-title-main {
-        font-size: 1.8rem;
-    }
-
-    .headerHero-title-bottom {
-        font-size: 1.5rem;
-    }
-
-    .headerHero-achievement-badge {
-        width: 100%;
-    }
-
-    .headerHero-achievement-badges {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .headerHero-team-image-container {
-        height: 250px;
-    }
+@media (max-width: 767px) {
+  .headerHero-title-top {
+    font-size: 2.5rem;
+  }
+  
+  .headerHero-title-main {
+    font-size: 1.5rem;
+  }
+  
+  .headerHero-title-bottom {
+    font-size: 1.3rem;
+  }
+  
+  .headerHero-description {
+    font-size: 1rem;
+  }
+  
+  .headerHero-cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .headerHero-achievement-badges {
+    gap: 15px;
+  }
+  
+  .headerHero-achievement-badge {
+    padding: 10px 15px;
+    min-width: 120px;
+  }
+  
+  .headerHero-badge-number {
+    font-size: 1.5rem;
+  }
+  
+  .headerHero-badge-text {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .headerHero-team-image-container {
-        height: 250px;
-    }
-   
+  .headerHero-title-top {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .headerHero-achievement-badge {
+    min-width: 100px;
+  }
 }
-
-@media (min-width: 767px) {
-    #ytWEBHide{
-        visibility: hidden;
-        display: none;
-        
-    }
-   
+/* Video Container Styles */
+.headerHero-video-container {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
 }
-
-/* @media (min-width: 1024px) {
-    #youtube-video{
-    border: 2px solid white;
-    
-    margin-left: 60%;
-   }
-
-   .headerHero-content
-   {
-    border: 2px solid white;
-    
-    margin-right: 10%;
-   }
-   
-} */
-
-@media (max-width: 767px) {
-    
-   #ytWEBunHide{
-    visibility: hidden;
-   }
-   
-}
-
-@media (min-width: 480px) {
-    
-
-   
-}
-
-@media (max-width: 450px) {
-    .headerHero-title-top {
-        font-size: 1.8rem;
-        text-shadow: 3px 3px 0px rgb(255, 215, 0),
-            6px 6px 0px rgb(255, 215, 0, 0.1);
-    }
-
-    .headerHero-title-main {
-        font-size: 1.5rem;
-    }
-
-    .headerHero-title-bottom {
-        font-size: 1.3rem;
-    }
-
-    .headerHero-description {
-        font-size: 0.9rem;
-        margin-bottom: 30px;
-    }
-
-    .headerHero-btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 320px) {
-    .headerHero-navbar {
+.subscribe-container {
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        border: 2px solid #d4ae36;
+        border-radius: 50px;
+        overflow: hidden;
         width: 100%;
-        padding: 10px 0;
+        max-width: 400px;
+        background: #fff;
     }
-    
-    .headerHero-team-image-container {
-        height: 200px;
+    .subscribe-container input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 12px 15px;
+        font-size: 16px;
     }
+
+    .subscribe-container button {
+        background: #d4ae36;
+        border: none;
+        color: black;
+        padding: 12px 18px;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        border-radius: 0 50px 50px 0;
+    }
+
+    .subscribe-container button i {
+        margin-left: 8px;
+    }
+
+.headerHero-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
+.headerHero-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive styles for the grid layout */
+@media (max-width: 991px) {
+  .headerHero-content .row {
+    flex-direction: column;
+  }
+  
+  .headerHero-video-container {
+    margin-top: 40px;
+  }
+}
         /* academy css */
 
         /* Basic Setup */
@@ -7226,36 +7096,36 @@
 
 
 
-    <!-- Premium Cricket Hero Section with Modified Image -->
-    <header class="headerHero-section">
+     <!-- Hero Section -->
+     <section id="home" class="headerHero-section">
+        <div class="headerHero-pattern-overlay"></div>
+        <div class="headerHero-gradient headerHero-gradient-1"></div>
+        <div class="headerHero-gradient headerHero-gradient-2"></div>
+      
         <!-- Navigation Bar -->
         <nav class="headerHero-navbar">
             <div class="headerHero-navbar-container">
-                <div class="headerHero-navbar-logo">
-                    <a href="Testing.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo"
-                            class="headerHero-logo-image"></a>
-                    <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
-                </div>
+                <a href="Testing.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo"
+                    class="headerHero-logo-image"></a>
+            <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
+    
+                <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
+                    <li class="headerHero-nav-item"><a href="Testing1.html" class="headerHero-nav-link active">Home</a></li>
+                    <li class="headerHero-nav-item"><a href="About1.html" class="headerHero-nav-link">About Us</a></li>
+                    <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Our Coaches</a></li>
+                    <li class="headerHero-nav-item"><a href="Testimonials.html" class="headerHero-nav-link">Testimonials</a></li>
+                    <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact Us</a></li>
+                    <li class="headerHero-nav-item headerHero-nav-cta">
+                        <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Join Now</a>
+                    </li>
+                </ul>
     
                 <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-    
-                <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
-                    <li class="headerHero-nav-item"><a href="Testing.html" class="headerHero-nav-link active">Home</a></li>
-                    <li class="headerHero-nav-item"><a href="About1.html" class="headerHero-nav-link">About</a></li>
-                    <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Coach</a></li>
-                    <li class="headerHero-nav-item"><a href="Testimonials.html" class="headerHero-nav-link">Testimonials</a>
-                    </li>
-                    <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact</a></li>
-                    <li class="headerHero-nav-item headerHero-nav-cta">
-                        <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
-                    </li>
-                </ul>
             </div>
-
         </nav>
 
         <script>
@@ -7337,216 +7207,227 @@
                 });
             });
         </script>
-    
-        <!-- Hero Content Section -->
-        <div class="headerHero-content-wrapper" id="Hero">
+      
+        <!-- Hero Content -->
+        <div class="headerHero-content-wrapper">
             <div class="headerHero-content">
-                <div class="headerHero-text-content">
-                    <h1 class="headerHero-title">
-                        <div class="headerHero-title-container">
-                            <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
+                <!-- Using row structure for 2-column layout -->
+                <div class="row align-items-center">
+                    <!-- Left Side Content -->
+                    <div class="col-lg-6">
+                        <div class="headerHero-text-content">
+                            <h1 class="headerHero-title">
+                                <div class="headerHero-title-container">
+                                    <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
+                                </div>
+                                <span class="headerHero-title-main">FOR EVERY <span class="animated-skill">"𝐒𝐊𝐈𝐋𝐋"</span>,</span>
+                                <span class="headerHero-title-bottom">WE'VE GOT THE <span class="animated-drill">"𝐃𝐑𝐈𝐋𝐋"</span></span>
+                            </h1>
+                
+                            <p class="headerHero-description">
+                                Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
+                                across all areas of the game. We work with players at every level, from beginners to international
+                                cricketers, empowering them to reach their full potential and excel on the field.
+                            </p>
+                
+                            <div class="headerHero-cta-buttons">
+                                <div class="headerHero-cta-buttons">
+                                    <a href="https://masterclass-cricket.classforkids.io" class="headerHero-btn headerHero-primary-btn">
+                                        <span class="headerHero-btn-text">Easter Camp Registration</span>
+                                        <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
+                                    </a>
+                                    <form id="newsletter-form" action="" method="POST" class="subscribe-container">
+                                    
+                                        <input type="email" name="email" placeholder="Enter your email" required>
+                                    
+                                        <button type="submit">
+                                            Subscribe <i class="fas fa-envelope"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <script>
+                                document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+                                    event.preventDefault(); // Prevent default form submission
+                            
+                                    const formData = new FormData(this);
+                            
+                                    fetch("https://script.google.com/macros/s/AKfycbzoXbIhL0QvRt7x-jeqhAMlfYv0hY6_VzFf7EcUwiY0MswtuRnjax7fFuBF6U2GZmk3/exec", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        alert("Subscription successful!");
+                                        document.getElementById("newsletter-form").reset();
+                                    })
+                                    .catch(error => console.error("Error!", error.message));
+                                });
+                            </script>
+                            
+                            <!-- Achievement Badges -->
+                            <div class="headerHero-achievement-badges">
+                                <div class="headerHero-achievement-badge">
+                                    <span class="headerHero-badge-number"><span data-target="20">0</span>+</span>
+                                    <span class="headerHero-badge-text">Years Experience</span>
+                                </div>
+                                <div class="headerHero-achievement-badge">
+                                    <span class="headerHero-badge-number"><span data-target="750">0</span>+</span>
+                                    <span class="headerHero-badge-text">Members</span>
+                                </div>
+                                <div class="headerHero-achievement-badge">
+                                    <span class="headerHero-badge-number"><span data-target="100000">0</span>+</span>
+                                    <span class="headerHero-badge-text">Followers on Social Media</span>
+                                </div>
+                                <div class="headerHero-achievement-badge">
+                                    <span class="headerHero-badge-number"><span data-target="10000000">0</span>+</span>
+                                    <span class="headerHero-badge-text">Views</span>
+                                </div>
+                            </div>
                         </div>
-                        <span class="headerHero-title-main">FOR EVERY <span
-                                class="animated-skill">"𝐒𝐊𝐈𝐋𝐋",</span>,</span>
-                        <span class="headerHero-title-bottom">WE'VE GOT THE <span
-                                class="animated-drill">"𝐃𝐑𝐈𝐋𝐋"</span></span>
-                    </h1>
-    
-                    <p class="headerHero-description">
-                        Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
-                        across all areas of the game. We work with players at every level, from beginners to international
-                        cricketers,
-                        empowering them to reach their full potential and excel on the field.
-                    </p>
-    
-                    <div class="headerHero-cta-buttons">
-                        <a href="https://masterclass-cricket.classforkids.io" class="headerHero-btn headerHero-primary-btn">
-                            <span class="headerHero-btn-text">Easter Camp Registration</span>
-                            <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
-                        </a>
-                        <form id="newsletter-form" action="" method="POST" class="subscribe-container">
-                        
-                            <input type="email" name="email" placeholder="Enter your email" required>
-                        
-                            <button type="submit">
-                                Subscribe <i class="fas fa-envelope"></i>
-                            </button>
-                        </form>
                     </div>
-
-                    <script>
-                        document.getElementById("newsletter-form").addEventListener("submit", function(event) {
-                            event.preventDefault(); // Prevent default form submission
                     
-                            const formData = new FormData(this);
-                    
-                            fetch("https://script.google.com/macros/s/AKfycbzoXbIhL0QvRt7x-jeqhAMlfYv0hY6_VzFf7EcUwiY0MswtuRnjax7fFuBF6U2GZmk3/exec", {
-                                method: "POST",
-                                body: formData
-                            })
-                            .then(response => response.text())
-                            .then(data => {
-                                alert("Subscription successful!");
-                                document.getElementById("newsletter-form").reset();
-                            })
-                            .catch(error => console.error("Error!", error.message));
-                        });
-                    </script>
-                </div>
-
-
-                <!-- <div class="headerHero-team-image-container" id="ytWEBunHide" onclick="showyt()" >
-                    <div class="headerHero-team-image" id="headerHeroTeamImage">
-                        <iframe id="youtube-video" src="https://www.youtube.com/embed/hHuwpK9i4Tc" frameborder="0"
-                            allow="encrypted-media" allowfullscreen>
-                        </iframe>
+                    <!-- Right Side Video -->
+                    <div class="col-lg-6">
+                        <div class="headerHero-video-container">
+                            <div class="headerHero-video-wrapper">
+                                <iframe 
+                                    width="560" 
+                                    height="315" 
+                                    id="youtube-video"
+                                    src="https://www.youtube.com/embed/hHuwpK9i4Tc" 
+                                    title="Cricket Training Video" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
-
-
-                 
-            
-            
-                <script>
-                    function showyt() {
-                        window.location.href = "https://www.youtube.com/watch?v=hHuwpK9i4Tc";
-                    }
-                </script>
-            </div>
-            <!-- Font Awesome for Icons -->
-            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    
-    
-            <div class="headerHero-achievement-badges">
-                <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number"><span data-target="20">0</span>+</span>
-                    <span class="headerHero-badge-text">Years Experience</span>
-                </div>
-                <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number"><span data-target="750">0</span>+</span>
-                    <span class="headerHero-badge-text">Members</span>
-                </div>
-                <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number"><span data-target="100000">0</span>+</span>
-                    <span class="headerHero-badge-text">Followers on Social Media</span>
-                </div>
-                <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number"><span data-target="10000000">0</span>+</span>
-                    <span class="headerHero-badge-text">Views</span>
                 </div>
             </div>
-            <script>
-                function formatNumber(value) {
-                    if (value >= 1000000) {
-                        return (value / 1000000).toFixed(1).replace(/\.0$/, '') + "M";
-                    } else if (value >= 1000) {
-                        return (value / 1000).toFixed(1).replace(/\.0$/, '') + "K";
-                    }
-                    return value;
-                }
-        
-                function animateCounter(element, target) {
-                    let count = 0;
-                    let speed = target / 200; // Adjust speed for animation
-        
-                    function updateCount() {
-                        count += speed;
-                        if (count >= target) {
-                            element.innerText = formatNumber(target);
-                        } else {
-                            element.innerText = formatNumber(Math.floor(count));
-                            requestAnimationFrame(updateCount);
-                        }
-                    }
-                    updateCount();
-                }
-        
-                function startCounting(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const targetNumber = parseInt(entry.target.getAttribute("data-target"));
-                            animateCounter(entry.target, targetNumber);
-                            observer.unobserve(entry.target); // Stop observing after animation
-                        }
+        </div>
+    </section>
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('headerHeroNavToggle');
+    const navMenu = document.getElementById('headerHeroNavMenu');
+    const body = document.body;
+    
+    if(navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+    }
+    
+    // Navigate and highlight nav links
+    const navLinks = document.querySelectorAll('.headerHero-nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // For same-page links, prevent default and do smooth scroll
+            if(this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if(targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
                     });
                 }
-        
-                // Intersection Observer to trigger animation on scroll
-                const observer = new IntersectionObserver(startCounting, { threshold: 0.5 });
-                document.querySelectorAll(".headerHero-badge-number span").forEach(el => observer.observe(el));
-            </script>
-        </div>
-
-
-       
-        
-
-        <div class="headerHero-team-image-container" id="ytWEBHide" onclick="showyt()">
-            <div class="headerHero-team-image" id="headerHeroTeamImage">
-                <iframe id="youtube-video" src="https://www.youtube.com/embed/hHuwpK9i4Tc" frameborder="0"
-                    allow="encrypted-media" allowfullscreen>
-                </iframe>
-                <!-- <a href="https://www.youtube.com/@masterclasscricketcoaching" target="_blank" class="video-overlay"></a> -->
-            </div>
-        </div>
-            
-
-        
-        <!-- Modified Team Image -->
-        
-    
-    
-        <script>
-            function showyt() {
-                window.location.href = "https://www.youtube.com/watch?v=hHuwpK9i4Tc";
             }
-        </script>
+            
+            // Set active state
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Close mobile menu after click
+            if(window.innerWidth < 992 && navMenu && navMenu.classList.contains('active')) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+    });
     
+    // Handle counter animation - keeping your existing code
+    function formatNumber(value) {
+        if (value >= 1000000) {
+            return (value / 1000000).toFixed(1).replace(/\.0$/, '') + "M";
+        } else if (value >= 1000) {
+            return (value / 1000).toFixed(1).replace(/\.0$/, '') + "K";
+        }
+        return value;
+    }
+
+    function animateCounter(element, target) {
+        let count = 0;
+        let speed = target / 200; // Adjust speed for animation
+
+        function updateCount() {
+            count += speed;
+            if (count >= target) {
+                element.innerText = formatNumber(target);
+            } else {
+                element.innerText = formatNumber(Math.floor(count));
+                requestAnimationFrame(updateCount);
+            }
+        }
+        updateCount();
+    }
+
+    function startCounting(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetNumber = parseInt(entry.target.getAttribute("data-target"));
+                animateCounter(entry.target, targetNumber);
+                observer.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    }
+
+    // Intersection Observer to trigger animation on scroll
+    const observer = new IntersectionObserver(startCounting, { threshold: 0.5 });
+    document.querySelectorAll(".headerHero-badge-number span").forEach(el => observer.observe(el));
+    
+    // Handle scroll-based navigation highlighting
+    function highlightNavOnScroll() {
+        const scrollPosition = window.scrollY + 150;
         
-    
-    
-    
-    
-        <!-- Hero Pattern Overlay -->
-        <div class="headerHero-pattern-overlay"></div>
-    
-        <!-- Hero Animated Gradients -->
-        <div class="headerHero-gradient headerHero-gradient-1"></div>
-        <div class="headerHero-gradient headerHero-gradient-2"></div>
-    </header>
-    
-    <!-- Add JavaScript for mobile responsive behavior -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the navigation toggle button and menu
-            const navToggle = document.getElementById('headerHeroNavToggle');
-            const navMenu = document.getElementById('headerHeroNavMenu');
-
-            // Toggle menu on click
-            navToggle.addEventListener('click', function () {
-                this.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            });
-
-            // Update button text for mobile
-            function updateButtonText() {
-                const subscribeBtn = document.getElementById('subscribe-btn');
-                if (subscribeBtn) {
-                    const btnText = subscribeBtn.querySelector('.headerHero-btn-text');
-                    if (window.innerWidth <= 768) {
-                        btnText.textContent = 'Newsletter Subscribe';
-                    } else {
-                        btnText.textContent = 'Subscribe';
-                    }
+        // Find all sections with IDs
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Remove active class from all nav links
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                // Add active class to the corresponding nav link
+                const activeLink = document.querySelector(`.headerHero-nav-link[href="#${sectionId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
                 }
             }
-
-            // Call on load and resize
-            updateButtonText();
-            window.addEventListener('resize', updateButtonText);
         });
-    </script>
+    }
+    
+    // Initial check and add scroll listener
+    highlightNavOnScroll();
+    window.addEventListener('scroll', highlightNavOnScroll);
+});
+ </script>
     <!-- About Section -->
     <!-- About Section -->
         
