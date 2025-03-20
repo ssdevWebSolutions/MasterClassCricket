@@ -717,45 +717,60 @@
 }
 
 /* Achievement Badges */
+/* Achievement Badges */
 .headerHero-achievement-badges {
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
-}
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
+        }
 
-.headerHero-achievement-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: rgba(26, 26, 26, 0.7);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 10px;
-    transition: var(--headerHero-transition);
-    backdrop-filter: blur(5px);
-}
+        .headerHero-achievement-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: rgba(26, 26, 26, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            backdrop-filter: blur(5px);
+        }
 
-.headerHero-achievement-badge:hover {
-    transform: translateY(-5px);
-    border-color: var(--headerHero-primary-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+        .headerHero-achievement-badge:hover {
+            transform: translateY(-5px);
+            border-color: gold;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-.headerHero-badge-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--headerHero-primary-color);
-}
+        .headerHero-badge-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: gold;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
 
-.headerHero-badge-text {
-    font-size: 0.9rem;
-    color: var(--headerHero-secondary-color);
-    margin-top: 5px;
-}
+        .headerHero-badge-text {
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-top: 5px;
+        }
 
+        /* Animation Keyframes */
+        @keyframes headerHeroFadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 /* Hero Patterns and Gradients */
 .headerHero-pattern-overlay {
     position: absolute;
@@ -7323,22 +7338,62 @@
     
             <div class="headerHero-achievement-badges">
                 <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number">20+</span>
+                    <span class="headerHero-badge-number"><span data-target="20">0</span>+</span>
                     <span class="headerHero-badge-text">Years Experience</span>
                 </div>
                 <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number">750+</span>
-                    <span class="headerHero-badge-text">Members </span>
+                    <span class="headerHero-badge-number"><span data-target="750">0</span>+</span>
+                    <span class="headerHero-badge-text">Members</span>
                 </div>
                 <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number">100k+</span>
+                    <span class="headerHero-badge-number"><span data-target="100000">0</span>+</span>
                     <span class="headerHero-badge-text">Followers on Social Media</span>
                 </div>
                 <div class="headerHero-achievement-badge">
-                    <span class="headerHero-badge-number">10M+</span>
+                    <span class="headerHero-badge-number"><span data-target="10000000">0</span>+</span>
                     <span class="headerHero-badge-text">Views</span>
                 </div>
             </div>
+            <script>
+                function formatNumber(value) {
+                    if (value >= 1000000) {
+                        return (value / 1000000).toFixed(1).replace(/\.0$/, '') + "M";
+                    } else if (value >= 1000) {
+                        return (value / 1000).toFixed(1).replace(/\.0$/, '') + "K";
+                    }
+                    return value;
+                }
+        
+                function animateCounter(element, target) {
+                    let count = 0;
+                    let speed = target / 200; // Adjust speed for animation
+        
+                    function updateCount() {
+                        count += speed;
+                        if (count >= target) {
+                            element.innerText = formatNumber(target);
+                        } else {
+                            element.innerText = formatNumber(Math.floor(count));
+                            requestAnimationFrame(updateCount);
+                        }
+                    }
+                    updateCount();
+                }
+        
+                function startCounting(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const targetNumber = parseInt(entry.target.getAttribute("data-target"));
+                            animateCounter(entry.target, targetNumber);
+                            observer.unobserve(entry.target); // Stop observing after animation
+                        }
+                    });
+                }
+        
+                // Intersection Observer to trigger animation on scroll
+                const observer = new IntersectionObserver(startCounting, { threshold: 0.5 });
+                document.querySelectorAll(".headerHero-badge-number span").forEach(el => observer.observe(el));
+            </script>
         </div>
 
 
