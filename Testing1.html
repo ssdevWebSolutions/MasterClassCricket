@@ -1126,6 +1126,46 @@
     .headerHero-team-image-container {
         height: 250px;
     }
+   
+}
+
+@media (min-width: 767px) {
+    #ytWEBHide{
+        visibility: hidden;
+        display: none;
+        
+    }
+   
+}
+
+/* @media (min-width: 1024px) {
+    #youtube-video{
+    border: 2px solid white;
+    
+    margin-left: 60%;
+   }
+
+   .headerHero-content
+   {
+    border: 2px solid white;
+    
+    margin-right: 10%;
+   }
+   
+} */
+
+@media (max-width: 767px) {
+    
+   #ytWEBunHide{
+    visibility: hidden;
+   }
+   
+}
+
+@media (min-width: 480px) {
+    
+
+   
 }
 
 @media (max-width: 450px) {
@@ -3124,24 +3164,25 @@
             transform: translate(-50%, -50%);
             width: 64px;
             height: 64px;
-            background-color: rgba(234, 179, 8, 0.7);
+            /* color:rgba(234, 179, 8, 0.7) ; */
+            /* background-color: rgba(234, 179, 8, 0.7); */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
-            animation: pulse 2s infinite;
+            /* animation: pulse 2s infinite; */
         }
 
         .ig-play-button svg {
             width: 32px;
             height: 32px;
-            fill: white;
+            fill: rgba(255, 192, 3, 0.9); ;
         }
 
         .ig-social-card:hover .ig-play-button {
             transform: translate(-50%, -50%) scale(1.1);
-            background-color: rgba(234, 179, 8, 0.9);
+            /* background-color: rgba(234, 179, 8, 0.9); */
         }
 
         .ig-cricket-ball-corner {
@@ -7170,156 +7211,208 @@
 
 
 
-      <!-- Premium Cricket Hero Section with Modified Image -->
-<header class="headerHero-section">
-    <!-- Navigation Bar -->
-    <nav class="headerHero-navbar">
-        <div class="headerHero-navbar-container">
-            <div class="headerHero-navbar-logo">
-                <a href="Testing.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo" class="headerHero-logo-image"></a>
-                <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
+    <!-- Premium Cricket Hero Section with Modified Image -->
+    <header class="headerHero-section">
+        <!-- Navigation Bar -->
+        <nav class="headerHero-navbar">
+            <div class="headerHero-navbar-container">
+                <div class="headerHero-navbar-logo">
+                    <a href="Testing.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo"
+                            class="headerHero-logo-image"></a>
+                    <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
+                </div>
+    
+                <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+    
+                <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
+                    <li class="headerHero-nav-item"><a href="Testing.html" class="headerHero-nav-link active">Home</a></li>
+                    <li class="headerHero-nav-item"><a href="About1.html" class="headerHero-nav-link">About</a></li>
+                    <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Coach</a></li>
+                    <li class="headerHero-nav-item"><a href="Testimonials.html" class="headerHero-nav-link">Testimonials</a>
+                    </li>
+                    <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact</a></li>
+                    <li class="headerHero-nav-item headerHero-nav-cta">
+                        <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
-                <li class="headerHero-nav-item"><a href="Testing.html" class="headerHero-nav-link active">Home</a></li>
-                <li class="headerHero-nav-item"><a href="About1.html" class="headerHero-nav-link">About</a></li>
-                <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Coach</a></li>
-                <li class="headerHero-nav-item"><a href="Testimonials.html" class="headerHero-nav-link">Testimonials</a></li>
-                <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact</a></li>
-                <li class="headerHero-nav-item headerHero-nav-cta">
-                    <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
-                </li>
-                            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Content Section -->
-    <div class="headerHero-content-wrapper" id="Hero">
-        <div class="headerHero-content">
-            <div class="headerHero-text-content">
-                <h1 class="headerHero-title">
-                    <div class="headerHero-title-container">
-                        <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
+        </nav>
+    
+        <!-- Hero Content Section -->
+        <div class="headerHero-content-wrapper" id="Hero">
+            <div class="headerHero-content">
+                <div class="headerHero-text-content">
+                    <h1 class="headerHero-title">
+                        <div class="headerHero-title-container">
+                            <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
+                        </div>
+                        <span class="headerHero-title-main">FOR EVERY <span
+                                class="animated-skill">"𝐒𝐊𝐈𝐋𝐋",</span>,</span>
+                        <span class="headerHero-title-bottom">WE'VE GOT THE <span
+                                class="animated-drill">"𝐃𝐑𝐈𝐋𝐋"</span></span>
+                    </h1>
+    
+                    <p class="headerHero-description">
+                        Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
+                        across all areas of the game. We work with players at every level, from beginners to international
+                        cricketers,
+                        empowering them to reach their full potential and excel on the field.
+                    </p>
+    
+                    <div class="headerHero-cta-buttons">
+                        <a href="https://masterclass-cricket.classforkids.io" class="headerHero-btn headerHero-primary-btn">
+                            <span class="headerHero-btn-text">Easter Camp Registration</span>
+                            <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
+                        </a>
+                        <form id="newsletter-form" action="" method="POST" class="subscribe-container">
+                        
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        
+                            <button type="submit">
+                                Subscribe <i class="fas fa-envelope"></i>
+                            </button>
+                        </form>
                     </div>
-                    <span class="headerHero-title-main">FOR EVERY <span class="animated-skill">"𝐒𝐊𝐈𝐋𝐋",</span>,</span>
-                    <span class="headerHero-title-bottom">WE'VE GOT THE <span class="animated-drill">"𝐃𝐑𝐈𝐋𝐋"</span></span>
-                </h1>
 
-                <p class="headerHero-description">
-                    Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
-                    across all areas of the game. We work with players at every level, from beginners to international cricketers,
-                    empowering them to reach their full potential and excel on the field.
-                </p>
+                    <script>
+                        document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+                            event.preventDefault(); // Prevent default form submission
+                    
+                            const formData = new FormData(this);
+                    
+                            fetch("https://script.google.com/macros/s/AKfycbzoXbIhL0QvRt7x-jeqhAMlfYv0hY6_VzFf7EcUwiY0MswtuRnjax7fFuBF6U2GZmk3/exec", {
+                                method: "POST",
+                                body: formData
+                            })
+                            .then(response => response.text())
+                            .then(data => {
+                                alert("Subscription successful!");
+                                document.getElementById("newsletter-form").reset();
+                            })
+                            .catch(error => console.error("Error!", error.message));
+                        });
+                    </script>
+                </div>
 
-                <div class="headerHero-cta-buttons">
-                    <a href="https://masterclass-cricket.classforkids.io" class="headerHero-btn headerHero-primary-btn">
-                        <span class="headerHero-btn-text">Easter Camp Registration</span>
-                        <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
-                    </a>
-                    <form action="subscribe.php" method="POST" class="subscribe-container">
-                        <input type="email" name="email" placeholder="Enter your email" required>
-                        <button type="submit">
-                            Subscribe <i class="fas fa-envelope"></i>
-                        </button>
-                    </form>
+
+                <!-- <div class="headerHero-team-image-container" id="ytWEBunHide" onclick="showyt()" >
+                    <div class="headerHero-team-image" id="headerHeroTeamImage">
+                        <iframe id="youtube-video" src="https://www.youtube.com/embed/hHuwpK9i4Tc" frameborder="0"
+                            allow="encrypted-media" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div> -->
+
+
+                 
+            
+            
+                <script>
+                    function showyt() {
+                        window.location.href = "https://www.youtube.com/watch?v=hHuwpK9i4Tc";
+                    }
+                </script>
+            </div>
+            <!-- Font Awesome for Icons -->
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    
+            <div class="headerHero-achievement-badges">
+                <div class="headerHero-achievement-badge">
+                    <span class="headerHero-badge-number">20+</span>
+                    <span class="headerHero-badge-text">Years Experience</span>
+                </div>
+                <div class="headerHero-achievement-badge">
+                    <span class="headerHero-badge-number">750+</span>
+                    <span class="headerHero-badge-text">Members </span>
+                </div>
+                <div class="headerHero-achievement-badge">
+                    <span class="headerHero-badge-number">100k+</span>
+                    <span class="headerHero-badge-text">Followers on Social Media</span>
+                </div>
+                <div class="headerHero-achievement-badge">
+                    <span class="headerHero-badge-number">10M+</span>
+                    <span class="headerHero-badge-text">Views</span>
                 </div>
             </div>
         </div>
-        <!-- Font Awesome for Icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
-        <div class="headerHero-achievement-badges">
-            <div class="headerHero-achievement-badge">
-                <span class="headerHero-badge-number">20+</span>
-                <span class="headerHero-badge-text">Years Experience</span>
-            </div>
-            <div class="headerHero-achievement-badge">
-                <span class="headerHero-badge-number">750+</span>
-                <span class="headerHero-badge-text">Members </span>
-            </div>
-            <div class="headerHero-achievement-badge">
-                <span class="headerHero-badge-number">100k+</span>
-                <span class="headerHero-badge-text">Followers on Social Media</span>
-            </div>
-            <div class="headerHero-achievement-badge">
-                <span class="headerHero-badge-number">10M+</span>
-                <span class="headerHero-badge-text">Views</span>
+       
+        
+
+        <div class="headerHero-team-image-container" id="ytWEBHide" onclick="showyt()">
+            <div class="headerHero-team-image" id="headerHeroTeamImage">
+                <iframe id="youtube-video" src="https://www.youtube.com/embed/hHuwpK9i4Tc" frameborder="0"
+                    allow="encrypted-media" allowfullscreen>
+                </iframe>
+                <!-- <a href="https://www.youtube.com/@masterclasscricketcoaching" target="_blank" class="video-overlay"></a> -->
             </div>
         </div>
-    </div>
+            
 
-    <!-- Modified Team Image -->
-    <div class="headerHero-team-image-container"  onclick="showyt()">
-        <div class="headerHero-team-image" id="headerHeroTeamImage">
-            <iframe id="youtube-video" 
-                    src="https://www.youtube.com/embed/hHuwpK9i4Tc" 
-                    frameborder="0" 
-                    allow="encrypted-media" 
-                    allowfullscreen>
-            </iframe>
-            <!-- <a href="https://www.youtube.com/@masterclasscricketcoaching" target="_blank" class="video-overlay"></a> -->
-        </div>
-    </div>
-
-
+        
+        <!-- Modified Team Image -->
+        
+    
+    
+        <script>
+            function showyt() {
+                window.location.href = "https://www.youtube.com/watch?v=hHuwpK9i4Tc";
+            }
+        </script>
+    
+        
+    
+    
+    
+    
+        <!-- Hero Pattern Overlay -->
+        <div class="headerHero-pattern-overlay"></div>
+    
+        <!-- Hero Animated Gradients -->
+        <div class="headerHero-gradient headerHero-gradient-1"></div>
+        <div class="headerHero-gradient headerHero-gradient-2"></div>
+    </header>
+    
+    <!-- Add JavaScript for mobile responsive behavior -->
     <script>
-        function showyt() {
-            window.location.href = "https://www.youtube.com/watch?v=hHuwpK9i4Tc";
-        }
-    </script>
-    
-    
-    
-    
-    <!-- Hero Pattern Overlay -->
-    <div class="headerHero-pattern-overlay"></div>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the navigation toggle button and menu
+            const navToggle = document.getElementById('headerHeroNavToggle');
+            const navMenu = document.getElementById('headerHeroNavMenu');
 
-    <!-- Hero Animated Gradients -->
-    <div class="headerHero-gradient headerHero-gradient-1"></div>
-    <div class="headerHero-gradient headerHero-gradient-2"></div>
-</header>
+            // Toggle menu on click
+            navToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
 
-<!-- Add JavaScript for mobile responsive behavior -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get the navigation toggle button and menu
-        const navToggle = document.getElementById('headerHeroNavToggle');
-        const navMenu = document.getElementById('headerHeroNavMenu');
-        
-        // Toggle menu on click
-        navToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-        
-        // Update button text for mobile
-        function updateButtonText() {
-            const subscribeBtn = document.getElementById('subscribe-btn');
-            if (subscribeBtn) {
-                const btnText = subscribeBtn.querySelector('.headerHero-btn-text');
-                if (window.innerWidth <= 768) {
-                    btnText.textContent = 'Newsletter Subscribe';
-                } else {
-                    btnText.textContent = 'Subscribe';
+            // Update button text for mobile
+            function updateButtonText() {
+                const subscribeBtn = document.getElementById('subscribe-btn');
+                if (subscribeBtn) {
+                    const btnText = subscribeBtn.querySelector('.headerHero-btn-text');
+                    if (window.innerWidth <= 768) {
+                        btnText.textContent = 'Newsletter Subscribe';
+                    } else {
+                        btnText.textContent = 'Subscribe';
+                    }
                 }
             }
-        }
-        
-        // Call on load and resize
-        updateButtonText();
-        window.addEventListener('resize', updateButtonText);
-    });
-</script>
-        <!-- About Section -->
-        <!-- About Section -->
+
+            // Call on load and resize
+            updateButtonText();
+            window.addEventListener('resize', updateButtonText);
+        });
+    </script>
+    <!-- About Section -->
+    <!-- About Section -->
         
         
         <a href="https://www.instagram.com/reel/C7WiS5ntRRP/?hl=en" target="_blank">
@@ -8045,517 +8138,518 @@
 
         <!-- instagarma -->
        <!-- Social Media Section -->
-    <section class="ig-reels-section ">
-        <h2 class="ig-section-title">
-            CHECK OUT <span class="ig-highlight">OUR SOCIAL MEDIA!</span>
-        </h2>
+   <!-- Social Media Section -->
+   <section class="ig-reels-section ">
+    <h2 class="ig-section-title">
+        CHECK OUT <span class="ig-highlight">OUR SOCIAL MEDIA!</span>
+    </h2>
 
-        <!-- Decorative cricket bat - top left -->
-        <div class="ig-decorative-bat ig-bat-top-left">
-            <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
-                <defs>
-                    <linearGradient id="bat-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#854d0e" />
-                        <stop offset="100%" stopColor="#a16207" />
-                    </linearGradient>
-                </defs>
-                <!-- Bat handle -->
-                <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
+    <!-- Decorative cricket bat - top left -->
+    <div class="ig-decorative-bat ig-bat-top-left">
+        <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
+            <defs>
+                <linearGradient id="bat-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#854d0e" />
+                    <stop offset="100%" stopColor="#a16207" />
+                </linearGradient>
+            </defs>
+            <!-- Bat handle -->
+            <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
 
-                <!-- Handle grip texture -->
-                <g opacity="0.4">
-                    <rect x="43" y="20" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="29" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="38" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="47" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="56" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="65" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="74" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="83" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="92" width="14" height="5" rx="2.5" fill="white" />
-                    <rect x="43" y="101" width="14" height="5" rx="2.5" fill="white" />
-                </g>
+            <!-- Handle grip texture -->
+            <g opacity="0.4">
+                <rect x="43" y="20" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="29" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="38" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="47" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="56" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="65" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="74" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="83" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="92" width="14" height="5" rx="2.5" fill="white" />
+                <rect x="43" y="101" width="14" height="5" rx="2.5" fill="white" />
+            </g>
 
-                <!-- Bat shoulder -->
-                <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
-                    fill="#a16207" />
+            <!-- Bat shoulder -->
+            <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
+                fill="#a16207" />
 
-                <!-- Bat blade -->
-                <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z"
-                    fill="url(#bat-gradient)" />
+            <!-- Bat blade -->
+            <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z"
+                fill="url(#bat-gradient)" />
 
-                <!-- Bat edge -->
-                <path d="M30,135 L30,350 C30,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
-                <path d="M70,135 L70,350 C70,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
+            <!-- Bat edge -->
+            <path d="M30,135 L30,350 C30,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
+            <path d="M70,135 L70,350 C70,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
 
-                <!-- Bat face texture/grain -->
-                <g opacity="0.1">
-                    <line x1="35" y1="150" x2="65" y2="150" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="160" x2="65" y2="160" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="170" x2="65" y2="170" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="180" x2="65" y2="180" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="190" x2="65" y2="190" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="200" x2="65" y2="200" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="210" x2="65" y2="210" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="220" x2="65" y2="220" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="230" x2="65" y2="230" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="240" x2="65" y2="240" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="250" x2="65" y2="250" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="260" x2="65" y2="260" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="270" x2="65" y2="270" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="280" x2="65" y2="280" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="290" x2="65" y2="290" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="300" x2="65" y2="300" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="310" x2="65" y2="310" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="320" x2="65" y2="320" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="330" x2="65" y2="330" stroke="#422006" strokeWidth="1" />
-                    <line x1="35" y1="340" x2="65" y2="340" stroke="#422006" strokeWidth="1" />
-                </g>
+            <!-- Bat face texture/grain -->
+            <g opacity="0.1">
+                <line x1="35" y1="150" x2="65" y2="150" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="160" x2="65" y2="160" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="170" x2="65" y2="170" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="180" x2="65" y2="180" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="190" x2="65" y2="190" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="200" x2="65" y2="200" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="210" x2="65" y2="210" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="220" x2="65" y2="220" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="230" x2="65" y2="230" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="240" x2="65" y2="240" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="250" x2="65" y2="250" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="260" x2="65" y2="260" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="270" x2="65" y2="270" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="280" x2="65" y2="280" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="290" x2="65" y2="290" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="300" x2="65" y2="300" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="310" x2="65" y2="310" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="320" x2="65" y2="320" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="330" x2="65" y2="330" stroke="#422006" strokeWidth="1" />
+                <line x1="35" y1="340" x2="65" y2="340" stroke="#422006" strokeWidth="1" />
+            </g>
 
-                <!-- Bat branding -->
-                <text x="50" y="200" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold"
-                    transform="rotate(90, 50, 200)">
-                    CRICKET MASTER
-                </text>
-            </svg>
-        </div>
+            <!-- Bat branding -->
+            <text x="50" y="200" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold"
+                transform="rotate(90, 50, 200)">
+                CRICKET MASTER
+            </text>
+        </svg>
+    </div>
 
-        <!-- Decorative cricket ball - bottom right -->
-        <div class="ig-decorative-ball ig-ball-bottom-right">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
-                <defs>
-                    <radialGradient id="ball-gradient" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
-                        <stop offset="0%" stopColor="#f43f5e" />
-                        <stop offset="100%" stopColor="#b91c1c" />
-                    </radialGradient>
-                </defs>
-                <circle cx="50" cy="50" r="45" fill="url(#ball-gradient)" />
+    <!-- Decorative cricket ball - bottom right -->
+    <div class="ig-decorative-ball ig-ball-bottom-right">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
+            <defs>
+                <radialGradient id="ball-gradient" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+                    <stop offset="0%" stopColor="#f43f5e" />
+                    <stop offset="100%" stopColor="#b91c1c" />
+                </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" fill="url(#ball-gradient)" />
 
-                <!-- Cricket ball seam -->
-                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+            <!-- Cricket ball seam -->
+            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
 
-                <!-- Highlights -->
-                <circle cx="35" cy="35" r="8" fill="white" fillOpacity="0.2" />
-            </svg>
-        </div>
+            <!-- Highlights -->
+            <circle cx="35" cy="35" r="8" fill="white" fillOpacity="0.2" />
+        </svg>
+    </div>
 
-        <!-- Decorative cricket ball - middle left -->
-        <div class="ig-decorative-ball ig-ball-middle-left">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
-                <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
-            </svg>
-        </div>
+    <!-- Decorative cricket ball - middle left -->
+    <div class="ig-decorative-ball ig-ball-middle-left">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
+            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" />
+        </svg>
+    </div>
 
-        <!-- Decorative cricket bat - middle right -->
-        <div class="ig-decorative-bat ig-bat-middle-right">
-            <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
-                <!-- Bat handle -->
-                <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
+    <!-- Decorative cricket bat - middle right -->
+    <div class="ig-decorative-bat ig-bat-middle-right">
+        <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
+            <!-- Bat handle -->
+            <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
 
-                <!-- Bat shoulder -->
-                <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
-                    fill="#a16207" />
+            <!-- Bat shoulder -->
+            <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z"
+                fill="#a16207" />
 
-                <!-- Bat blade -->
-                <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z" fill="#a16207" />
-            </svg>
-        </div>
+            <!-- Bat blade -->
+            <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z" fill="#a16207" />
+        </svg>
+    </div>
 
-        <!-- Reels Grid -->
-        <div class="ig-reels-grid">
-            <!-- Social Card 1 -->
-            <div class="ig-social-card">
-                <!-- Card Header -->
-                <div class="ig-card-header">
-                    <div class="ig-profile-image">
-                        <a href="https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==" target="_blank">
-                            <img src="img/instalogo.JPG" alt="masterclasscricket profile">
-                        </a>
+    <!-- Reels Grid -->
+    <div class="ig-reels-grid">
+        <!-- Social Card 1 -->
+        <div class="ig-social-card">
+            <!-- Card Header -->
+            <div class="ig-card-header">
+                <div class="ig-profile-image">
+                    <a href="https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==" target="_blank">
+                        <img src="img/instalogo.JPG" alt="masterclasscricket profile">
+                    </a>
+                    
+                </div>
+                <div class="ig-profile-info">
+                    <div class="ig-username">masterclasscricket</div>
+                    <div class="ig-audio-info">Original audio</div>
+                </div>
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
+
+            </div>
+
+            <!-- Card Content -->
+            <div class="ig-card-content">
+                <video id="video1" src="vedios/v1.mp4"   muted  width="110%" height="100%"></video>
+
+
+                <!-- Play button -->
+                <div class="ig-play-button" id="v1" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video1" onclick="toggleAudio(this)" >
+                        <path d="M8 5v14l11-7z" />
                         
-                    </div>
-                    <div class="ig-profile-info">
-                        <div class="ig-username">masterclasscricket</div>
-                        <div class="ig-audio-info">Original audio</div>
-                    </div>
-                    <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+                    </svg>
+                    
                 </div>
 
-                <!-- Card Content -->
-                <div class="ig-card-content">
-                    <video id="video1" src="vedios/v1.mp4"   muted  width="110%" height="100%"></video>
-
-
-                    <!-- Play button -->
-                    <div class="ig-play-button" id="v1" >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video1" onclick="toggleAudio(this)" >
-                            <path d="M8 5v14l11-7z" />
-                            
-                        </svg>
-                        
-                    </div>
-
-                    <!-- Cricket ball in corner -->
-                    <div class="ig-cricket-ball-corner">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-                            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                        </svg>
-                    </div>
-
-                    <!-- Title -->
-                    <!-- <div class="ig-content-title">I CAN'T READ THE LENGTH</div> -->
+                <!-- Cricket ball in corner -->
+                <div class="ig-cricket-ball-corner">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                        <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                    </svg>
                 </div>
 
-                <!-- Card Actions -->
-                <div class="ig-card-actions">
-                    <div class="ig-action-buttons">
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="ig-action-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Card Details -->
-                <div class="ig-card-details">
-                    <div class="ig-likes">
-                        <span class="ig-likes-count">50,707 views</span>
-                    </div>
-                    <!-- <p class="ig-description">
-                        <strong>masterclasscricket</strong> 
-                        Tag a friend who struggles to read length when playing spin? Comment below 👇
-                        .
-                        When facing spin bowling, many batsmen often make the mistake of standing too tall, which can make it difficult for them to judge the length of the ball properly.
-                        .
-                        Our head coach, Uzi, was fortunate to have worked with the legendary Gary Kirsten, who shared an amazing tip with him. Kirsten advised batsmen to look under the ball while batting against spin. This technique helps in picking up the length of the ball early and keeping the head stable.
-                        .
-                       
-                        #CricketWorldCup #CWC19 #CricketFans #CricketLove
-                        #WorldCup2019 #CricketMatch
-                        #CricketHighlight #CricketVideos
-                        #CricketLife #CricketSkills
-                        #CricketPassion #Cricketers
-                       
-                    </p> -->
-                    <p class="ig-view-more">
-                        View more on Instagram
-                    </p>
-                </div>
+                <!-- Title -->
+                <!-- <div class="ig-content-title">I CAN'T READ THE LENGTH</div> -->
             </div>
 
-            <!-- Social Card 2 -->
-            <div class="ig-social-card">
-                <!-- Card Header -->
-                <div class="ig-card-header">
-                    <div class="ig-profile-image">
-                        <img src="img/instalogo.JPG"
-                            alt="masterclasscricket profile">
-                    </div>
-                    <div class="ig-profile-info">
-                        <div class="ig-username">masterclasscricket</div>
-                        <div class="ig-audio-info">Original audio</div>
-                    </div>
-                    <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
-                </div>
-
-                <!-- Card Content -->
-                <div class="ig-card-content">
-                    <video id="video2" src="vedios/v2.mp4"   muted  width="110%" height="100%"></video>
-
-                    <!-- Play button -->
-                    <div class="ig-play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video2" onclick="toggleAudio(this)" >
-                            <path d="M8 5v14l11-7z" />
-                            
-                        </svg>
-                    </div>
-
-                    <!-- Cricket ball in corner -->
-                    <div class="ig-cricket-ball-corner">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-                            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                        </svg>
-                    </div>
-
-                    <!-- Title -->
-                    <!-- <div class="ig-content-title">MASTER THE YORKER</div> -->
-                </div>
-
-                <!-- Card Actions -->
-                <div class="ig-card-actions">
-                    <div class="ig-action-buttons">
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </button>
-                    </div>
+            <!-- Card Actions -->
+            <div class="ig-card-actions">
+                <div class="ig-action-buttons">
                     <button class="ig-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                         </svg>
                     </button>
                 </div>
-
-                <!-- Card Details -->
-                <div class="ig-card-details">
-                    <div class="ig-likes">
-                        <span class="ig-likes-count">25,989 Views</span>
-                    </div>
-                    <!-- <p class="ig-description">
-                        <strong>masterclasscricket</strong> Struggling with the drive and getting nicked off?
-
-                        It’s likely because your front shoulder is rotating too early, sending your bat down the wrong line.
-                        
-                        The fix?
-                        Focus on dipping your front shoulder into the ball, keeping your elbow high, and driving through with the side of your hand.
-                        .
-                        #Cricket #BattingTips #DriveShot #CoverDrive #StraightDrive #BattingTechnique #ViratKohli #CricketCoaching #CricketSkills #CricketTraining #BattingMasterclass                        
-                    </p> -->
-                    <p class="ig-view-more">
-                        View more on Instagram
-                    </p>
-                </div>
+                <button class="ig-action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                </button>
             </div>
 
-            <!-- Social Card 3 -->
-            <div class="ig-social-card">
-                <!-- Card Header -->
-                <div class="ig-card-header">
-                    <div class="ig-profile-image">
-                        <img src="img/instalogo.JPG"
-                            alt="masterclasscricket profile">
-                    </div>
-                    <div class="ig-profile-info">
-                        <div class="ig-username">masterclasscricket</div>
-                        <div class="ig-audio-info">Original audio</div>
-                    </div>
-                    <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+            <!-- Card Details -->
+            <div class="ig-card-details">
+                <div class="ig-likes">
+                    <span class="ig-likes-count">1M views</span>
                 </div>
-
-                <!-- Card Content -->
-                <div class="ig-card-content">
-                    <video id="video3" src="vedios/v3.mp4"   muted  width="110%" height="100%"></video>
-
-                    <!-- Play button -->
-                    <div class="ig-play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video3" onclick="toggleAudio(this)" >
-                            <path d="M8 5v14l11-7z" />
-                            
-                        </svg>
-                    </div>
-
-                    <!-- Cricket ball in corner -->
-                    <div class="ig-cricket-ball-corner">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-                            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                        </svg>
-                    </div>
-
-                    <!-- Title -->
-                    <!-- <div class="ig-content-title">FIELD PLACEMENT</div> -->
-                </div>
-
-                <!-- Card Actions -->
-                <div class="ig-card-actions">
-                    <div class="ig-action-buttons">
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="ig-action-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Card Details -->
-                <div class="ig-card-details">
-                    <div class="ig-likes">
-                        <span class="ig-likes-count">50,445 Views</span>
-                    </div>
-                    <!-- <p class="ig-description">
-                        <strong>masterclasscricket</strong> Read The Caption⬇️⬇️
-                        .
-                        The secret to being a game-changing leg spin bowler lies in the split phase position rather than the release position.
-                        .
-                        Many coaches mistakenly focus on the release position when trying to help spinners improve their ability to spin the ball. However, it is crucial to observe and adjust the wrist position during the split phase in order to enhance alignment and achieve better spin. It’s important to note that not all bowlers need to make these adjustments, as some can still generate spin with a closed wrist.
-                        #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                    </p> -->
-                    <p class="ig-view-more">
-                        View more on Instagram
-                    </p>
-                </div>
-            </div>
-
-            <!-- Social Card 4 -->
-            <div class="ig-social-card">
-                <!-- Card Header -->
-                <div class="ig-card-header">
-                    <div class="ig-profile-image">
-                        <img src="img/instalogo.JPG"
-                            alt="masterclasscricket profile">
-                    </div>
-                    <div class="ig-profile-info">
-                        <div class="ig-username">masterclasscricket</div>
-                        <div class="ig-audio-info">Original audio</div>
-                    </div>
-                    <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
-                </div>
-
-                <!-- Card Content -->
-                <div class="ig-card-content">
-                    <video id="video4" src="vedios/v4.mp4"   muted  width="110%" height="100%"></video>
-
-                    <!-- Play button -->
-                    <div class="ig-play-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video4" onclick="toggleAudio(this)" >
-                            <path d="M8 5v14l11-7z" />
-                            
-                        </svg>
-                    </div>
-
-                    <!-- Cricket ball in corner -->
-                    <div class="ig-cricket-ball-corner">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="45" fill="#f43f5e" />
-                            <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                            <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
-                        </svg>
-                    </div>
-
-                    <!-- Title -->
-                    <!-- <div class="ig-content-title">SWING BOWLING</div> -->
-                </div>
-
-                <!-- Card Actions -->
-                <div class="ig-card-actions">
-                    <div class="ig-action-buttons">
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                        </button>
-                        <button class="ig-action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round"
-                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </button>
-                    </div>
-                    <button class="ig-action-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
-                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Card Details -->
-                <div class="ig-card-details">
-                    <div class="ig-likes">
-                        <span class="ig-likes-count">42,103 Views</span>
-                    </div>
-                    <!-- <p class="ig-description">
-                        <strong>masterclasscricket</strong> Tag a bowler who’s effort ball always goes down the legside?
-                        .
-                        When releasing the ball, it is important to ensure that your wrist remains stable and does not collapse. To address this issue, it is crucial to focus on the cues provided in the video clip. 
-                        #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                    </p> -->
-                    <p class="ig-view-more">
-                        View more on Instagram
-                    </p>
-                </div>
+                <!-- <p class="ig-description">
+                    <strong>masterclasscricket</strong> 
+                    Tag a friend who struggles to read length when playing spin? Comment below 👇
+                    .
+                    When facing spin bowling, many batsmen often make the mistake of standing too tall, which can make it difficult for them to judge the length of the ball properly.
+                    .
+                    Our head coach, Uzi, was fortunate to have worked with the legendary Gary Kirsten, who shared an amazing tip with him. Kirsten advised batsmen to look under the ball while batting against spin. This technique helps in picking up the length of the ball early and keeping the head stable.
+                    .
+                   
+                    #CricketWorldCup #CWC19 #CricketFans #CricketLove
+                    #WorldCup2019 #CricketMatch
+                    #CricketHighlight #CricketVideos
+                    #CricketLife #CricketSkills
+                    #CricketPassion #Cricketers
+                   
+                </p> -->
+                <p class="ig-view-more">
+                    View more on Instagram
+                </p>
             </div>
         </div>
 
-        <!-- Follow Button -->
-        <div class="ig-follow-btn-container">
-            <button class="ig-follow-btn"onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank', 'noopener,noreferrer')">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-                FOLLOW US ON INSTAGRAM
-            </button>
+        <!-- Social Card 2 -->
+        <div class="ig-social-card">
+            <!-- Card Header -->
+            <div class="ig-card-header">
+                <div class="ig-profile-image">
+                    <img src="img/instalogo.JPG"
+                        alt="masterclasscricket profile">
+                </div>
+                <div class="ig-profile-info">
+                    <div class="ig-username">masterclasscricket</div>
+                    <div class="ig-audio-info">Original audio</div>
+                </div>
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
+
+            </div>
+
+            <!-- Card Content -->
+            <div class="ig-card-content">
+                <video id="video2" src="vedios/v2.mp4"   muted  width="110%" height="100%"></video>
+
+                <!-- Play button -->
+                <div class="ig-play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video2" onclick="toggleAudio(this)" >
+                        <path d="M8 5v14l11-7z" />
+                        
+                    </svg>
+                </div>
+
+                <!-- Cricket ball in corner -->
+                <div class="ig-cricket-ball-corner">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                        <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Title -->
+                <!-- <div class="ig-content-title">MASTER THE YORKER</div> -->
+            </div>
+
+            <!-- Card Actions -->
+            <div class="ig-card-actions">
+                <div class="ig-action-buttons">
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="ig-action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Card Details -->
+            <div class="ig-card-details">
+                <div class="ig-likes">
+                    <span class="ig-likes-count">717k Views</span>
+                </div>
+                <!-- <p class="ig-description">
+                    <strong>masterclasscricket</strong> Struggling with the drive and getting nicked off?
+
+                    It’s likely because your front shoulder is rotating too early, sending your bat down the wrong line.
+                    
+                    The fix?
+                    Focus on dipping your front shoulder into the ball, keeping your elbow high, and driving through with the side of your hand.
+                    .
+                    #Cricket #BattingTips #DriveShot #CoverDrive #StraightDrive #BattingTechnique #ViratKohli #CricketCoaching #CricketSkills #CricketTraining #BattingMasterclass                        
+                </p> -->
+                <p class="ig-view-more">
+                    View more on Instagram
+                </p>
+            </div>
         </div>
-    </section>
+
+        <!-- Social Card 3 -->
+        <div class="ig-social-card">
+            <!-- Card Header -->
+            <div class="ig-card-header">
+                <div class="ig-profile-image">
+                    <img src="img/instalogo.JPG"
+                        alt="masterclasscricket profile">
+                </div>
+                <div class="ig-profile-info">
+                    <div class="ig-username">masterclasscricket</div>
+                    <div class="ig-audio-info">Original audio</div>
+                </div>
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
+
+            </div>
+
+            <!-- Card Content -->
+            <div class="ig-card-content">
+                <video id="video3" src="vedios/v3.mp4"   muted  width="110%" height="100%"></video>
+
+                <!-- Play button -->
+                <div class="ig-play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video3" onclick="toggleAudio(this)" >
+                        <path d="M8 5v14l11-7z" />
+                        
+                    </svg>
+                </div>
+
+                <!-- Cricket ball in corner -->
+                <div class="ig-cricket-ball-corner">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                        <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Title -->
+                <!-- <div class="ig-content-title">FIELD PLACEMENT</div> -->
+            </div>
+
+            <!-- Card Actions -->
+            <div class="ig-card-actions">
+                <div class="ig-action-buttons">
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="ig-action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Card Details -->
+            <div class="ig-card-details">
+                <div class="ig-likes">
+                    <span class="ig-likes-count">1M Views</span>
+                </div>
+                <!-- <p class="ig-description">
+                    <strong>masterclasscricket</strong> Read The Caption⬇️⬇️
+                    .
+                    The secret to being a game-changing leg spin bowler lies in the split phase position rather than the release position.
+                    .
+                    Many coaches mistakenly focus on the release position when trying to help spinners improve their ability to spin the ball. However, it is crucial to observe and adjust the wrist position during the split phase in order to enhance alignment and achieve better spin. It’s important to note that not all bowlers need to make these adjustments, as some can still generate spin with a closed wrist.
+                    #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
+                </p> -->
+                <p class="ig-view-more">
+                    View more on Instagram
+                </p>
+            </div>
+        </div>
+
+        <!-- Social Card 4 -->
+        <div class="ig-social-card">
+            <!-- Card Header -->
+            <div class="ig-card-header">
+                <div class="ig-profile-image">
+                    <img src="img/instalogo.JPG"
+                        alt="masterclasscricket profile">
+                </div>
+                <div class="ig-profile-info">
+                    <div class="ig-username">masterclasscricket</div>
+                    <div class="ig-audio-info">Original audio</div>
+                </div>
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
+
+            </div>
+
+            <!-- Card Content -->
+            <div class="ig-card-content">
+                <video id="video4" src="vedios/v4.mp4"   muted  width="110%" height="100%"></video>
+
+                <!-- Play button -->
+                <div class="ig-play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video4" onclick="toggleAudio(this)" >
+                        <path d="M8 5v14l11-7z" />
+                        
+                    </svg>
+                </div>
+
+                <!-- Cricket ball in corner -->
+                <div class="ig-cricket-ball-corner">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                        <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                        <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Title -->
+                <!-- <div class="ig-content-title">SWING BOWLING</div> -->
+            </div>
+
+            <!-- Card Actions -->
+            <div class="ig-card-actions">
+                <div class="ig-action-buttons">
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </button>
+                    <button class="ig-action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="ig-action-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Card Details -->
+            <div class="ig-card-details">
+                <div class="ig-likes">
+                    <span class="ig-likes-count">92.7k Views</span>
+                </div>
+                <!-- <p class="ig-description">
+                    <strong>masterclasscricket</strong> Tag a bowler who’s effort ball always goes down the legside?
+                    .
+                    When releasing the ball, it is important to ensure that your wrist remains stable and does not collapse. To address this issue, it is crucial to focus on the cues provided in the video clip. 
+                    #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
+                </p> -->
+                <p class="ig-view-more">
+                    View more on Instagram
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Follow Button -->
+    <div class="ig-follow-btn-container">
+        <button class="ig-follow-btn"onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank', 'noopener,noreferrer')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            FOLLOW US ON INSTAGRAM
+        </button>
+    </div>
+</section>
 
 
         <!-- coaches -->
@@ -9102,44 +9196,42 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- Contact Form -->
                     <!-- Contact Form -->
                     <div class="contact-us-form-container">
-                        <form class="contact-us-form">
+                        <!-- Contact Form -->
+                        <form id="contact-form" class="contact-us-form" method="POST">
                             <h3 class="contact-us-form-title">Send us a message</h3>
-
+                        
                             <!-- Name Field -->
                             <div class="contact-us-form-group">
                                 <label for="name" class="contact-us-label">Your Name</label>
-                                <input type="text" id="name" class="contact-us-input" placeholder="Enter your name"
-                                    required>
+                                <input type="text" id="name" name="Name" class="contact-us-input" placeholder="Enter your name" required>
                             </div>
-
+                        
                             <!-- Email Field -->
                             <div class="contact-us-form-group">
                                 <label for="email" class="contact-us-label">Email Address</label>
-                                <input type="email" id="email" class="contact-us-input" placeholder="Enter your email"
-                                    required>
+                                <input type="email" id="email" name="Email" class="contact-us-input" placeholder="Enter your email" required>
                             </div>
-
+                        
                             <!-- Subject Field -->
                             <div class="contact-us-form-group">
                                 <label for="subject" class="contact-us-label">Subject</label>
-                                <input type="text" id="subject" class="contact-us-input"
-                                    placeholder="What's this about?">
+                                <input type="text" id="subject" name="Subject" class="contact-us-input" placeholder="What's this about?">
                             </div>
-
+                        
                             <!-- Message Field -->
                             <div class="contact-us-form-group">
                                 <label for="message" class="contact-us-label">Message</label>
-                                <textarea id="message" class="contact-us-textarea"
-                                    placeholder="Write your message here..." required></textarea>
+                                <textarea id="message" name="Message" class="contact-us-textarea" placeholder="Write your message here..." required></textarea>
                             </div>
-
+                        
                             <!-- Submit Button -->
                             <button type="submit" class="contact-us-submit">Send Message</button>
                         </form>
                     </div>
+                   
                 </div>
 
                 <!-- Map Section -->
@@ -9267,11 +9359,14 @@
 
             </script>
 
-        <script>
-            document.getElementById("contact-form").addEventListener("submit", function(event) {
+
+
+       <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
 
         const formData = new FormData(this);
+
         fetch("https://script.google.com/macros/s/AKfycbwE3r5mbEhwhMUOv-beY-m7GwrWMOzvJEjFq2Xv_CCs3Gdky3O1ksJgYmsNOI12avNXfA/exec", {
             method: "POST",
             body: formData
@@ -9283,8 +9378,7 @@
         })
         .catch(error => console.error("Error!", error.message));
     });
-
-        </script>
+</script>
 
         <!-- Footer -->
         <!-- Footer -->
