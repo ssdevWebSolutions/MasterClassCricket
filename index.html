@@ -1,102 +1,408 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Masterclass - Under Maintenance</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #f0f0f0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-        
-        .maintenance-container {
-            max-width: 600px;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #f8c300;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .maintenance-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-        
-        .coming-soon {
-            font-size: 1.5rem;
-            margin: 30px 0;
-            color: #f8c300;
-            font-weight: bold;
-        }
-        
-        .social-links {
-            margin-top: 30px;
-        }
-        
-        .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="maintenance-container">
-        <div class="logo">Cricket Masterclass</div>
-        
-        <div class="maintenance-icon">🏏</div>
-        
-        <h1>Under Maintenance</h1>
-        
-        <p>We're currently updating our website to bring you the best cricket masterclass experience. We'll be back online soon!</p>
-        
-        <div class="coming-soon">Coming Soon</div>
-        
-        <p>We're working hard to improve your experience. Thank you for your patience.</p>
-        
-        <div class="social-links">
-            <a href="#" title="Facebook">📱</a>
-            <a href="#" title="Twitter">📧</a>
-            <a href="#" title="Instagram">💬</a>
+<div id="countdown-overlay">
+    <div class="countdown-container">
+        <div class="cricket-ball">
+            <div class="seam"></div>
+            <div class="seam horizontal"></div>
+            <div class="seam vertical"></div>
+            <div class="highlight"></div>
         </div>
+        <h1 class="countdown-title">MASTERCLASS <span>CRICKET</span></h1>
+        <p class="countdown-subtitle">Website launches In</p>
+        <div id="countdown-timer">
+            <div class="time-segment">
+                <span id="hours">00</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="time-divider">:</div>
+            <div class="time-segment">
+                <span id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-divider">:</div>
+            <div class="time-segment">
+                <span id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+        </div>
+        <!-- <p class="countdown-message">Prepare your <span class="animated-text">gear</span> and get ready for an <span class="animated-text">incredible</span> training session!</p> -->
     </div>
-</body>
-</html>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+    
+    :root {
+        --cricket-red: #9e0b0f;
+        --cricket-gold: #d4af37;
+        --cricket-black: #121212;
+    }
+    
+    #countdown-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--cricket-black) 0%, #2a2a2a 100%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 9999;
+        overflow: hidden;
+    }
+    
+    .countdown-container {
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+        position: relative;
+        animation: fadeIn 1s ease-out;
+    }
+    
+    .countdown-title {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    }
+    
+    .countdown-title span {
+        color: var(--cricket-gold);
+        position: relative;
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: rgba(255,255,255,0.8);
+        font-weight: 500;
+    }
+    
+    #countdown-timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .time-segment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .time-segment span:first-child {
+        font-size: 4rem;
+        font-weight: 700;
+        background: linear-gradient(to bottom, var(--cricket-gold), #b89728);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+        min-width: 100px;
+    }
+    
+    .time-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+        color: rgba(255,255,255,0.7);
+    }
+    
+    .time-divider {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--cricket-red);
+        margin: 0 0.5rem;
+        animation: pulseFade 1s infinite;
+    }
+    
+    .countdown-message {
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.9);
+        margin-top: 2rem;
+        line-height: 1.6;
+    }
+    
+    .animated-text {
+        color: var(--cricket-gold);
+        position: relative;
+        font-weight: 700;
+        display: inline-block;
+        animation: shakeText 2s ease-in-out infinite;
+    }
+    
+    /* Cricket Ball Animation */
+    .cricket-ball {
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at 30% 30%, var(--cricket-red) 70%, #8a0a0d 100%);
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto 2rem;
+        box-shadow: 
+            inset 3px -3px 10px rgba(0,0,0,0.5),
+            0 5px 15px rgba(0,0,0,0.3);
+        animation: floatBall 3s ease-in-out infinite, spinBall 8s linear infinite;
+    }
+    
+    .seam {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px dashed white;
+        opacity: 0.6;
+        animation: spinBall 12s linear infinite reverse;
+    }
+    
+    .seam.horizontal {
+        width: 80px;
+        height: 0;
+        top: 40px;
+        left: 0;
+        border: 1px dashed white;
+    }
+    
+    .seam.vertical {
+        width: 0;
+        height: 80px;
+        top: 0;
+        left: 40px;
+        border: 1px dashed white;
+    }
+    
+    .highlight {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.3);
+        filter: blur(3px);
+    }
+    
+    /* Particle Background Effect */
+    #countdown-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(158, 11, 15, 0.05) 0%, transparent 50%);
+        animation: shimmerBackground 15s ease-in-out infinite alternate;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes pulseFade {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+    
+    @keyframes shakeText {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-2px); }
+        50% { transform: translateX(0); }
+        75% { transform: translateX(2px); }
+        100% { transform: translateX(0); }
+    }
+    
+    @keyframes floatBall {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(180deg); }
+        100% { transform: translateY(0) rotate(360deg); }
+    }
+    
+    @keyframes spinBall {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes shimmerBackground {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 100%; }
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .countdown-title {
+            font-size: 2.2rem;
+        }
+        
+        .countdown-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .time-segment span:first-child {
+            font-size: 3rem;
+            min-width: 70px;
+        }
+        
+        .time-divider {
+            font-size: 3rem;
+        }
+        
+        .cricket-ball {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .seam {
+            width: 52px;
+            height: 52px;
+        }
+        
+        .seam.horizontal {
+            width: 60px;
+            top: 30px;
+        }
+        
+        .seam.vertical {
+            height: 60px;
+            left: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .countdown-title {
+            font-size: 1.8rem;
+        }
+        
+        .time-segment span:first-child {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+        
+        .time-divider {
+            font-size: 2.5rem;
+            margin: 0 0.3rem;
+        }
+        
+        .countdown-message {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    function startCountdown(durationInSeconds) {
+        const overlay = document.getElementById("countdown-overlay");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+        let remainingTime = 11*60;
+
+        function updateTimer() {
+            let hours = Math.floor(remainingTime / 3600);
+            let minutes = Math.floor((remainingTime % 710) / 60);
+            let seconds = remainingTime % 60;
+            
+            // Format with leading zeros
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+            // Update display
+            hoursElement.textContent = hours;
+            minutesElement.textContent = minutes;
+            secondsElement.textContent = seconds;
+            
+            // Change colors as time decreases
+            if (remainingTime < 300) { // Less than 5 minutes
+                document.documentElement.style.setProperty('--cricket-gold', '#ff7700');
+                document.querySelectorAll('.time-segment span:first-child').forEach(el => {
+                    el.style.animation = 'pulse 0.5s infinite';
+                });
+            } else if (remainingTime < 600) { // Less than 10 minutes
+                document.documentElement.style.setProperty('--cricket-gold', '#ffa500');
+            }
+
+            if (remainingTime > 0) {
+                remainingTime--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                // Add a fade-out animation when the countdown ends
+                overlay.style.animation = 'fadeOut 2s forwards';
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                }, 2000);
+            }
+        }
+
+        // Add this animation for the ending
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; visibility: hidden; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Start the timer
+        updateTimer();
+        
+        // Add some motion to the particles in the background for more visual interest
+        setInterval(() => {
+            const particles = document.createElement('div');
+            particles.className = 'cricket-particle';
+            particles.style.cssText = `
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background: ${Math.random() > 0.5 ? 'var(--cricket-gold)' : 'var(--cricket-red)'};
+                border-radius: 50%;
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+                opacity: 0.6;
+                animation: particleFade 3s forwards;
+            `;
+            
+            overlay.appendChild(particles);
+            
+            setTimeout(() => {
+                particles.remove();
+            }, 3000);
+        }, 500);
+    }
+
+    // Add more visual interest with a particle fade animation
+    const particleStyle = document.createElement('style');
+    particleStyle.textContent = `
+        @keyframes particleFade {
+            0% { transform: translate(0, 0); opacity: 0.6; }
+            100% { transform: translate(${Math.random() > 0.5 ? '+' : '-'}50px, ${Math.random() > 0.5 ? '+' : '-'}50px); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(particleStyle);
+
+    // Start the countdown for 1 hour (3600 seconds)
+    document.addEventListener('DOMContentLoaded', function() {
+        startCountdown(3600);
+    });
+</script>
