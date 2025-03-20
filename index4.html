@@ -1,0 +1,400 @@
+<div id="countdown-overlay">
+    <div class="countdown-container">
+        <div class="cricket-ball">
+            <div class="seam"></div>
+            <div class="seam horizontal"></div>
+            <div class="seam vertical"></div>
+            <div class="highlight"></div>
+        </div>
+        <h1 class="countdown-title">MASTERCLASS <span>CRICKET</span></h1>
+        <p class="countdown-subtitle">Website launches In</p>
+        <div id="countdown-timer">
+            <div class="time-segment">
+                <span id="hours">00</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="time-divider">:</div>
+            <div class="time-segment">
+                <span id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-divider">:</div>
+            <div class="time-segment">
+                <span id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+        </div>
+        <!-- <p class="countdown-message">Prepare your <span class="animated-text">gear</span> and get ready for an <span class="animated-text">incredible</span> training session!</p> -->
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+    
+    :root {
+        --cricket-red: #9e0b0f;
+        --cricket-gold: #d4af37;
+        --cricket-black: #121212;
+    }
+    
+    #countdown-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--cricket-black) 0%, #2a2a2a 100%);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 9999;
+        overflow: hidden;
+    }
+    
+    .countdown-container {
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+        position: relative;
+        animation: fadeIn 1s ease-out;
+    }
+    
+    .countdown-title {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    }
+    
+    .countdown-title span {
+        color: var(--cricket-gold);
+        position: relative;
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: rgba(255,255,255,0.8);
+        font-weight: 500;
+    }
+    
+    #countdown-timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .time-segment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .time-segment span:first-child {
+        font-size: 4rem;
+        font-weight: 700;
+        background: linear-gradient(to bottom, var(--cricket-gold), #b89728);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+        min-width: 100px;
+    }
+    
+    .time-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+        color: rgba(255,255,255,0.7);
+    }
+    
+    .time-divider {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--cricket-red);
+        margin: 0 0.5rem;
+        animation: pulseFade 1s infinite;
+    }
+    
+    .countdown-message {
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.9);
+        margin-top: 2rem;
+        line-height: 1.6;
+    }
+    
+    .animated-text {
+        color: var(--cricket-gold);
+        position: relative;
+        font-weight: 700;
+        display: inline-block;
+        animation: shakeText 2s ease-in-out infinite;
+    }
+    
+    /* Cricket Ball Animation */
+    .cricket-ball {
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at 30% 30%, var(--cricket-red) 70%, #8a0a0d 100%);
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto 2rem;
+        box-shadow: 
+            inset 3px -3px 10px rgba(0,0,0,0.5),
+            0 5px 15px rgba(0,0,0,0.3);
+        animation: floatBall 3s ease-in-out infinite, spinBall 8s linear infinite;
+    }
+    
+    .seam {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px dashed white;
+        opacity: 0.6;
+        animation: spinBall 12s linear infinite reverse;
+    }
+    
+    .seam.horizontal {
+        width: 80px;
+        height: 0;
+        top: 40px;
+        left: 0;
+        border: 1px dashed white;
+    }
+    
+    .seam.vertical {
+        width: 0;
+        height: 80px;
+        top: 0;
+        left: 40px;
+        border: 1px dashed white;
+    }
+    
+    .highlight {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.3);
+        filter: blur(3px);
+    }
+    
+    /* Particle Background Effect */
+    #countdown-overlay::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(158, 11, 15, 0.05) 0%, transparent 50%);
+        animation: shimmerBackground 15s ease-in-out infinite alternate;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes pulseFade {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+    
+    @keyframes shakeText {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-2px); }
+        50% { transform: translateX(0); }
+        75% { transform: translateX(2px); }
+        100% { transform: translateX(0); }
+    }
+    
+    @keyframes floatBall {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(180deg); }
+        100% { transform: translateY(0) rotate(360deg); }
+    }
+    
+    @keyframes spinBall {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes shimmerBackground {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 100%; }
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .countdown-title {
+            font-size: 2.2rem;
+        }
+        
+        .countdown-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .time-segment span:first-child {
+            font-size: 3rem;
+            min-width: 70px;
+        }
+        
+        .time-divider {
+            font-size: 3rem;
+        }
+        
+        .cricket-ball {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .seam {
+            width: 52px;
+            height: 52px;
+        }
+        
+        .seam.horizontal {
+            width: 60px;
+            top: 30px;
+        }
+        
+        .seam.vertical {
+            height: 60px;
+            left: 30px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .countdown-title {
+            font-size: 1.8rem;
+        }
+        
+        .time-segment span:first-child {
+            font-size: 2.5rem;
+            min-width: 60px;
+        }
+        
+        .time-divider {
+            font-size: 2.5rem;
+            margin: 0 0.3rem;
+        }
+        
+        .countdown-message {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hide main content initially
+        const mainContent = document.querySelector('body > *:not(#countdown-overlay)');
+        if (mainContent) {
+            Array.from(document.body.children).forEach(child => {
+                if (child.id !== 'countdown-overlay') {
+                    child.style.display = 'none';
+                }
+            });
+        }
+        
+        // Calculate the target time for 6:30 PM GMT
+        const targetTime = new Date();
+        targetTime.setUTCHours(18, 30, 0, 0);  // Set time to 6:30 PM GMT
+
+        // Get the current UTC time
+        const currentTime = new Date();
+
+        // Calculate the time difference in seconds
+        const remainingTimeInSeconds = Math.floor((targetTime - currentTime) / 1000);
+
+        if (remainingTimeInSeconds > 0) {
+            // Start the countdown
+            startCountdown(remainingTimeInSeconds);
+        } else {
+            // If the target time has already passed, display an alert or handle accordingly
+            alert("The target time (6:30 PM GMT) has already passed.");
+        }
+    });
+
+    function startCountdown(durationInSeconds) {
+        const overlay = document.getElementById("countdown-overlay");
+        const hoursElement = document.getElementById("hours");
+        const minutesElement = document.getElementById("minutes");
+        const secondsElement = document.getElementById("seconds");
+        let remainingTime = durationInSeconds;
+
+        function updateTimer() {
+            let hours = Math.floor(remainingTime / 3600); // Calculate hours
+            let minutes = Math.floor((remainingTime % 3600) / 60); // Calculate minutes
+            let seconds = remainingTime % 60; // Calculate seconds
+
+            // Format with leading zeros for single digits
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+            // Update display
+            hoursElement.textContent = hours;
+            minutesElement.textContent = minutes;
+            secondsElement.textContent = seconds;
+            
+            if (remainingTime > 0) {
+                remainingTime--;
+                setTimeout(updateTimer, 1000); // Update every second
+            } else {
+                // When countdown is complete:
+                // 1. Hide overlay with animation
+                overlay.style.animation = 'fadeOut 1s forwards';
+                
+                // 2. Remove overlay completely after animation
+                setTimeout(() => {
+                    overlay.style.display = "none";
+                    
+                    // 3. Show all main content
+                    Array.from(document.body.children).forEach(child => {
+                        if (child.id !== 'countdown-overlay') {
+                            child.style.display = '';
+                        }
+                    });
+                }, 1000);
+            }
+        }
+
+        // Start the timer
+        updateTimer();
+        
+        // Add fadeOut animation (for overlay)
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; visibility: hidden; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+</script>

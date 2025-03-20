@@ -375,20 +375,477 @@
                 font-size: 14px;
             }
         }
+/* Header & Hero Section */
+.headerHero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--headerHero-dark-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Header & Hero Section */
-        .headerHero-section {
-            position: relative;
-            min-height: 100vh;
-            width: 100%;
-            background-color: var(--headerHero-dark-color);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
+/* Navigation Bar */
+.headerHero-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
-        /* Modified Team Image Style */
-        .headerHero-team-image-container {
+.headerHero-navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerHero-navbar-logo {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.headerHero-logo-image {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.headerHero-logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headerHero-primary-color);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.headerHero-navbar-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.headerHero-nav-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.headerHero-nav-link {
+    color: var(--headerHero-secondary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: var(--headerHero-transition);
+    padding: 5px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.headerHero-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--headerHero-primary-color);
+    transition: width 0.3s ease;
+}
+
+.animated-skill {
+    color: #eab308;
+    font-weight: bold;
+    display: inline-block;
+    animation: fadeInBounce 1.5s ease-in-out infinite alternate;
+    animation-delay: 0s;
+    /* Starts immediately */
+}
+
+.animated-drill {
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    animation: fadeInBounce 1.5s ease-in-out infinite alternate;
+    animation-delay: 1s;
+    /* Delayed by 1 second */
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.headerHero-nav-link:hover,
+.headerHero-nav-link.active {
+    color: var(--headerHero-primary-color);
+}
+
+.headerHero-nav-link:hover::after,
+.headerHero-nav-link.active::after {
+    width: 100%;
+}
+
+.headerHero-book-now-btn {
+    display: inline-block;
+    background-color: var(--headerHero-primary-color);
+    color: var(--headerHero-dark-color);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headerHero-book-now-btn:hover {
+    background-color: var(--headerHero-secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.headerHero-navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.headerHero-navbar-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--headerHero-secondary-color);
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Content */
+.headerHero-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+}
+
+.headerHero-content {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.headerHero-text-content {
+    max-width: 700px;
+    position: relative;
+}
+
+.headerHero-title {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerHero-title-container {
+    perspective: 1000px;
+    display: inline-block;
+    position: relative;
+}
+
+.headerHero-title-top {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--headerHero-primary-color);
+    margin-bottom: 35px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 0.2s;
+
+    /* Enhanced 3D Text Effect */
+    text-shadow: 3px 3px 0px rgb(255, 215, 0),
+        6px 6px 0px rgb(51, 51, 51);
+    background: linear-gradient(45deg, var(--headerHero-primary-color), rgb(62, 62, 61));
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+}
+
+.headerHero-title-main {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--headerHero-secondary-color);
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 0.4s;
+}
+
+.headerHero-title-bottom {
+    font-size: 1.5rem;
+    color: var(--headerHero-primary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 0.6s;
+}
+
+.headerHero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 0.8s;
+}
+
+.headerHero-cta-buttons {
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 1s;
+}
+
+.headerHero-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 14px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--headerHero-transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.headerHero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.headerHero-primary-btn {
+    background-color: var(--headerHero-primary-color);
+    color: var(--headerHero-dark-color);
+}
+
+.headerHero-primary-btn::before {
+    background-color: var(--headerHero-secondary-color);
+}
+
+.headerHero-secondary-btn {
+    background-color: transparent;
+    color: var(--headerHero-secondary-color);
+    border: 2px solid var(--headerHero-primary-color);
+}
+
+.headerHero-secondary-btn::before {
+    background-color: var(--headerHero-primary-color);
+}
+
+.headerHero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.headerHero-btn:hover::before {
+    width: 100%;
+}
+
+.headerHero-secondary-btn:hover {
+    color: var(--headerHero-dark-color);
+}
+
+.headerHero-btn-icon {
+    margin-left: 10px;
+    transition: var(--headerHero-transition);
+}
+
+.headerHero-btn:hover .headerHero-btn-icon {
+    transform: translateX(5px);
+}
+
+/* Achievement Badges */
+.headerHero-achievement-badges {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
+}
+
+.headerHero-achievement-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    transition: var(--headerHero-transition);
+    backdrop-filter: blur(5px);
+}
+
+.headerHero-achievement-badge:hover {
+    transform: translateY(-5px);
+    border-color: var(--headerHero-primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.headerHero-badge-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--headerHero-primary-color);
+}
+
+.headerHero-badge-text {
+    font-size: 0.9rem;
+    color: var(--headerHero-secondary-color);
+    margin-top: 5px;
+}
+
+/* Hero Patterns and Gradients */
+.headerHero-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.headerHero-gradient {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.headerHero-gradient-1 {
+    top: -10%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    animation: headerHeroPulseGradient 10s infinite alternate;
+}
+
+.headerHero-gradient-2 {
+    bottom: -20%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    animation: headerHeroPulseGradient 8s infinite alternate-reverse;
+}
+
+/* 3D Text Hover Animation */
+@keyframes headerHero3DRotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateX(2deg) rotateY(2deg);
+    }
+
+    50% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    75% {
+        transform: rotateX(-2deg) rotateY(-2deg);
+    }
+
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+.headerHero-title-top:hover {
+    animation: headerHero3DRotate 2s infinite;
+}
+
+@keyframes headerHeroPulseGradient {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes headerHeroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modified Team Image Style with updated responsive behavior */
+.headerHero-team-image-container {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -401,12 +858,10 @@
     right: 5%;
     width: 35%;
     height: 100%;
-    /* Make the iframe fill the container */
     background-size: cover;
     background-position: center;
-   
     overflow: hidden;
-    z-index: 1; /* Ensures the video stays below the overlay */
+    z-index: 1;
 }
 
 /* Embed iframe to cover the container */
@@ -427,756 +882,288 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(135deg,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0.85) 50%,
-        rgba(212, 175, 55, 0.2) 100%); */
-    z-index: 1; /* Make sure overlay is above the video */
+    z-index: 1;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .headerHero-team-image {
-        right: -15%;
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .headerHero-title-top {
+        font-size: 3.5rem;
+        text-shadow: 3px 3px 0px rgb(255, 215, 0),
+            6px 6px 0px rgba(244, 239, 239, 0.5);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .headerHero-title-main {
+        font-size: 3.5rem;
+    }
+
+    .headerHero-title-bottom {
+        font-size: 3rem;
+    }
+
+    .headerHero-achievement-badges {
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .headerHero-team-image-container {
-        height: 80vh;
+@media (max-width: 992px) {
+    .headerHero-navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 100px 40px 40px;
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgb(255, 215, 0);
+        overflow-y: auto;
     }
 
-    .headerHero-team-image {
-        right: -5%;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .headerHero-team-image-container {
-        height: 70vh;
-    }
-
-    .headerHero-team-image {
+    .headerHero-navbar-menu.active {
         right: 0;
-        background-position: 60% center;
+    }
+
+    .headerHero-nav-item {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .headerHero-nav-link {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .headerHero-nav-cta {
+        margin-top: 25px;
+    }
+
+    .headerHero-book-now-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .headerHero-navbar-toggle {
+        display: flex;
+    }
+
+    .headerHero-navbar-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--headerHero-primary-color);
+    }
+
+    .headerHero-navbar-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .headerHero-navbar-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--headerHero-primary-color);
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .headerHero-title-top {
+        text-shadow: 3px 3px 0px rgb(255, 215, 0),
+            6px 6px 0px rgb(255, 215, 0, 0.1);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+    }
+
+    .headerHero-title-main {
+        font-size: 3rem;
+    }
+
+    .headerHero-title-bottom {
+        font-size: 2.5rem;
     }
 }
 
-        /* Navigation Bar */
-        .headerHero-navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 0;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(8px);
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .headerHero-navbar-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .headerHero-navbar-logo {
-            display: flex;
-            align-items: center;
-            z-index: 1001;
-        }
-
-        .headerHero-logo-image {
-            height: 50px;
-            width: auto;
-            margin-right: 15px;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-        }
-
-        .headerHero-logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--headerHero-primary-color);
-            letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .headerHero-navbar-menu {
-            display: flex;
-            list-style: none;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .headerHero-nav-item {
-            margin: 0 15px;
-            position: relative;
-        }
-
-        .headerHero-nav-link {
-            color: var(--headerHero-secondary-color);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: var(--headerHero-transition);
-            padding: 5px 0;
-            position: relative;
-            display: inline-block;
-        }
-
-        .headerHero-nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--headerHero-primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .animated-skill {
-            color: #eab308;
-            font-weight: bold;
-            display: inline-block;
-            animation: fadeInBounce 1.5s ease-in-out infinite alternate;
-            animation-delay: 0s;
-            /* Starts immediately */
-        }
-
-
-        .animated-drill {
-            color: #fff;
-            font-weight: bold;
-            display: inline-block;
-            animation: fadeInBounce 1.5s ease-in-out infinite alternate;
-            animation-delay: 1s;
-            /* Delayed by 1 second */
-        }
-
-        @keyframes fadeInBounce {
-            0% {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            50% {
-                opacity: 1;
-                transform: translateY(5px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-
-        .headerHero-nav-link:hover,
-        .headerHero-nav-link.active {
-            color: var(--headerHero-primary-color);
-        }
-
-        .headerHero-nav-link:hover::after,
-        .headerHero-nav-link.active::after {
-            width: 100%;
-        }
-
-        .headerHero-book-now-btn {
-            display: inline-block;
-            background-color: var(--headerHero-primary-color);
-            color: var(--headerHero-dark-color);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .headerHero-book-now-btn:hover {
-            background-color: var(--headerHero-secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-        }
-
-        .headerHero-navbar-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .headerHero-navbar-toggle span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: var(--headerHero-secondary-color);
-            margin: 3px 0;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        /* Hero Content */
-        .headerHero-content-wrapper {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-            margin-top: 120px;
-        }
-
-        .headerHero-content {
-            margin-top: 5vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            margin-bottom: 50px;
-        }
-
-        .headerHero-text-content {
-            max-width: 700px;
-            position: relative;
-        }
-
-        .headerHero-title {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 30px;
-            line-height: 1.2;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .headerHero-title-container {
-            perspective: 1000px;
-            display: inline-block;
-            position: relative;
-        }
-
-
-        .headerHero-title-top {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--headerHero-primary-color);
-            margin-bottom: 35px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 0.2s;
-
-            /* Enhanced 3D Text Effect */
-            text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                6px 6px 0px rgb(51, 51, 51);
-            background: linear-gradient(45deg, var(--headerHero-primary-color), rgb(62, 62, 61));
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 2px;
-
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            position: relative;
-        }
-
-        .headerHero-title-main {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--headerHero-secondary-color);
-            margin-bottom: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 0.4s;
-        }
-
-        .headerHero-title-bottom {
-            font-size: 1.5rem;
-            color: var(--headerHero-primary-color);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 0.6s;
-        }
-
-        .headerHero-description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-            max-width: 600px;
-            line-height: 1.6;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 0.8s;
-        }
-
-        .headerHero-cta-buttons {
-            display: flex;
-            gap: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 1s;
-        }
-
-        .headerHero-btn {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            border-radius: 50px;
-            padding: 14px 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--headerHero-transition);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .headerHero-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            transition: width 0.4s ease;
-            z-index: -1;
-            border-radius: 50px;
-        }
-
-        .headerHero-primary-btn {
-            background-color: var(--headerHero-primary-color);
-            color: var(--headerHero-dark-color);
-        }
-
-        .headerHero-primary-btn::before {
-            background-color: var(--headerHero-secondary-color);
-        }
-
-        .headerHero-secondary-btn {
-            background-color: transparent;
-            color: var(--headerHero-secondary-color);
-            border: 2px solid var(--headerHero-primary-color);
-        }
-
-        .headerHero-secondary-btn::before {
-            background-color: var(--headerHero-primary-color);
-        }
-
-        .headerHero-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .headerHero-btn:hover::before {
-            width: 100%;
-        }
-
-        .headerHero-secondary-btn:hover {
-            color: var(--headerHero-dark-color);
-        }
-
-        .headerHero-btn-icon {
-            margin-left: 10px;
-            transition: var(--headerHero-transition);
-        }
-
-        .headerHero-btn:hover .headerHero-btn-icon {
-            transform: translateX(5px);
-        }
-
-        /* Achievement Badges */
-        .headerHero-achievement-badges {
-            display: flex;
-            justify-content: flex-start;
-            gap: 30px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: headerHeroFadeInUp 0.8s ease forwards 1.2s;
-        }
-
-        .headerHero-achievement-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 15px 25px;
-            background-color: rgba(26, 26, 26, 0.7);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            transition: var(--headerHero-transition);
-            backdrop-filter: blur(5px);
-        }
-
-        .headerHero-achievement-badge:hover {
-            transform: translateY(-5px);
-            border-color: var(--headerHero-primary-color);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .headerHero-badge-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--headerHero-primary-color);
-        }
-
-        .headerHero-badge-text {
-            font-size: 0.9rem;
-            color: var(--headerHero-secondary-color);
-            margin-top: 5px;
-        }
-
-        /* Hero Patterns and Gradients */
-        .headerHero-pattern-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
-            z-index: 1;
-        }
-
-        .headerHero-gradient {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: 0;
-        }
-
-        .headerHero-gradient-1 {
-            top: -10%;
-            right: -10%;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-            animation: headerHeroPulseGradient 10s infinite alternate;
-        }
-
-        .headerHero-gradient-2 {
-            bottom: -20%;
-            left: -10%;
-            width: 50%;
-            height: 50%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            animation: headerHeroPulseGradient 8s infinite alternate-reverse;
-        }
-
-        /* 3D Text Hover Animation */
-        @keyframes headerHero3DRotate {
-            0% {
-                transform: rotateX(0deg) rotateY(0deg);
-            }
-
-            25% {
-                transform: rotateX(2deg) rotateY(2deg);
-            }
-
-            50% {
-                transform: rotateX(0deg) rotateY(0deg);
-            }
-
-            75% {
-                transform: rotateX(-2deg) rotateY(-2deg);
-            }
-
-            100% {
-                transform: rotateX(0deg) rotateY(0deg);
-            }
-        }
-
-        .headerHero-title-top:hover {
-            animation: headerHero3DRotate 2s infinite;
-        }
-
-        @keyframes headerHeroPulseGradient {
-            0% {
-                opacity: 0.6;
-                transform: scale(1);
-            }
-
-            100% {
-                opacity: 0.8;
-                transform: scale(1.2);
-            }
-        }
-
-        @keyframes headerHeroFadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1200px) {
-            .headerHero-title-top {
-                font-size: 3.5rem;
-                /* Enhanced 3D Text Effect */
-                text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                    6px 6px 0px rgba(244, 239, 239, 0.5);
-                /* background: linear-gradient(45deg, var(--headerHero-primary-color), #ffd700);  */
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            .headerHero-title-main {
-                font-size: 3.5rem;
-            }
-
-            .headerHero-title-bottom {
-                font-size: 3rem;
-            }
-
-            .headerHero-achievement-badges {
-                flex-wrap: wrap;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .headerHero-navbar-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                flex-direction: column;
-                width: 80%;
-                max-width: 350px;
-                height: 100vh;
-                background-color: rgba(0, 0, 0, 0.95);
-                padding: 100px 40px 40px;
-                transition: right 0.4s ease-in-out;
-                z-index: 999;
-                box-shadow: -5px 0 15px rgb(255, 215, 0);
-                overflow-y: auto;
-            }
-
-            .headerHero-navbar-menu.active {
-                right: 0;
-            }
-
-            .headerHero-nav-item {
-                margin: 15px 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .headerHero-nav-link {
-                display: block;
-                padding: 10px 0;
-                font-size: 1.1rem;
-            }
-
-            .headerHero-nav-cta {
-                margin-top: 25px;
-            }
-
-            .headerHero-book-now-btn {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            .headerHero-navbar-toggle {
-                display: flex;
-            }
-
-            .headerHero-navbar-toggle.active span:nth-child(1) {
-                transform: translateY(9px) rotate(45deg);
-                background-color: var(--headerHero-primary-color);
-            }
-
-            .headerHero-navbar-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .headerHero-navbar-toggle.active span:nth-child(3) {
-                transform: translateY(-9px) rotate(-45deg);
-                background-color: var(--headerHero-primary-color);
-            }
-
-            /* Add body class when menu is active */
-            body.menu-open {
-                overflow: hidden;
-            }
-
-            .headerHero-title-top {
-                /* Enhanced 3D Text Effect */
-                text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                    6px 6px 0px rgb(255, 215, 0, 0.1);
-                /* background: linear-gradient(45deg, var(--headerHero-primary-color), #ffd700);  */
-                font-family: 'Montserrat', sans-serif;
-                font-size: 3rem;
-            }
-
-            .headerHero-title-main {
-                font-size: 3rem;
-            }
-
-            .headerHero-title-bottom {
-                font-size: 2.5rem;
-            }
-        }
-
-
-        @media (max-width: 768px) {
-
-            .headerHero-navbar {
-                position: fixed;
-                /* border: 1px solid red; */
-                top: 0;
-                left: 0;
-                width: 100%;
-                padding: 15px 0;
-                z-index: 1000;
-                background-color: rgba(0, 0, 0, 0.8);
-                backdrop-filter: blur(8px);
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            }
-
-
-            .headerHero-navbar-container {
-                padding: 0 15px;
-            }
-
-            .headerHero-logo-image {
-                height: 40px;
-            }
-
-            .headerHero-logo-text {
-                font-size: 1.2rem;
-            }
-
-            .headerHero-content-wrapper {
-                margin-top: 100px;
-                padding: 0 15px;
-            }
-
-            .headerHero-title-top {
-                font-size: 2.5rem;
-                text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                    6px 6px 0px rgb(255, 215, 0, 0.1);
-                letter-spacing: 1px;
-            }
-
-            .headerHero-title-main {
-                font-size: 2.5rem;
-            }
-
-            .headerHero-title-bottom {
-                font-size: 2rem;
-            }
-
-            .headerHero-description {
-                font-size: 1rem;
-            }
-
-            .headerHero-cta-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .headerHero-btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .headerHero-achievement-badge {
-                padding: 10px 20px;
-            }
-
-            .headerHero-badge-number {
-                font-size: 1.8rem;
-            }
-
-            .headerHero-badge-text {
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .headerHero-title-top {
-                text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                    6px 6px 0px rgb(255, 215, 0, 0.1);
-                font-size: 2rem;
-            }
-
-            .headerHero-title-main {
-                font-size: 1.8rem;
-            }
-
-            .headerHero-title-bottom {
-                font-size: 1.5rem;
-            }
-
-            .headerHero-achievement-badge {
-                width: 100%;
-            }
-
-            .headerHero-achievement-badges {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 450px) {
-            .headerHero-title-top {
-                font-size: 1.8rem;
-                text-shadow: 3px 3px 0px rgb(255, 215, 0),
-                    6px 6px 0px rgb(255, 215, 0, 0.1);
-            }
-
-            .headerHero-title-main {
-                font-size: 1.5rem;
-            }
-
-            .headerHero-title-bottom {
-                font-size: 1.3rem;
-            }
-
-            .headerHero-description {
-                font-size: 0.9rem;
-                margin-bottom: 30px;
-            }
-
-            .headerHero-btn {
-                padding: 12px 24px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 320px) {
-
-            .headerHero-navbar {
-                position: fixed;
-                /* border: 1px solid red; */
-                top: 0;
-                left: 0;
-                width: 85%;
-                padding: 15px 0;
-                z-index: 1000;
-                background-color: rgba(0, 0, 0, 0.8);
-                backdrop-filter: blur(8px);
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            }
-
-
-        }
+@media (max-width: 768px) {
+    /* Reorganize section layout for mobile */
+    .headerHero-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Adjust navbar for mobile */
+    .headerHero-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .headerHero-navbar-container {
+        padding: 0 15px;
+    }
+
+    .headerHero-logo-image {
+        height: 40px;
+    }
+
+    .headerHero-logo-text {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust content wrapper for mobile */
+    .headerHero-content-wrapper {
+        margin-top: 80px;
+        padding: 0 15px;
+        order: 1; /* Place content first */
+    }
+
+    .headerHero-title-top {
+        font-size: 2.5rem;
+        text-shadow: 3px 3px 0px rgb(255, 215, 0),
+            6px 6px 0px rgb(255, 215, 0, 0.1);
+        letter-spacing: 1px;
+    }
+
+    .headerHero-title-main {
+        font-size: 2.5rem;
+    }
+
+    .headerHero-title-bottom {
+        font-size: 2rem;
+    }
+
+    .headerHero-description {
+        font-size: 1rem;
+    }
+
+    /* Stack buttons vertically on mobile */
+    .headerHero-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .headerHero-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Adjust achievement badges for mobile */
+    .headerHero-achievement-badge {
+        padding: 10px 20px;
+    }
+
+    .headerHero-badge-number {
+        font-size: 1.8rem;
+    }
+
+    .headerHero-badge-text {
+        font-size: 0.8rem;
+    }
+
+    /* Move YouTube video below content on mobile */
+    .headerHero-team-image-container {
+        position: relative;
+        height: 300px;
+        margin-top: 20px;
+        order: 2; /* Place video second */
+    }
+    
+    .headerHero-team-image {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        right: auto;
+        margin: 0 auto;
+    }
+    
+    /* Change subscribe button text on mobile */
+    .headerHero-btn.headerHero-secondary-btn .headerHero-btn-text {
+        content: "Newsletter Subscribe";
+    }
+}
+
+@media (max-width: 576px) {
+    .headerHero-title-top {
+        text-shadow: 3px 3px 0px rgb(255, 215, 0),
+            6px 6px 0px rgb(255, 215, 0, 0.1);
+        font-size: 2rem;
+    }
+
+    .headerHero-title-main {
+        font-size: 1.8rem;
+    }
+
+    .headerHero-title-bottom {
+        font-size: 1.5rem;
+    }
+
+    .headerHero-achievement-badge {
+        width: 100%;
+    }
+
+    .headerHero-achievement-badges {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .headerHero-team-image-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerHero-team-image-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 450px) {
+    .headerHero-title-top {
+        font-size: 1.8rem;
+        text-shadow: 3px 3px 0px rgb(255, 215, 0),
+            6px 6px 0px rgb(255, 215, 0, 0.1);
+    }
+
+    .headerHero-title-main {
+        font-size: 1.5rem;
+    }
+
+    .headerHero-title-bottom {
+        font-size: 1.3rem;
+    }
+
+    .headerHero-description {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .headerHero-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .headerHero-navbar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .headerHero-team-image-container {
+        height: 200px;
+    }
+}
 
         /* academy css */
 
@@ -3922,7 +3909,7 @@
         .partner-card {
             width: 200px;
             height: 150px;
-            background: rgb(253, 250, 250);
+            background: #D4AF37;
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 10px;
             display: flex;
@@ -6723,7 +6710,7 @@
             margin-bottom: 20px;
         }
 
-        .letter-text p:first-child::first-letter {
+        /* .letter-text p:first-child::first-letter {
             font-size: 3.5rem;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -6731,7 +6718,7 @@
             line-height: 1;
             padding-right: 10px;
             color: #eab308;
-        }
+        } */
 
         .letter-text strong {
             color: #ffffff;
@@ -7072,101 +7059,54 @@
                 text-align: center !important;
             }
         }
+
+        .subscribe-container {
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        border: 2px solid #d4ae36;
+        border-radius: 50px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+    }
+
+    .subscribe-container input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    .subscribe-container button {
+        background: #d4ae36;
+        border: none;
+        color: black;
+        padding: 12px 18px;
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        border-radius: 0 50px 50px 0;
+    }
+
+    .subscribe-container button i {
+        margin-left: 8px;
+    }
     </style>
 </head>
 
 <body>
 
     <div>
-        <!-- Top Header -->
-        <!-- <div class="top-header py-2  text-black" style="background-color: #ffa800;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center gap-3">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-envelope me-2 text-primary"></i>
-                            <span>info@Cricket-league.com</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-phone me-2 text-primary"></i>
-                            <span>+18(461)236 98</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-md-end gap-3">
-                        <div class="social-icons">
-                            <a href="#" class="text-black me-2" ><i class="fab fa-facebook-f" ></i></a>
-                            <a href="#" class="text-black me-2"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-black me-2"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-black"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
+       
 
 
 
-        <!-- Main Navigation -->
-        <!-- <header class="py-3 sticky-top " style="background-color: black;" id="navbarHeader">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="img/logo_.ico" alt="Logo" class="me-2 logo" style="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(243, 237, 237);">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(243, 237, 237);">About Club</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(243, 237, 237);">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(243, 237, 237);">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: rgb(243, 237, 237);">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                           <button class="form-control btn btn-warning" style="color: rgb(243, 237, 237);margin-left: 50%;"><a class="nav-link" href="#" style="color: rgb(4, 4, 4);">Book Now</a></button> 
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header> -->
 
-
-
-        <!-- Hero Section -->
-        <!-- <div class="hero" style="position: relative;">
-      
-        <div class="background-container">
-            <div class="background-text">Masterclass Cricket Academy</div>
-            <div class="background-text">Masterclass Cricket Academy</div>
-        </div>
-
-        <h1 class="institute-name">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂
-            𝙲𝚁𝙸𝙲𝙺𝙴𝚃</h1>
-        <p class="moto">FOR EVERY SKILL, WE'VE GOT THE DRILL</p>
-        <div class="buttons-container">
-            <button id="get-started" class="button">Get Started</button>
-            <button id="easter-camp" class="button">Easter Camp Registration</button>
-        </div>
-
-        
-        <img src="img/whitetheme Background.webp" alt="Cricket Image" class="right-image">
-    </div> -->
+   
 
         <!-- Loading Screen -->
         <div class="loading-screen" id="loadingScreen">
@@ -7215,218 +7155,149 @@
 
 
 
-        <!-- Premium Cricket Hero Section with Modified Image -->
-        <header class="headerHero-section">
-            <!-- Navigation Bar -->
-            <nav class="headerHero-navbar">
-                <div class="headerHero-navbar-container">
-                    <div class="headerHero-navbar-logo">
-                        <a href="#Hero"><img src="img/logo_.ico" alt="Masterclass Cricket Logo"
-                                class="headerHero-logo-image"></a>
-                        <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
-                    </div>
-
-                    <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-
-                    <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
-                        <li class="headerHero-nav-item"><a href="#Hero" class="headerHero-nav-link active">Home</a></li>
-
-                        <li class="headerHero-nav-item"><a href="#About" class="headerHero-nav-link">About</a></li>
-                        <li class="headerHero-nav-item"><a href="#Founder" class="headerHero-nav-link">Coach</a></li>
-                        <!-- <li class="headerHero-nav-item"><a href="#Gallery" class="headerHero-nav-link">MatchMoments</a></li> -->
-                        <!-- <li class="headerHero-nav-item"><a href="#Events&Updates" class="headerHero-nav-link">Programs</a></li> -->
-                        <li class="headerHero-nav-item"><a href="#Testimonials"
-                                class="headerHero-nav-link">Testimonials</a></li>
-                        <li class="headerHero-nav-item"><a href="#Contact" class="headerHero-nav-link">Contact</a></li>
-
-                        <li class="headerHero-nav-item headerHero-nav-cta"><a href="#"
-                                class="headerHero-book-now-btn">Book Now</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <!-- Hero Content Section -->
-            <div class="headerHero-content-wrapper" id="Hero">
-                <div class="headerHero-content">
-                    <div class="headerHero-text-content">
-                        <h1 class="headerHero-title">
-                            <div class="headerHero-title-container">
-                                <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
-                            </div>
-                            <span class="headerHero-title-main">FOR EVERY <span
-                                    class="animated-skill">"𝐒𝐊𝐈𝐋𝐋",</span>,</span>
-                            <span class="headerHero-title-bottom">WE'VE GOT THE <span class="animated-drill">
-                                    "𝐃𝐑𝐈𝐋𝐋"</span></span>
-                        </h1>
-
-                        <p class="headerHero-description">
-                            Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
-                            across all areas of the
-                            game. We work with players at every level, from beginners to international cricketers,
-                            empowering them to reach
-                            their full potential and excel on the field.
-                        </p>
-
-                        <div class="headerHero-cta-buttons">
-                            <a href="https://masterclass-cricket.classforkids.io"
-                                class="headerHero-btn headerHero-primary-btn">
-                                <span class="headerHero-btn-text">Easter Camp Registration</span>
-                                <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
-                            </a>
-                            <a href="
-                            https://youtube.com/@masterclasscricketcoaching.?si=Ovy--9xFpdpV6dlu
-                            " class="headerHero-btn headerHero-secondary-btn">
-                                <span class="headerHero-btn-text">Subscribe</span>
-                                <span class="headerHero-btn-icon"><i class="fas fa-play"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="headerHero-achievement-badges">
-                    <div class="headerHero-achievement-badge">
-                        <span class="headerHero-badge-number">20+</span>
-                        <span class="headerHero-badge-text">Years Experience</span>
-                    </div>
-                    <div class="headerHero-achievement-badge">
-                        <span class="headerHero-badge-number">750+</span>
-                        <span class="headerHero-badge-text">Members </span>
-                    </div>
-                    <div class="headerHero-achievement-badge">
-                        <span class="headerHero-badge-number">100k+</span>
-                        <span class="headerHero-badge-text">Followers on Social Media</span>
-                    </div>
-                    <div class="headerHero-achievement-badge">
-                        <span class="headerHero-badge-number">10M+</span>
-                        <span class="headerHero-badge-text">Views</span>
-                    </div>
-                </div>
+      <!-- Premium Cricket Hero Section with Modified Image -->
+<header class="headerHero-section">
+    <!-- Navigation Bar -->
+    <nav class="headerHero-navbar">
+        <div class="headerHero-navbar-container">
+            <div class="headerHero-navbar-logo">
+                <a href="Testing.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo" class="headerHero-logo-image"></a>
+                <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
             </div>
 
-            <!-- Modified Team Image -->
-            <div class="headerHero-team-image-container">
-                <div class="headerHero-team-image" id="headerHeroTeamImage">
-                    <iframe id="youtube-video" 
-                            src="https://www.youtube.com/embed/kTaTjtVWVyE" 
-                            frameborder="0" 
-                            allow="encrypted-media" 
-                            allowfullscreen>
-                    </iframe>
+            <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
+                <li class="headerHero-nav-item"><a href="Testing.html" class="headerHero-nav-link active">Home</a></li>
+                <li class="headerHero-nav-item"><a href="About.html" class="headerHero-nav-link">About</a></li>
+                <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Coach</a></li>
+                <li class="headerHero-nav-item"><a href="Testimonials.html" class="headerHero-nav-link">Testimonials</a></li>
+                <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact</a></li>
+                <li class="headerHero-nav-item headerHero-nav-cta">
+                    <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
+                </li>
+                            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Content Section -->
+    <div class="headerHero-content-wrapper" id="Hero">
+        <div class="headerHero-content">
+            <div class="headerHero-text-content">
+                <h1 class="headerHero-title">
+                    <div class="headerHero-title-container">
+                        <span class="headerHero-title-top">𝙼𝙰𝚂𝚃𝙴𝚁𝙲𝙻𝙰𝚂𝚂 𝙲𝚁𝙸𝙲𝙺𝙴𝚃</span>
+                    </div>
+                    <span class="headerHero-title-main">FOR EVERY <span class="animated-skill">"𝐒𝐊𝐈𝐋𝐋",</span>,</span>
+                    <span class="headerHero-title-bottom">WE'VE GOT THE <span class="animated-drill">"𝐃𝐑𝐈𝐋𝐋"</span></span>
+                </h1>
+
+                <p class="headerHero-description">
+                    Masterclass Cricket is known for professional cricket coaching backed by expert knowledge
+                    across all areas of the game. We work with players at every level, from beginners to international cricketers,
+                    empowering them to reach their full potential and excel on the field.
+                </p>
+
+                <div class="headerHero-cta-buttons">
+                    <a href="https://masterclass-cricket.classforkids.io" class="headerHero-btn headerHero-primary-btn">
+                        <span class="headerHero-btn-text">Easter Camp Registration</span>
+                        <span class="headerHero-btn-icon"><i class="fas fa-angle-right"></i></span>
+                    </a>
+                    <form action="subscribe.php" method="POST" class="subscribe-container">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            Subscribe <i class="fas fa-envelope"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
-            
-            
+        </div>
+        <!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-            <!-- Hero Pattern Overlay -->
-            <div class="headerHero-pattern-overlay"></div>
 
-            <!-- Hero Animated Gradients -->
-            <div class="headerHero-gradient headerHero-gradient-1"></div>
-            <div class="headerHero-gradient headerHero-gradient-2"></div>
-        </header>
+        <div class="headerHero-achievement-badges">
+            <div class="headerHero-achievement-badge">
+                <span class="headerHero-badge-number">20+</span>
+                <span class="headerHero-badge-text">Years Experience</span>
+            </div>
+            <div class="headerHero-achievement-badge">
+                <span class="headerHero-badge-number">750+</span>
+                <span class="headerHero-badge-text">Members </span>
+            </div>
+            <div class="headerHero-achievement-badge">
+                <span class="headerHero-badge-number">100k+</span>
+                <span class="headerHero-badge-text">Followers on Social Media</span>
+            </div>
+            <div class="headerHero-achievement-badge">
+                <span class="headerHero-badge-number">10M+</span>
+                <span class="headerHero-badge-text">Views</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Modified Team Image -->
+    <div class="headerHero-team-image-container">
+        <div class="headerHero-team-image" id="headerHeroTeamImage">
+            <iframe id="youtube-video" 
+                    src="https://www.youtube.com/embed/hHuwpK9i4Tc" 
+                    frameborder="0" 
+                    allow="encrypted-media" 
+                    allowfullscreen>
+            </iframe>
+            <a href="https://www.youtube.com/@masterclasscricketcoaching" target="_blank" class="video-overlay"></a>
+        </div>
+    </div>
+    
+    
+    <!-- Hero Pattern Overlay -->
+    <div class="headerHero-pattern-overlay"></div>
+
+    <!-- Hero Animated Gradients -->
+    <div class="headerHero-gradient headerHero-gradient-1"></div>
+    <div class="headerHero-gradient headerHero-gradient-2"></div>
+</header>
+
+<!-- Add JavaScript for mobile responsive behavior -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the navigation toggle button and menu
+        const navToggle = document.getElementById('headerHeroNavToggle');
+        const navMenu = document.getElementById('headerHeroNavMenu');
+        
+        // Toggle menu on click
+        navToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Update button text for mobile
+        function updateButtonText() {
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            if (subscribeBtn) {
+                const btnText = subscribeBtn.querySelector('.headerHero-btn-text');
+                if (window.innerWidth <= 768) {
+                    btnText.textContent = 'Newsletter Subscribe';
+                } else {
+                    btnText.textContent = 'Subscribe';
+                }
+            }
+        }
+        
+        // Call on load and resize
+        updateButtonText();
+        window.addEventListener('resize', updateButtonText);
+    });
+</script>
         <!-- About Section -->
         <!-- About Section -->
-        <section class="about-section" id="About">
-            <!-- Background animation -->
-            <div class="cricket-ball ball-1"></div>
-            <div class="cricket-ball ball-2"></div>
-
-            <div class="about-container">
-                <!-- Top section with image on right, content on left -->
-                <div class="top-section">
-                    <div class="about-image fade-in">
-                        <img src="img/AboutBackground.png" alt="Masterclass Cricket Coaches" id="about-img">
-                    </div>
-                    <div class="about-content">
-                        <h1 class="fade-in about-header" style="  
-            font-family: 'Playfair Display', serif;">Masterclass Cricket – The Ultimate Coaching Experience</h1>
-
-                        <h2 class="fade-in delay-1">What We Specialise In</h2>
-                        <p class="fade-in delay-2">
-                            At Masterclass Cricket, we combine advanced biomechanics with professional playing
-                            experience to develop elite cricketers. Our unique "linking" method ensures players not only
-                            understand technique but feel the difference in their batting, fast bowling, and spin
-                            bowling performance.
-                        </p>
-                        <p class="fade-in delay-2">
-                            We pride ourselves on identifying technical adjustments and designing innovative drills to
-                            accelerate improvement.
-                        </p>
-
-                        <h2 class="fade-in delay-3">A Complete Player Development System</h2>
-                    </div>
-
-
-                </div>
-
-                <!-- Development system in 2x2 grid -->
-                <div class="development-grid" >
-                    <div class="development-item delay-1">
-                        <div class="item-number">1</div>
-                        <div class="item-content">
-                            <div class="item-title">Technical Adjustments & Drills</div>
-                            <p>Identifying weaknesses and implementing tailored drills to correct them.</p>
-                        </div>
-                    </div>
-
-                    <div class="development-item delay-2">
-                        <div class="item-number">2</div>
-                        <div class="item-content">
-                            <div class="item-title">Strength & Conditioning</div>
-                            <p>Enhancing power, agility, and endurance.</p>
-                        </div>
-                    </div>
-
-                    <div class="development-item delay-3">
-                        <div class="item-number">3</div>
-                        <div class="item-content">
-                            <div class="item-title">Nutrition</div>
-                            <p>Fueling the body for peak performance.</p>
-                        </div>
-                    </div>
-
-                    <div class="development-item delay-4">
-                        <div class="item-number">4</div>
-                        <div class="item-content">
-                            <div class="item-title">Mindset & Mental Discipline</div>
-                            <p>Developing resilience to perform under pressure.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Legacy and Grassroots in two columns -->
-                <div class="two-column-section">
-                    <div class="info-box legacy-box fade-in delay-1">
-                        <h2 style="margin-top: 0;">A Globally Respected Legacy</h2>
-                        <p>
-                            For over 10 years, Masterclass Cricket has been a trusted coaching brand, attracting players
-                            from around the world. Our reputation for elite coaching and international success speaks
-                            for itself.
-                        </p>
-                    </div>
-
-                    <!-- <div class="info-box grassroots-box fade-in delay-2">
-                        <h2 style="margin-top: 0;">From Grassroots to the Test Arena</h2>
-                        <p>
-                            Whether you're just starting out or aiming for the highest level, our holistic approach
-                            ensures you develop the technical, tactical, and mental edge needed to excel.
-                        </p>
-
-                        <p><strong>For Every Skill We've Got The Drill</strong></p>
-
-                        <button class="cta-button fade-in delay-3"
-                            onclick="window.location.href='https://masterclass-cricket.classforkids.io'">Book a
-                            Session</button>
-                    </div> -->
-                </div>
-            </div>
-        </section>
+        
+        
         <a href="https://www.instagram.com/reel/C7WiS5ntRRP/?hl=en" target="_blank">
             <video autoplay muted loop playsinline poster="img/masterclass-cricket-thumbnail.jpg" class="why-choose-video" style="width: 100%;">
                 <source src="Brown and White Simple Animated Fashion New Arrival Promo Video (4).mp4" type="video/mp4">
@@ -7435,277 +7306,7 @@
         </a>
         
 
-        <!-- Founder -->
-        <section class="founders-letter-section" id="Founder">
-            <!-- Cricket Background Elements -->
-            <div class="cricket-bg-elements">
-                <!-- <div class="cricket-ball cricket-ball-1"></div>
-                <div class="cricket-ball cricket-ball-2"></div>
-                <div class="cricket-stumps"></div>
-                <div class="cricket-bat"></div>
-                <div class="cricket-pattern"></div> -->
-                <!-- <div class="letter-decorative-element letter-decorative-element-1"></div>
-                <div class="letter-decorative-element letter-decorative-element-2"></div> -->
-            </div>
-
-            <div class="founders-letter-container">
-                <!-- Founder Image Column -->
-                <div class="founder-image-column">
-                    <div class="founder-image-wrap">
-                        <div class="founder-image-container">
-                            <img src="img/CADC14DE-834F-495B-92C6-F33ADEA57676.JPG" alt="Club Founder"
-                                class="founder-image">
-
-                            <!-- Founder Role Badge -->
-                            <div class="founder-role-badge">Elite Coach</div>
-
-                            <!-- Founder Info Card -->
-                            <div class="founder-info-card">
-                                <h3 class="founder-name">Uzi Arif</h3>
-                                <div class="founder-role" style="font-weight: bold;">Head Coach & Founder</div>
-
-                                <div class="founder-details">
-                                    <div class="founder-detail">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <span>Played County Cricket For *OVER A DECADE (2008-2018)
-                                        </span>
-                                    </div>
-                                    <div class="founder-detail">
-                                        <i class="fas fa-trophy"></i>
-                                        <span>"Clocked 92.4mph & Nicknamed "The RocketmAn"
-                                        </span>
-                                    </div>
-                                    <div class="founder-detail">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>Assistant Bowling Coach Bangladesh Premier Leage (Chattogram Challangers)
-                                        </span>
-                                    </div>
-                                    <div class="founder-detail">
-                                        <i class="fas fa-users"></i>
-                                        <span>Higest wickets in a game 
-                                            </span>
-                                    </div>
-                                    <div class="founder-detail">
-                                        <i class="fas fa-building"></i>
-                                        <span>11 Wickets for-73runs against Northamptonshire CCC</span>
-                                    </div>
-                                </div>
-
-                                <div class="founder-achievements">
-                                    <div class="achievement-badge" data-tooltip="National Coaching Award 2018">
-                                        <i class="fas fa-medal"></i>
-                                    </div>
-                                    <div class="achievement-badge" data-tooltip="Youth Developer of the Year 2022">
-                                        <i class="fas fa-award"></i>
-                                    </div>
-                                    <div class="achievement-badge" data-tooltip="15 Players in National Teams">
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="achievement-badge" data-tooltip="Regional Coach of the Decade">
-                                        <i class="fas fa-trophy"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Signature -->
-                            <div class="founder-signature-wrap">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Cpath d='M10,50 C30,20 60,70 80,40 C100,10 120,80 140,50 C160,20 180,70 200,40 C220,10 240,60 290,50' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
-                                    alt="Signature" class="founder-signature">
-                                <div class="signature-name">Uzi Arif</div>
-                            </div>
-                        </div>
-
-                        <!-- Decorative cricket elements behind image -->
-                        <div class="founder-image-cricket-elements">
-                            <div class="cricket-element cricket-element-bat"></div>
-                            <div class="cricket-element cricket-element-ball"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Letter Content Column -->
-                <div class="letter-content-column">
-                    <div class="letter-header">
-                        <h2 class="letter-title">Meet Uzi Arif – Elite Coach & Founder of Masterclass Cricket Academy
-                        </h2>
-
-                        <!-- <h2 class="letter-title">𝙰 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚏𝚛𝚘𝚖 𝙾𝚞𝚛 𝙵𝚘𝚞𝚗𝚍𝚎𝚛</h2> -->
-                        <h3 class="letter-subtitle">From Player to Coach – A Journey of Passion & Dedication</h3>
-
-                        <!-- <div class="letter-subtitle">Cricket is more than a game, it's a way of life.</div> -->
-                        <!-- <div class="letter-date">March 17, 2025</div> -->
-                    </div>
-
-                    <div class="letter-content-scroll">
-                        <div class="letter-text">
-                            <p>Dear Cricket Community,</p>
-
-                            <p>Hello and welcome to Masterclass Cricket! I’m Uzi Arif, the founder of this academy, and
-                                I’d like to share a bit about the journey that led me to create something truly special
-                                for cricketers.
-
-
-                            </p>
-
-                            <div class="cricket-quote">
-                                Cricket teaches us resilience, teamwork, and the delicate balance between personal
-                                achievement and collective success – values that extend far beyond the boundary rope.
-                            </div>
-                            <p>
-                                From a young age, cricket was my passion. Growing up in the north-west of London, I
-                                spent countless hours playing tape-ball cricket in the parks, watching the likes of
-                                Shoaib Akhtar and Waqar Younis bowl at lightning speed. That fuelled my dream to bowl
-                                fast and compete at the highest level.
-
-                            </p>
-
-
-                            <p>
-                                I played over 200 county games, had trials with multiple counties, and experienced the
-                                highs and lows of professional cricket. But despite the setbacks, rejection, and
-                                injuries, one thing never changed: my unwavering commitment to the game. Cricket taught
-                                me more than just how to bowl fast—it taught me resilience, mental strength, and the
-                                importance of never giving up, no matter the obstacles.
-
-                            </p>
-                            <p>
-                                That’s why Masterclass Cricket isn’t just about teaching cricket—it’s about developing
-                                complete players who understand the game, both on and off the field. At Masterclass, we
-                                aim to create not only skillful cricketers but also strong individuals who are ready to
-                                face life’s challenges head-on.
-
-                            </p>
-
-                            <p>
-                                We don’t just focus on the technical side of the game; we believe in holistic
-                                development. We want our players to develop a strong mental game, emotional
-                                intelligence, and physical readiness, all while fostering an understanding of the
-                                lifestyle that leads to success.
-
-                            </p>
-                            <p>
-                                I’ve experienced the rollercoaster ride of professional cricket, and I know what it
-                                takes to reach the top. That’s why I’m here, to give every cricketer the opportunity I
-                                never had: to train smarter, develop deeper, and play harder.
-
-                            </p>
-
-                            <strong>
-                                OUR MISSION
-                            </strong>
-                            <p>
-
-                                To create well-rounded cricketers who excel in skill, mindset, and resilience, both on
-                                and off the field. At Masterclass Cricket, we aim to help our players unlock their full
-                                potential and make lasting contributions to the game.
-
-                            </p>
-
-                            <strong>OUR VISION</strong>
-                            <p>To be a leading force in the cricketing world, empowering the next generation of
-                                cricketers with innovative coaching, tailored to each individual’s journey. We focus on
-                                the fundamentals of cricket, while ensuring personal growth through every aspect of the
-                                sport.
-                            </p>
-                            <strong>
-                                THE MASTERCLASS APPROACH
-
-                            </strong>
-                            <p>
-                                At Masterclass Cricket, we don’t just build players—we shape athletes of character. Our
-                                unique approach blends the six pillars that will help you become a complete player and a
-                                stronger individual.
-
-                            </p>
-
-                            <strong>
-                                Technical Mastery
-
-                            </strong>
-                            <p>
-                                Your technique is the foundation of your game. We help you perfect your skills, so
-                                they’re consistent and effective, regardless of the situation.
-
-                            </p>
-                            <strong>
-                                Mental Toughness
-
-                            </strong>
-                            <p>
-                                Cricket is as much a mental game as it is physical. We focus on developing your mindset,
-                                helping you manage pressure, and ensuring you are ready for anything the game throws
-                                your way.
-
-                            </p>
-                            <strong>
-                                Emotional Intelligence
-
-
-                            </strong>
-                            <p>
-                                Understanding and managing your emotions is key to peak performance. We teach our
-                                players how to use their feelings to their advantage, rather than allowing them to
-                                dictate their performance.
-
-                            </p>
-                            <strong>
-                                Physical Conditioning
-
-                            </strong>
-                            <p>
-                                Cricket demands stamina, strength, and agility. We focus on getting you physically
-                                prepared to perform your best, no matter the conditions or length of the match.
-
-                            </p>
-                            <strong>
-                                Life Skills
-
-                            </strong>
-                            <p>
-                                Cricket is a game of life lessons. Our academy instills values that extend beyond the
-                                field, helping you build habits and behaviours that set you up for success both in and
-                                outside of sport.
-
-                            </p>
-                            <strong>
-                                Strategic Vision
-
-                            </strong>
-                            <p>
-                                Understanding the game at a deeper level allows you to read situations, make smarter
-                                decisions, and play with a clear focus. We help you develop your tactical awareness so
-                                you can look at the game from a broader perspective.
-
-                            </p>
-                            <strong>
-                                JOIN US AT MASTERCLASS CRICKET
-
-                            </strong>
-                            <p>
-                                At Masterclass Cricket, we are more than just coaches—we are mentors dedicated to
-                                helping you become the best version of yourself. Whether you’re a beginner looking to
-                                develop your skills or an elite player aiming to take your game to the next level, we
-                                are here to guide you every step of the way.
-
-                            </p>
-                            <i>Let’s take your cricket to the next level, and together, let’s achieve greatness—on and
-                                off the field.</i>
-                            <div class="letter-sign">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Cpath d='M10,50 C30,20 60,70 80,40 C100,10 120,80 140,50 C160,20 180,70 200,40 C220,10 240,60 290,50' stroke='black' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
-                                    alt="Signature" class="letter-signature">
-                                <div class="letter-name">Uzi Arif</div>
-                                <div class="letter-role">Head Coach & Founder</div>
-                            </div>
-                        </div>
-
-                        <!-- Scroll indicator -->
-                        <div class="scroll-indicator"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cricket Gallery Section -->
+      
 
 
 
@@ -8624,7 +8225,7 @@
                     <div class="ig-likes">
                         <span class="ig-likes-count">50,707 views</span>
                     </div>
-                    <p class="ig-description">
+                    <!-- <p class="ig-description">
                         <strong>masterclasscricket</strong> 
                         Tag a friend who struggles to read length when playing spin? Comment below 👇
                         .
@@ -8639,7 +8240,7 @@
                         #CricketLife #CricketSkills
                         #CricketPassion #Cricketers
                        
-                    </p>
+                    </p> -->
                     <p class="ig-view-more">
                         View more on Instagram
                     </p>
@@ -8723,7 +8324,7 @@
                     <div class="ig-likes">
                         <span class="ig-likes-count">25,989 Views</span>
                     </div>
-                    <p class="ig-description">
+                    <!-- <p class="ig-description">
                         <strong>masterclasscricket</strong> Struggling with the drive and getting nicked off?
 
                         It’s likely because your front shoulder is rotating too early, sending your bat down the wrong line.
@@ -8732,7 +8333,7 @@
                         Focus on dipping your front shoulder into the ball, keeping your elbow high, and driving through with the side of your hand.
                         .
                         #Cricket #BattingTips #DriveShot #CoverDrive #StraightDrive #BattingTechnique #ViratKohli #CricketCoaching #CricketSkills #CricketTraining #BattingMasterclass                        
-                    </p>
+                    </p> -->
                     <p class="ig-view-more">
                         View more on Instagram
                     </p>
@@ -8816,14 +8417,14 @@
                     <div class="ig-likes">
                         <span class="ig-likes-count">50,445 Views</span>
                     </div>
-                    <p class="ig-description">
+                    <!-- <p class="ig-description">
                         <strong>masterclasscricket</strong> Read The Caption⬇️⬇️
                         .
                         The secret to being a game-changing leg spin bowler lies in the split phase position rather than the release position.
                         .
                         Many coaches mistakenly focus on the release position when trying to help spinners improve their ability to spin the ball. However, it is crucial to observe and adjust the wrist position during the split phase in order to enhance alignment and achieve better spin. It’s important to note that not all bowlers need to make these adjustments, as some can still generate spin with a closed wrist.
                         #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                    </p>
+                    </p> -->
                     <p class="ig-view-more">
                         View more on Instagram
                     </p>
@@ -8907,12 +8508,12 @@
                     <div class="ig-likes">
                         <span class="ig-likes-count">42,103 Views</span>
                     </div>
-                    <p class="ig-description">
+                    <!-- <p class="ig-description">
                         <strong>masterclasscricket</strong> Tag a bowler who’s effort ball always goes down the legside?
                         .
                         When releasing the ball, it is important to ensure that your wrist remains stable and does not collapse. To address this issue, it is crucial to focus on the cues provided in the video clip. 
                         #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                    </p>
+                    </p> -->
                     <p class="ig-view-more">
                         View more on Instagram
                     </p>
@@ -8961,13 +8562,13 @@
                                     </div>
                                     <div class="coach-info-preview">
                                         <h3 class="coach-name">Uzi Arif</h3>
-                                        <p class="coach-title">MasterClass Head Coach</p>
+                                        <p class="coach-title">Masterclass Head Coach</p>
                                     </div>
                                 </div>
                                 <div class="coach-card-back">
                                     <div class="coach-details">
                                         <h3 class="coach-name">Uzi Arif</h3>
-                                        <p class="coach-title">MasterClass Head Coach</p>
+                                        <p class="coach-title">Masterclass Head Coach</p>
                                         <div class="coach-separator"></div>
                                         <p class="coach-bio">
                                             Former Country Cricketer and International Franchise Coach
@@ -8998,13 +8599,13 @@
                                     </div>
                                     <div class="coach-info-preview">
                                         <h3 class="coach-name">Ollie Sheen</h3>
-                                        <p class="coach-title">MasterClass  Coach</p>
+                                        <p class="coach-title">Masterclass  Coach</p>
                                     </div>
                                 </div>
                                 <div class="coach-card-back">
                                     <div class="coach-details">
                                         <h3 class="coach-name">Ollie Sheen</h3>
-                                        <p class="coach-title">MasterClass  Coach</p>
+                                        <p class="coach-title">Masterclass  Coach</p>
                                         <div class="coach-separator"></div>
                                         <p class="coach-bio">
                                             A product of Masterclass Cricket, Ollie Sheen has trained under Head Coach Uzi since the age of 13, developing into a high-level cricketer. He has represented Surrey County, the ECB Young Lions Super 4s, and Durham University UCCE. He has played all over the world, in countries like Australia, Sri Lanka, South Africa and India gaining top-level experience.
@@ -9034,13 +8635,13 @@
                                     </div>
                                     <div class="coach-info-preview">
                                         <h3 class="coach-name">Anirudh Reddy</h3>
-                                        <p class="coach-title">MasterClass  Coach</p>
+                                        <p class="coach-title">Masterclass  Coach</p>
                                     </div>
                                 </div>
                                 <div class="coach-card-back">
                                     <div class="coach-details">
                                         <h3 class="coach-name">Anirudh Reddy</h3>
-                                        <p class="coach-title">MasterClass Coach</p>
+                                        <p class="coach-title">Masterclass Coach</p>
                                         <div class="coach-separator"></div>
                                         <p class="coach-bio">
                                             Ani Reddy, an experienced ECB Level 2 cricket coach, has been guiding
@@ -9064,13 +8665,13 @@
                                     </div>
                                     <div class="coach-info-preview">
                                         <h3 class="coach-name">Sohaib Arif</h3>
-                                        <p class="coach-title">MasterClass Coach</p>
+                                        <p class="coach-title">Masterclass Coach</p>
                                     </div>
                                 </div>
                                 <div class="coach-card-back">
                                     <div class="coach-details">
                                         <h3 class="coach-name">Sohaib Arif</h3>
-                                        <p class="coach-title">MasterClass  Coach</p>
+                                        <p class="coach-title">Masterclass  Coach</p>
                                         <div class="coach-separator"></div>
                                         <p class="coach-bio">
                                             Our exceptional coach, trained under Head Coach Uzi, brings expertise in
@@ -9142,326 +8743,7 @@
             </div>
         </section>
 
-        <!-- testimonail -->
-        <section class="testimonials-container " id="Testimonials" style="background-color: black;">
-            <div class="testimonials-header">
-                <h2 style="font-family: 'Playfair Display', serif;color: white;">Cricket Academy Reviews – Why Players &
-                    Parents Love Masterclass</h2>
-                <p>See why players, parents, and professionals trust <a href="#Academy">Masterclass Cricket Academy</a>.
-                    Discover our <a href="#Programs">Cricket Training Programs</a>.</p>
-            </div>
-
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-left">
-                    <!-- First row of testimonials -->
-
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                J
-                            </div>
-                            <h3 class="author-name">James Parker – Richmond</h3>
-                        </div>
-                        <p class="testimonial-text">“We’ve trained with **Masterclass Cricket Academy** for 10 years,
-                            and the **professional cricket coaching** is unmatched. Thanks to **expert batting, bowling,
-                            and fielding training**, my son progressed from **borough cricket to the County Winter
-                            Squad**.”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Sarah Wilson – Chiswick</h3>
-                        </div>
-                        <p class="testimonial-text">“We tried other academies before coming to Masterclass, but nothing
-                            compares to the professionalism and attention to detail here. My daughter started playing
-                            for her school B team, then moved to borough cricket. After working with Uzi and Ani, she’s
-                            now in the County Summer Squad. The investment is worth it!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                D
-                            </div>
-                            <h3 class="author-name">Daniel Simmons – Wimbledon</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “People ask if it’s expensive. I say, ‘You get what you pay for.’ This isn’t just an
-                            academy—it’s an elite coaching program. Thanks to Uzi and the team, my son went from a
-                            school second-team cricketer to playing borough cricket and now regional trials. The
-                            structured coaching and match preparation made all the difference.”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                P
-                            </div>
-                            <h3 class="author-name">Priya Patel – Hounslow</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “My son struggled with his batting, and after just a few months at Masterclass, his
-                            confidence and technique transformed. The one-on-one sessions with Ani and the detailed
-                            reports allowed us to track his progress. He started in borough cricket and has now made the
-                            County Winter Squad!”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
-                            <h3 class="author-name">Alex Thompson – Clapham</h3>
-                        </div>
-                        <p class="testimonial-text">“We travel two hours every Saturday for a session here. My son was
-                            overlooked at his old academy, but Uzi and Sohaib spotted his potential immediately. After
-                            working on his bowling, he moved up from borough cricket to the regional setup. Now, he’s
-                            pushing for county selection!”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Michelle Davies – Kensington</h3>
-                        </div>
-                        <p class="testimonial-text">
-
-                            “My daughter was the only girl at her club and never got real coaching. Masterclass changed
-                            that. After training with Ollie and Ani, she’s now playing in her school’s A team and has
-                            been selected for regional trials. Finally, an academy that values girls’ cricket!”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
-                            <h3 class="author-name">Andrew Carter – Ealing</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “Sohaib corrected my son’s bowling action in just a few weeks, and now he’s bowling quicker
-                            and more accurately. His confidence has skyrocketed, and he’s getting noticed at regional
-                            level. Uzi oversees every player’s development, making sure they get the best coaching.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Simon Bradley – Notting Hill</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “Masterclass isn’t just coaching—it’s a cricket education. The video analysis, structured
-                            feedback, and match scenarios prepare players for real competition. My son has moved from
-                            regional cricket to the County Summer Squad, and his game awareness has improved massively.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                T
-                            </div>
-                            <h3 class="author-name">Thomas Finch – Kingston</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “As a club coach myself, I’ve never seen an academy that provides this level of detail. My
-                            son started in the school B team, moved to borough cricket, and has now been selected for
-                            the County Winter Squad. The technical work from Uzi and Sohaib has been outstanding.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                E
-                            </div>
-                            <h3 class="author-name">Emma Richards – Chelsea</h3>
-                        </div>
-                        <p class="testimonial-text">“The coaches here don’t just create better cricketers; they build
-                            confidence, discipline, and passion. My son started in the school C team and is now the
-                            opening batter for the A team, all thanks to Masterclass.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Mark Bennett – Twickenham</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “We’ve been with Masterclass for 8 years. My son has gone from a club player to a
-                            borough-level opener, and now he’s in the County Summer Squad. No gimmicks—just pure,
-                            high-level coaching from Uzi, Ollie, and the team.”</p>
-                    </div>
-
-
-
-
-
-                </div>
-            </div>
-
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-right">
-                    <!-- Second row of testimonials -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                R
-                            </div>
-                            <h3 class="author-name">Rachel Owens – Hammersmith</h3>
-                        </div>
-                        <p class="testimonial-text">“My daughter plays cricket for fun, but even at a recreational
-                            level, the improvements have been huge. She went from a school beginner to playing in the A
-                            team. The coaches make learning exciting and engaging.”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Mohammed Khan – Southall</h3>
-                        </div>
-                        <p class="testimonial-text">“I drive 3 hours weekly for my son’s one-on-one sessions with
-                            Sohaib. The personalized coaching and deep understanding of technique make this academy the
-                            best. He was struggling in borough cricket but has now been selected for the regional
-                            squad!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                O
-                            </div>
-                            <h3 class="author-name">Oliver James – Fulham</h3>
-                        </div>
-                        <p class="testimonial-text">“Other academies felt like daycare. At Masterclass, they actually
-                            teach. The coaches push players and set high standards. My son moved up from the school C
-                            team to borough cricket and now has regional trials lined up!”</p>
-                    </div>
-                    <div class="testimonial-card">
-
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                N
-                            </div>
-                            <h3 class="author-name">Nathan Green – Croydon</h3>
-                        </div>
-                        <p class="testimonial-text">“We flew in from Dubai just to train with Uzi and his team. The
-                            level of coaching here is on par with international academies. My son’s game has completely
-                            transformed, and he’s now competing in the County Winter Squad.”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                C
-                            </div>
-                            <h3 class="author-name">Charlotte Adams – Barnes</h3>
-                        </div>
-                        <p class="testimonial-text">“The structured reports are a game-changer. Most academies just let
-                            kids play, but here, every session is measured and tracked. My son started at borough level
-                            and has now secured a place in the County Summer Squad!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                R
-                            </div>
-                            <h3 class="author-name">Richard Clarke – Essex</h3>
-                        </div>
-                        <p class="testimonial-text">“As a former cricketer myself, I was skeptical at first. But after
-                            watching Uzi and his team work, I can confidently say they turn good players into great
-                            ones. My son moved from school A team to borough and now regional selection!”</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Sophie Brown – Surrey
-                            </h3>
-                        </div>
-                        <p class="testimonial-text">“Masterclass is the reason my son got into the regional setup. The
-                            technical coaching, match preparation, and high-level training all contributed to his
-                            success. Uzi’s knowledge and Ollie’s coaching have been key.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                J
-                            </div>
-                            <h3 class="author-name">Jacob Lewis – Guildford</h3>
-                        </div>
-                        <p class="testimonial-text">“What sets Masterclass apart is their ability to tailor coaching to
-                            each child’s strengths and weaknesses. They’re developing smart cricketers, not just players
-                            who can hit the ball. My son has moved from borough to the County Winter Squad under
-                            Sohaib’s coaching!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                D
-                            </div>
-                            <h3 class="author-name">David Wright – Birmingham</h3>
-                        </div>
-                        <p class="testimonial-text">“We drive down from Birmingham every half-term just so my son can
-                            train here. The level of coaching is that good. Uzi and his team don’t just teach
-                            cricket—they build champions. My son has gone from regional to the County Summer Squad
-                            thanks to their elite coaching!”</p>
-                    </div>
-                    <div class="testimonial-card">
-
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                K
-                            </div>
-                            <h3 class="author-name">Kesrick Williams – West Indies International Cricketer</h3>
-                        </div>
-                        <p class="testimonial-text">“I’ve played cricket all over the world, but the coaching setup at
-                            Masterclass Cricket is something special. Uzi and his team break down the game in a way that
-                            even professionals can learn from. Any young player training here is in the best hands.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                N
-                            </div>
-                            <h3 class="author-name">Rayad Emrit – Former West Indies Captain</h3>
-                        </div>
-                        <p class="testimonial-text">“I’ve trained with Uzi and the Masterclass team, and their technical
-                            knowledge is top-tier. They understand what it takes to develop young players, whether it’s
-                            improving fast bowling, perfecting batting technique, or building a match-winning mindset.
-                            If you’re serious about cricket, this is the place to be.”</p>
-                    </div>
-
-
-
-
-                </div>
-            </div>
-        </section>
+       
 
         <script type="application/ld+json">
             {
@@ -9954,6 +9236,7 @@
         }
 
             </script>
+
         <script>
             document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
@@ -9981,7 +9264,7 @@
                     <!-- Column 1: About -->
                     <div class="col-lg-3 col-md-6">
                         <a class="d-flex justify-content-start align-items-center text-white text-decoration-none mb-4"
-                            href="#Hero">
+                            href="Testing.html">
                             <img src="img/logo_.ico" alt="Logo" class="me-2 img-fluid"
                                 style="width: 50%; max-width: 120px;">
                         </a>
@@ -10010,14 +9293,14 @@
                         <h4 class="font-montserrat fw-bold mb-4">Quick Links</h4>
 
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#Hero" class="text-white text-decoration-none">Home</a></li>
-                            <li class="mb-2"><a href="#About" class="text-white text-decoration-none">About</a></li>
-                            <li class="mb-2"><a href="#Founder" class="text-white text-decoration-none">Coach</a></li>
+                            <li class="mb-2"><a href="Testing.html" class="text-white text-decoration-none">Home</a></li>
+                            <li class="mb-2"><a href="About.html" class="text-white text-decoration-none">About</a></li>
+                            <li class="mb-2"><a href="Coach.html" class="text-white text-decoration-none">Coach</a></li>
                             <!-- <li class="mb-2"><a href="#Gallery" class="text-white text-decoration-none">MatchMoments</a></li> -->
                             <!-- <li class="mb-2"><a href="#Events&Updates" class="text-white text-decoration-none">Programs</a></li> -->
-                            <li class="mb-2"><a href="#Testimonials"
+                            <li class="mb-2"><a href="Testimonials.html"
                                     class="text-white text-decoration-none">Testimonials</a></li>
-                            <li class="mb-2"><a href="#Contact" class="text-white text-decoration-none">Contact</a></li>
+                            <li class="mb-2"><a href="Contact.html" class="text-white text-decoration-none">Contact</a></li>
                         </ul>
 
                     </div>
@@ -11053,7 +10336,7 @@
     </script>
 
 
-    <!-- JavaScript for animations -->
+    <!-- about JavaScript for animations -->
     <script>
         // Function to check if element is in viewport
         function isInViewport(element) {

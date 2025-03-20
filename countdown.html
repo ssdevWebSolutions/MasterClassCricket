@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Countdown</title>
+    <style>
+        /* Fullscreen Countdown Overlay */
+        #countdown-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?cricket,stadium') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            z-index: 9999;
+        }
+
+        /* Countdown Timer */
+        #countdown-timer {
+            font-size: 4rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        /* Flashy Text Animation */
+        #bang-content {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: yellow;
+            text-transform: uppercase;
+            animation: flash 1s infinite alternate;
+        }
+
+        /* Image Banner */
+        #image-banner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?cricket,banner') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px black;
+            z-index: 9999;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        @keyframes flash {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Countdown Overlay -->
+    <div id="countdown-overlay">
+        <div id="countdown-timer">1:00:00</div>
+        <div id="bang-content">🔥 The Game Begins Soon! Stay Tuned! 🏏</div>
+    </div>
+
+    <!-- Image Banner (Appears After Countdown) -->
+    <div id="image-banner">🏆 Welcome to the Ultimate Cricket Battle! 🏏</div>
+
+    <script>
+        function startCountdown(durationInSeconds) {
+            let remainingTime = durationInSeconds;
+            const timerDisplay = document.getElementById("countdown-timer");
+            const overlay = document.getElementById("countdown-overlay");
+            const banner = document.getElementById("image-banner");
+
+            function updateTimer() {
+                let hours = Math.floor(remainingTime / 3600);
+                let minutes = Math.floor((remainingTime % 3600) / 60);
+                let seconds = remainingTime % 60;
+                timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+
+                if (remainingTime > 0) {
+                    remainingTime--;
+                    setTimeout(updateTimer, 1000);
+                } else {
+                    // Hide countdown and show banner
+                    overlay.style.display = "none";
+                    banner.style.display = "flex";
+
+                    // After 5 seconds, redirect to the main site
+                    setTimeout(() => {
+                        window.location.href = "your_main_site_url_here"; // Change this to your actual site URL
+                    }, 5000);
+                }
+            }
+
+            updateTimer();
+        }
+
+        // Start countdown for 1 hour
+        startCountdown(3600);
+    </script>
+
+</body>
+</html>

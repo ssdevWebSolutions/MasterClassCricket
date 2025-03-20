@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterClassCricket - Premium Cricket League</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts - Montserrat and Open Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index1.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+   
+  </head>
+  <body>
+
+
+    <!-- Top Header -->
+    <div class="top-header py-2  text-black" style="background-color: #ffa800;">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-envelope me-2 text-primary"></i>
+                <span>info@Cricket-league.com</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-phone me-2 text-primary"></i>
+                <span>+18(461)236 98</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-md-end gap-3">
+              <div class="social-icons">
+                <a href="#" class="text-black me-2"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-black me-2"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-black me-2"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-black"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="bg-dark py-3 sticky-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/logo_.ico" alt="Logo" class="me-2 logo" style="">
+            <!-- <span class="fw-bold font-montserrat">Cricket</span> -->
+        </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Club</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fas fa-search"></i>
+                </a>
+              </li> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+
+    <div class="herosection-main-container">
+      <div class="herosection-content-wrapper">
+          <div class="herosection-hero">
+              <h1 class="herosection-institute-name">Masterclass Cricket</h1>
+              <p class="herosection-moto">For Every Skill, We've Got the Drill!</p>
+
+              <div class="herosection-buttons-container">
+                  <button class="herosection-button" id="herosection-get-started">JOIN THE MASTER CLASS</button>
+                  <button class="herosection-button" id="herosection-easter-camp">Easter Camp</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="herosection-background-container">
+          <div class="herosection-background-text">MASTERCLASS CRICKET</div>
+          <div class="herosection-background-text">MASTERCLASS CRICKET</div>
+      </div>
+
+      <!-- Ball Animation (Follows Mouse) -->
+      <div class="herosection-ball-animation" id="herosection-ball"></div>
+
+      <!-- Right Image (Adjust the src to your image URL) -->
+      <img src="img/whitetheme Background.webp" alt="Cricket Image" class="herosection-right-image">
+    </div>
+
+  <!-- Modal (Form) -->
+  <div class="herosection-form-modal" id="herosection-form-modal">
+      <div class="herosection-form-container">
+          <button class="herosection-close-btn" id="herosection-close-btn">&times;</button>
+          <h2>Register for the Camp</h2>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Why do you want to join the camp?" rows="4"></textarea>
+          <button type="submit">Submit</button>
+      </div>
+  </div>
+</section>
+    <!-- academy -->
+    <section class="academy-hero-section">         
+      <div class="academy-hero-image-container">             
+          <img src="img/updated cricket.png" alt="Cricket Player" class="academy-hero-image">         
+      </div>         
+      <div class="academy-hero-content">             
+          <h1 class="academy-hero-title">The Cricket Pulse Story, Beyond the Boundary</h1>             
+          <p class="academy-hero-text">Lorem ipsum dolor sit amet consectetur. Nibh id venenatis elit quam posuere vitae aliquam. Velit odio mi duis proin quam eget. Sit vitae sit commodo id sagittis quam lacinia tortor augue. Pellentesque et tellus.</p>             
+          <p class="academy-hero-text">Lorem ipsum dolor sit amet consectetur. Nibh id venenatis elit quam posuere vitae aliquam. Velit odio mi duis proin quam eget. Sit vitae sit commodo id sagittis quam lacinia tortor augue. Pellentesque et tellus.</p>             
+          <a href="#" class="academy-read-more-btn">Book Now &nbsp;›</a>         
+      </div>     
+  </section>      
+  
+  <section class="academy-achievements-section">         
+      <div class="academy-achievements-bg-text">ACHIEVEMENTS</div>         
+      <div class="academy-achievements-container">             
+          <div class="academy-achievement-box">                 
+              <h2 class="academy-achievement-number" id="academy-teamMembers">0</h2>                 
+              <p class="academy-achievement-text">Team Members</p>             
+          </div>             
+          <div class="academy-achievement-box">                 
+              <h2 class="academy-achievement-number" id="academy-tournamentVictories">0</h2>                 
+              <p class="academy-achievement-text">Tournament Victories</p>             
+          </div>             
+          <div class="academy-achievement-box">                 
+              <h2 class="academy-achievement-number" id="academy-majorEvents">0</h2>                 
+              <p class="academy-achievement-text">Hosting Major Events</p>             
+          </div>             
+          <div class="academy-achievement-box">                 
+              <h2 class="academy-achievement-number" id="academy-satisfactionRate">0</h2>                 
+              <p class="academy-achievement-text">Satisfaction Rate</p>             
+          </div>         
+      </div>     
+  </section>  
+  
+   <!-- Cricket Gallery Section -->
+   <section class="cricket-gallery-section">
+    <div class="cricket-gallery-container">
+      <div class="cricket-gallery-header">
+        <h2 class="cricket-gallery-title">Our Latest Gallery</h2>
+        <div class="cricket-gallery-navigation">
+          <button id="prev-gallery" class="cricket-gallery-nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="next-gallery" class="cricket-gallery-nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="cricket-gallery-content">
+        <!-- Gallery Set 1 -->
+        <div class="cricket-gallery-grid active" id="gallery-1">
+          <!-- Large item (3x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-large bounce-in" style="animation-delay: 0.1s">
+            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI0fHxjcmlja2V0JTIwZmllbGR8ZW58MHx8fHwxNjI5MzQ0NjE3&ixlib=rb-4.0.3&q=80&w=1200" alt="Cricket stadium with mountains">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Scenic Stadium</h3>
+              <p class="cricket-gallery-item-description">Mountain backdrop at a cricket ground</p>
+            </div>
+          </div>
+          
+          <!-- Medium item (2x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-medium slide-in-right" style="animation-delay: 0.2s">
+            <img src="https://images.unsplash.com/photo-1593766788989-ad15585e8b26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGNyaWNrZXR8ZW58MHx8fHwxNjI5MzQ0NjE3&ixlib=rb-4.0.3&q=80&w=800" alt="Batsman playing a shot">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Perfect Cover Drive</h3>
+              <p class="cricket-gallery-item-description">Classic cricket shot execution</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small fade-in" style="animation-delay: 0.3s">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE1fHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket match">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Match Day</h3>
+              <p class="cricket-gallery-item-description">Intense competition in action</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small slide-in-left" style="animation-delay: 0.4s">
+            <img src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIwfHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket team">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Team Spirit</h3>
+              <p class="cricket-gallery-item-description">Group of players ready for action</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Set 2 (initially hidden) -->
+        <div class="cricket-gallery-grid hidden" id="gallery-2">
+          <!-- Large item (3x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-large">
+            <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDM2fHxjcmlja2V0JTIwdGVhbXxlbnwwfHx8fDE2MjkzNDQ2MTc&ixlib=rb-4.0.3&q=80&w=1200" alt="Cricket match in progress">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Professional Match</h3>
+              <p class="cricket-gallery-item-description">Teams competing at the highest level</p>
+            </div>
+          </div>
+          
+          <!-- Medium item (2x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-medium">
+            <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=800" alt="Cricket equipment">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Professional Gear</h3>
+              <p class="cricket-gallery-item-description">High-quality cricket equipment</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small">
+            <img src="https://images.unsplash.com/photo-1590156357515-698b0f300be6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQzfHxjcmlja2V0JTIwYmF0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket stadium lights">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Evening Match</h3>
+              <p class="cricket-gallery-item-description">Playing under floodlights</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small">
+            <img src="https://images.unsplash.com/photo-1591927675641-c97a43a1a243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUwfHxjcmlja2V0JTIwcGxheWVyfGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket player">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Celebration</h3>
+              <p class="cricket-gallery-item-description">Joy after taking a crucial wicket</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Set 3 (initially hidden) -->
+        <div class="cricket-gallery-grid hidden" id="gallery-3">
+          <!-- Large item (3x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-large">
+            <img src="https://images.unsplash.com/photo-1556811824-4d5e4768a65c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDk0fHxjcmlja2V0JTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNjI5MzQ0NjE3&ixlib=rb-4.0.3&q=80&w=1200" alt="Cricket team celebration">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Victory Moment</h3>
+              <p class="cricket-gallery-item-description">The team celebrates a big win</p>
+            </div>
+          </div>
+          
+          <!-- Medium item (2x2) -->
+          <div class="cricket-gallery-item cricket-gallery-item-medium">
+            <img src="https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDU4fHxjcmlja2V0JTIwZmFuc3xlbnwwfHx8fDE2MjkzNDQ2MTc&ixlib=rb-4.0.3&q=80&w=800" alt="Cricket fans">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Passionate Fans</h3>
+              <p class="cricket-gallery-item-description">Supporters cheering during a match</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small">
+            <img src="https://images.unsplash.com/photo-1531056725536-21a221b7c60a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDc1fHxjcmlja2V0JTIwdHJhaW5pbmd8ZW58MHx8fHwxNjI5MzQ0NjE3&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket field maintenance">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Perfect Pitch</h3>
+              <p class="cricket-gallery-item-description">Preparing the field for play</p>
+            </div>
+          </div>
+          
+          <!-- Small item (2x1) -->
+          <div class="cricket-gallery-item cricket-gallery-item-small">
+            <img src="https://images.unsplash.com/photo-1511204579483-e5ccbf3cd513?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDY1fHxjcmlja2V0JTIwdHJvcGh5fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket trophy">
+            <div class="cricket-gallery-item-overlay">
+              <h3 class="cricket-gallery-item-title">Championship Trophy</h3>
+              <p class="cricket-gallery-item-description">The ultimate prize</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pagination Dots -->
+      <div class="cricket-gallery-pagination">
+        <div class="cricket-gallery-pagination-dot active" data-page="1"></div>
+        <div class="cricket-gallery-pagination-dot" data-page="2"></div>
+        <div class="cricket-gallery-pagination-dot" data-page="3"></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Meet our coacher -->
+
+<div class="coaches_section_coaches_update">
+  <div class="title_coaches_update">Meet Our Cricket Coaches</div>
+  
+  <div class="buttons_coaches_update">
+      <button class="scroll_btn_coaches_update" onclick="scrollLeft()">←</button>
+      <button class="scroll_btn_coaches_update" onclick="scrollRight()">→</button>
+  </div>
+
+  <div class="scroll_container_coaches_update" id="scrollContainer">
+      <div class="card_coaches_update">
+          <img src="coach1.jpg" alt="Coach John">
+          <div class="overlay_coaches_update">
+              <h3>Coach John</h3>
+              <p>Batting Coach</p>
+              <div class="social_links_coaches_update">
+                  <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                  <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+                  <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+ <!-- Social Media Section -->
+    <section class="ig-reels-section">
+      <h2 class="ig-section-title">
+        CHECK OUT <span class="ig-highlight">OUR SOCIAL MEDIA!</span>
+      </h2>
+      
+      <!-- Decorative cricket bat - top left -->
+      <div class="ig-decorative-bat ig-bat-top-left">
+        <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
+          <defs>
+            <linearGradient id="bat-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#854d0e" />
+              <stop offset="100%" stopColor="#a16207" />
+            </linearGradient>
+          </defs>
+          <!-- Bat handle -->
+          <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
+          
+          <!-- Handle grip texture -->
+          <g opacity="0.4">
+            <rect x="43" y="20" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="29" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="38" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="47" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="56" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="65" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="74" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="83" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="92" width="14" height="5" rx="2.5" fill="white" />
+            <rect x="43" y="101" width="14" height="5" rx="2.5" fill="white" />
+          </g>
+          
+          <!-- Bat shoulder -->
+          <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z" fill="#a16207" />
+          
+          <!-- Bat blade -->
+          <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z" fill="url(#bat-gradient)" />
+          
+          <!-- Bat edge -->
+          <path d="M30,135 L30,350 C30,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
+          <path d="M70,135 L70,350 C70,380 50,390 50,390" fill="none" stroke="#713f12" strokeWidth="2" />
+          
+          <!-- Bat face texture/grain -->
+          <g opacity="0.1">
+            <line x1="35" y1="150" x2="65" y2="150" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="160" x2="65" y2="160" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="170" x2="65" y2="170" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="180" x2="65" y2="180" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="190" x2="65" y2="190" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="200" x2="65" y2="200" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="210" x2="65" y2="210" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="220" x2="65" y2="220" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="230" x2="65" y2="230" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="240" x2="65" y2="240" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="250" x2="65" y2="250" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="260" x2="65" y2="260" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="270" x2="65" y2="270" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="280" x2="65" y2="280" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="290" x2="65" y2="290" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="300" x2="65" y2="300" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="310" x2="65" y2="310" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="320" x2="65" y2="320" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="330" x2="65" y2="330" stroke="#422006" strokeWidth="1" />
+            <line x1="35" y1="340" x2="65" y2="340" stroke="#422006" strokeWidth="1" />
+          </g>
+          
+          <!-- Bat branding -->
+          <text x="50" y="200" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" transform="rotate(90, 50, 200)">
+            CRICKET MASTER
+          </text>
+        </svg>
+      </div>
+      
+      <!-- Decorative cricket ball - bottom right -->
+      <div class="ig-decorative-ball ig-ball-bottom-right">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
+          <defs>
+            <radialGradient id="ball-gradient" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+              <stop offset="0%" stopColor="#f43f5e" />
+              <stop offset="100%" stopColor="#b91c1c" />
+            </radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="45" fill="url(#ball-gradient)" />
+          
+          <!-- Cricket ball seam -->
+          <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          
+          <!-- Highlights -->
+          <circle cx="35" cy="35" r="8" fill="white" fillOpacity="0.2" />
+        </svg>
+      </div>
+      
+      <!-- Decorative cricket ball - middle left -->
+      <div class="ig-decorative-ball ig-ball-middle-left">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-ball-svg">
+          <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+          <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+          <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+        </svg>
+      </div>
+      
+      <!-- Decorative cricket bat - middle right -->
+      <div class="ig-decorative-bat ig-bat-middle-right">
+        <svg viewBox="0 0 100 400" xmlns="http://www.w3.org/2000/svg" class="ig-cricket-bat-svg">
+          <!-- Bat handle -->
+          <rect x="43" y="10" width="14" height="100" rx="7" fill="#1e293b" />
+          
+          <!-- Bat shoulder -->
+          <path d="M43,110 C40,115 30,120 30,125 L30,135 L70,135 L70,125 C70,120 60,115 57,110 Z" fill="#a16207" />
+          
+          <!-- Bat blade -->
+          <path d="M30,135 L30,350 C30,380 50,390 50,390 C50,390 70,380 70,350 L70,135 Z" fill="#a16207" />
+        </svg>
+      </div>
+      
+      <!-- Reels Grid -->
+      <div class="ig-reels-grid">
+        <!-- Social Card 1 -->
+        <div class="ig-social-card">
+          <!-- Card Header -->
+          <div class="ig-card-header">
+            <div class="ig-profile-image">
+              <img src="https://images.unsplash.com/photo-1565180429899-cf4309aff162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNyaWNrZXQlMjBiYWxsfGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=50" alt="masterclasscricket profile">
+            </div>
+            <div class="ig-profile-info">
+              <div class="ig-username">masterclasscricket</div>
+              <div class="ig-audio-info">Original audio</div>
+            </div>
+            <button class="ig-view-profile-btn">View profile</button>
+          </div>
+          
+          <!-- Card Content -->
+          <div class="ig-card-content">
+            <img src="https://images.unsplash.com/photo-1593766788989-ad15585e8b26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGNyaWNrZXR8ZW58MHx8fHwxNjI5MzQ0NjE3&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket training video" class="ig-content-image">
+            
+            <!-- Play button -->
+            <div class="ig-play-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            
+            <!-- Cricket ball in corner -->
+            <div class="ig-cricket-ball-corner">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+              </svg>
+            </div>
+            
+            <!-- Title -->
+            <div class="ig-content-title">I CAN'T READ THE LENGTH</div>
+          </div>
+          
+          <!-- Card Actions -->
+          <div class="ig-card-actions">
+            <div class="ig-action-buttons">
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </div>
+            <button class="ig-action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Card Details -->
+          <div class="ig-card-details">
+            <div class="ig-likes">
+              <span class="ig-likes-count">50,641 likes</span>
+            </div>
+            <p class="ig-description">
+              <strong>masterclasscricket</strong> Learn how to pick the length early with our expert coach! #cricket #batting #technique
+            </p>
+            <p class="ig-view-more">
+              View more on Instagram
+            </p>
+          </div>
+        </div>
+        
+        <!-- Social Card 2 -->
+        <div class="ig-social-card">
+          <!-- Card Header -->
+          <div class="ig-card-header">
+            <div class="ig-profile-image">
+              <img src="https://images.unsplash.com/photo-1565180429899-cf4309aff162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNyaWNrZXQlMjBiYWxsfGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=50" alt="masterclasscricket profile">
+            </div>
+            <div class="ig-profile-info">
+              <div class="ig-username">masterclasscricket</div>
+              <div class="ig-audio-info">Original audio</div>
+            </div>
+            <button class="ig-view-profile-btn">View profile</button>
+          </div>
+          
+          <!-- Card Content -->
+          <div class="ig-card-content">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE1fHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket training video" class="ig-content-image">
+            
+            <!-- Play button -->
+            <div class="ig-play-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            
+            <!-- Cricket ball in corner -->
+            <div class="ig-cricket-ball-corner">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+              </svg>
+            </div>
+            
+            <!-- Title -->
+            <div class="ig-content-title">MASTER THE YORKER</div>
+          </div>
+          
+          <!-- Card Actions -->
+          <div class="ig-card-actions">
+            <div class="ig-action-buttons">
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </div>
+            <button class="ig-action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Card Details -->
+          <div class="ig-card-details">
+            <div class="ig-likes">
+              <span class="ig-likes-count">35,892 likes</span>
+            </div>
+            <p class="ig-description">
+              <strong>masterclasscricket</strong> Perfect your yorker bowling technique with these expert tips! #cricket #bowling
+            </p>
+            <p class="ig-view-more">
+              View more on Instagram
+            </p>
+          </div>
+        </div>
+        
+        <!-- Social Card 3 -->
+        <div class="ig-social-card">
+          <!-- Card Header -->
+          <div class="ig-card-header">
+            <div class="ig-profile-image">
+              <img src="https://images.unsplash.com/photo-1565180429899-cf4309aff162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNyaWNrZXQlMjBiYWxsfGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=50" alt="masterclasscricket profile">
+            </div>
+            <div class="ig-profile-info">
+              <div class="ig-username">masterclasscricket</div>
+              <div class="ig-audio-info">Original audio</div>
+            </div>
+            <button class="ig-view-profile-btn">View profile</button>
+          </div>
+          
+          <!-- Card Content -->
+          <div class="ig-card-content">
+            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUwfHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket training video" class="ig-content-image">
+            
+            <!-- Play button -->
+            <div class="ig-play-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            
+            <!-- Cricket ball in corner -->
+            <div class="ig-cricket-ball-corner">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+              </svg>
+            </div>
+            
+            <!-- Title -->
+            <div class="ig-content-title">FIELD PLACEMENT</div>
+          </div>
+          
+          <!-- Card Actions -->
+          <div class="ig-card-actions">
+            <div class="ig-action-buttons">
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </div>
+            <button class="ig-action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Card Details -->
+          <div class="ig-card-details">
+            <div class="ig-likes">
+              <span class="ig-likes-count">28,749 likes</span>
+            </div>
+            <p class="ig-description">
+              <strong>masterclasscricket</strong> Strategic field placement tips to restrict scoring and create chances! #cricket #fielding #tactics
+            </p>
+            <p class="ig-view-more">
+              View more on Instagram
+            </p>
+          </div>
+        </div>
+        
+        <!-- Social Card 4 -->
+        <div class="ig-social-card">
+          <!-- Card Header -->
+          <div class="ig-card-header">
+            <div class="ig-profile-image">
+              <img src="https://images.unsplash.com/photo-1565180429899-cf4309aff162?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGNyaWNrZXQlMjBiYWxsfGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=50" alt="masterclasscricket profile">
+            </div>
+            <div class="ig-profile-info">
+              <div class="ig-username">masterclasscricket</div>
+              <div class="ig-audio-info">Original audio</div>
+            </div>
+            <button class="ig-view-profile-btn">View profile</button>
+          </div>
+          
+          <!-- Card Content -->
+          <div class="ig-card-content">
+            <img src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIwfHxjcmlja2V0fGVufDB8fHx8MTYyOTM0NDYxNw&ixlib=rb-4.0.3&q=80&w=600" alt="Cricket training video" class="ig-content-image">
+            
+            <!-- Play button -->
+            <div class="ig-play-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            
+            <!-- Cricket ball in corner -->
+            <div class="ig-cricket-ball-corner">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#f43f5e" />
+                <path d="M50,5 C50,5 50,95 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C65,20 65,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+                <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
+              </svg>
+            </div>
+            
+            <!-- Title -->
+            <div class="ig-content-title">SWING BOWLING</div>
+          </div>
+          
+          <!-- Card Actions -->
+          <div class="ig-card-actions">
+            <div class="ig-action-buttons">
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </button>
+              <button class="ig-action-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </button>
+            </div>
+            <button class="ig-action-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Card Details -->
+          <div class="ig-card-details">
+            <div class="ig-likes">
+              <span class="ig-likes-count">42,103 likes</span>
+            </div>
+            <p class="ig-description">
+              <strong>masterclasscricket</strong> Learn the art of swing bowling with these pro tips! #cricket #swingbowling #masterclass
+            </p>
+            <p class="ig-view-more">
+              View more on Instagram
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Follow Button -->
+      <div class="ig-follow-btn-container">
+        <button class="ig-follow-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          FOLLOW US ON INSTAGRAM
+        </button>
+      </div>
+    </section>
+
+    <div class="partners-section">
+      <div class="partners-title-background">PARTNERS</div>
+      <h2 class="partners-title">Our Trusted Partners</h2>
+      <div class="partners-container">
+          <img class="partners-logo" src="img/nike.svg" alt="Partner 1">
+          <img class="partners-logo" src="img/nike.svg" alt="Partner 2">
+          <img class="partners-logo" src="img/nike.svg" alt="Partner 3">
+          <img class="partners-logo" src="img/nike.svg" alt="Partner 4">
+      </div>
+    </div>
+
+
+    <!-- testimonials -->
+    <section class="testimonials-container">
+      <div class="testimonials-header">
+          <h2>Loved by Devs</h2>
+          <p>Trae is popular among developers worldwide.</p>
+      </div>
+      
+      <div class="testimonials-row">
+          <div class="testimonials-row-inner scroll-left">
+              <!-- First row of testimonials -->
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          A
+                      </div>
+                      <h3 class="author-name">Anonymous</h3>
+                  </div>
+                  <p class="testimonial-text">"I've used competitors for a long time, but I say Trae is my new favorite. It's super quick, it's stylish! I love the way it works, and extremely responsive."</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          M
+                      </div>
+                      <h3 class="author-name">Md. Shah Paran</h3>
+                  </div>
+                  <p class="testimonial-text">Trae's seamless experience and intuitive design make it my top pick for creative projects. It's a game changer that continuously boosts my productivity—highly recommended!</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          S
+                      </div>
+                      <h3 class="author-name">Steve Morin</h3>
+                  </div>
+                  <p class="testimonial-text">Love how Trae accelerates my development and that of my teams.</p>
+              </div>
+              
+              <!-- Duplicate cards for infinite scroll effect -->
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          A
+                      </div>
+                      <h3 class="author-name">Anonymous</h3>
+                  </div>
+                  <p class="testimonial-text">"I've used competitors for a long time, but I say Trae is my new favorite. It's super quick, it's stylish! I love the way it works, and extremely responsive."</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          M
+                      </div>
+                      <h3 class="author-name">Md. Shah Paran</h3>
+                  </div>
+                  <p class="testimonial-text">Trae's seamless experience and intuitive design make it my top pick for creative projects. It's a game changer that continuously boosts my productivity—highly recommended!</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          S
+                      </div>
+                      <h3 class="author-name">Steve Morin</h3>
+                  </div>
+                  <p class="testimonial-text">Love how Trae accelerates my development and that of my teams.</p>
+              </div>
+          </div>
+      </div>
+      
+      <div class="testimonials-row">
+          <div class="testimonials-row-inner scroll-right">
+              <!-- Second row of testimonials -->
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          S
+                      </div>
+                      <h3 class="author-name">sapienapp</h3>
+                  </div>
+                  <p class="testimonial-text">Trae is hands down my favorite AI IDE—smarter, sleeker, and outpacing Cursor and Windsurf every time. Just keeping on those model settings for new and local models to unlock its full potential. Ps: Love the UI/UX</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          N
+                      </div>
+                      <h3 class="author-name">Nikita Kakuev</h3>
+                  </div>
+                  <p class="testimonial-text">You know what, @Trae_ai is my best mate now! He's teaching me Rust and it's the best experience I've had so far with AIs!</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          G
+                      </div>
+                      <h3 class="author-name">György Márk Varga</h3>
+                  </div>
+                  <p class="testimonial-text">I've been using @Trae_ai code edit since the start. Wow, they have one of the greatest developer experience amongst IDEs and the productivity gain from AI mode really making me a 10x engineer. Great job!</p>
+              </div>
+              
+              <!-- Duplicate cards for infinite scroll effect -->
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          S
+                      </div>
+                      <h3 class="author-name">sapienapp</h3>
+                  </div>
+                  <p class="testimonial-text">Trae is hands down my favorite AI IDE—smarter, sleeker, and outpacing Cursor and Windsurf every time. Just keeping on those model settings for new and local models to unlock its full potential. Ps: Love the UI/UX</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          N
+                      </div>
+                      <h3 class="author-name">Nikita Kakuev</h3>
+                  </div>
+                  <p class="testimonial-text">You know what, @Trae_ai is my best mate now! He's teaching me Rust and it's the best experience I've had so far with AIs!</p>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-author">
+                      <div class="author-avatar">
+                          G
+                      </div>
+                      <h3 class="author-name">György Márk Varga</h3>
+                  </div>
+                  <p class="testimonial-text">I've been using @Trae_ai code edit since the start. Wow, they have one of the greatest developer experience amongst IDEs and the productivity gain from AI mode really making me a 10x engineer. Great job!</p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Column 1: About -->
+          <div class="col-lg-3 col-md-6 " >
+            <a
+              class="d-flex align-items-center text-white text-decoration-none mb-4"
+              href="#"
+            >
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="img/logo_.ico" alt="Logo" class="me-2" style="width: 30%; height: 30%px; margin-bottom: 2%; ">
+              <!-- <span class="fw-bold font-montserrat fs-4">MasterClassCricket</span> -->
+          </a>
+          
+            </a>
+            <p class=" mb-4 text-white">
+              The premium Cricket league experience, bringing together elite
+              competition, world-class facilities, and a passionate community.
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-3"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-3 col-md-6">
+            <h4 class="font-montserrat fw-bold mb-4">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Our Teams</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Fixtures</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >News & Updates</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Leagues -->
+          <div class="col-lg-3 col-md-6">
+            <h4 class="font-montserrat fw-bold mb-4">Leagues</h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Premier Division</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Championship</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Youth League</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Women's League</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none hover-white"
+                  >Veterans Cup</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact -->
+          <div class="col-lg-3 col-md-6">
+            <h4 class="font-montserrat fw-bold mb-4">Contact Us</h4>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-3">
+                <i class="fas fa-map-marker-alt text-primary mt-1 me-3"></i>
+                <span class="text-white"
+                  >123 Stadium Road, Sportsville, SP1 2FC</span
+                >
+              </li>
+              <li class="d-flex mb-3">
+                <i class="fas fa-phone text-primary mt-1 me-3"></i>
+                <span class="text-white">+18(461)236 98</span>
+              </li>
+              <li class="d-flex mb-3">
+                <i class="fas fa-envelope text-primary mt-1 me-3"></i>
+                <span class="text-white">info@masterClassCricket-league.com</span>
+              </li>
+              <li class="d-flex">
+                <i class="fab fa-skype text-primary mt-1 me-3"></i>
+                <span class="text-white">Team.Skype</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="mt-4 mb-3 border-secondary" />
+
+        <div class="text-center text-white small">
+          <p>&copy; 2025 MasterClassCricket . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Three.js for 3D Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="index1.js"></script>
+  </body>
+</html>
