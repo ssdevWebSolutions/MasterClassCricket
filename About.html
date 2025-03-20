@@ -89,9 +89,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    </head>
-    <style>
-          *,
+        <style>
+              *,
         *::before,
         *::after {
             box-sizing: border-box;
@@ -1971,188 +1970,309 @@
             }
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+            /* About section styles */
+        .about-section {
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+width: 100%;
+padding: 60px 0;
+background-color: #000;
+overflow: hidden;
+}
 
-        /* body {
-            background-color: #121212;
-            color: #fff;
-            
-        } */
+.about-container {
 
-        .testimonials-container {
-            background-color: #fffcfc;
-            /* max-width: 1200px; */
-            margin: 0 auto;
-            padding: 2rem;
-        }
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
 
-        .testimonials-header {
+.top-section {
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 40px;
+}
 
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+.about-header {
+/* border: 1px solid red; */
+font-family: 'Playfair Display', serif;
+}
 
-        .testimonials-header h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #060606;
-            margin-bottom: 1rem;
-        }
+.about-content {
+flex: 1;
+min-width: 300px;
+padding-left: 50px;
+}
 
-        .testimonials-header p {
-            font-size: 1.2rem;
-            color: #aaa;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.about-image {
+flex: 1;
+min-width: 300px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-        .testimonials-row {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-            overflow-x: hidden;
-            position: relative;
-            padding: 1rem 0;
-        }
+.about-image img {
+max-width: 100%;
+height: auto;
+display: block;
+transition: transform 0.5s ease;
+border-radius: 8px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
-        .testimonial-card {
-            background-color: rgb(255, 192, 7);
-            border-radius: 10px;
-            padding: 1.5rem;
-            min-width: 320px;
-            max-width: 320px;
-            flex: 0 0 auto;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+/* Two-column layout */
+.two-column-section {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+margin: 30px 0;
+}
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            background-color: rgb(2, 2, 2);
-            color: white;
-        }
+/* Development system grid - 2x2 layout */
+.development-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 30px 0;
+}
 
-        .testimonial-card:hover p {
-            transform: translateY(-5px);
-            background-color: rgb(2, 2, 2);
-            color: white;
-        }
+/* Typography styles */
+.about-section h1 {
+font-size: 32px;
+font-weight: 700;
+margin-bottom: 10px;
+color: #fff;
+}
 
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
+.about-section h2 {
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 18px;
+color: #d4af37;
+/* Gold color */
+position: relative;
+display: inline-block;
+}
 
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 1rem;
-            background-color: rgb(170, 39, 43);
-            /* Yellow background */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #000;
-            /* Black text */
-        }
+.about-section p {
+margin-bottom: 15px;
+font-size: 16px;
+line-height: 1.6;
+color: #fff;
+}
 
-        .author-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
+/* Development system items */
+.development-item {
+display: flex;
+align-items: flex-start;
+padding: 20px;
+background-color: rgba(30, 30, 30, 0.5);
+border-radius: 8px;
+transform: translateY(20px);
+opacity: 0;
+transition: transform 0.5s, opacity 0.5s;
+height: 100%;
+border-top: 3px solid #d4af37;
+}
 
-        .testimonial-text {
-            color: #000;
-            line-height: 1.5;
-            font-size: 0.95rem;
-            height: 110px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-        }
+.development-item.animated {
+transform: translateY(0);
+opacity: 1;
+}
 
-        .company-logo {
-            width: 120px;
-            height: auto;
-            opacity: 0.7;
-            margin-bottom: 1rem;
-        }
+.development-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
-        /* Animation classes */
-        .scroll-left {
-            animation: scrollLeft 30s linear infinite;
-        }
+.item-number {
+width: 32px;
+height: 32px;
+background-color: #d4af37;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size: 16px;
+margin-right: 15px;
+flex-shrink: 0;
+color: #000;
+}
 
-        .scroll-right {
-            animation: scrollRight 30s linear infinite;
-        }
+.item-content {
+flex: 1;
+}
 
-        @keyframes scrollLeft {
-            0% {
-                transform: translateX(0);
-            }
+.item-title {
+font-weight: 600;
+margin-bottom: 5px;
+color: #d4af37;
+}
 
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+/* Legacy and Grassroots boxes */
+.info-box {
+flex: 1;
+min-width: 300px;
+padding: 25px;
+margin-bottom: 20px;
+background-color: rgba(30, 30, 30, 0.7);
+border-radius: 8px;
+transform: translateY(20px);
+opacity: 0;
+transition: transform 0.5s, opacity 0.5s;
+height: 100%;
+}
 
-        @keyframes scrollRight {
-            0% {
-                transform: translateX(-100%);
-            }
+.legacy-box {
+border-left: 4px solid #d4af37;
+}
 
-            100% {
-                transform: translateX(0);
-            }
-        }
+.grassroots-box {
+border-right: 4px solid #d4af37;
+}
 
-        /* For cloning cards to create infinite scroll effect */
-        .testimonials-row-inner {
-            display: flex;
-            gap: 1.5rem;
-        }
+.info-box.animated {
+transform: translateY(0);
+opacity: 1;
+}
 
-        @media (max-width: 1024px) {
-            .testimonial-card {
-                min-width: 280px;
-                max-width: 280px;
-            }
-        }
+/* Buttons */
+.cta-button {
+display: inline-block;
+padding: 12px 30px;
+background-color: #d4af37;
+color: #000;
+font-weight: 600;
+border-radius: 5px;
+text-decoration: none;
+margin-top: 20px;
+cursor: pointer;
+transition: transform 0.3s, box-shadow 0.3s;
+border: none;
+font-size: 16px;
+}
 
-        @media (max-width: 768px) {
-            .testimonial-card {
-                min-width: 260px;
-                max-width: 260px;
-            }
-        }
+.cta-button:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
 
+/* Fade-in animation */
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+.fade-in.animated {
+opacity: 1;
+transform: translateY(0);
+}
 
+/* Delay animations */
+.delay-1 {
+transition-delay: 0.1s;
+}
 
+.delay-2 {
+transition-delay: 0.2s;
+}
 
-        
-    </style>
+.delay-3 {
+transition-delay: 0.3s;
+}
+
+.delay-4 {
+transition-delay: 0.4s;
+}
+
+.delay-5 {
+transition-delay: 0.5s;
+}
+
+/* Cricket ball animation */
+.cricket-ball {
+position: absolute;
+width: 40px;
+height: 40px;
+background: radial-gradient(circle at 30% 30%, #d4af37, #aa8c2c);
+border-radius: 50%;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+z-index: -1;
+opacity: 0.2;
+}
+
+.ball-1 {
+top: 10%;
+left: 5%;
+animation: floatBall 15s infinite ease-in-out;
+}
+
+.ball-2 {
+bottom: 15%;
+right: 10%;
+animation: floatBall 18s infinite ease-in-out reverse;
+}
+
+@keyframes floatBall {
+
+0%,
+100% {
+    transform: translate(0, 0) rotate(0deg);
+}
+
+25% {
+    transform: translate(50px, 40px) rotate(90deg);
+}
+
+50% {
+    transform: translate(20px, 80px) rotate(180deg);
+}
+
+75% {
+    transform: translate(-30px, 40px) rotate(270deg);
+}
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.top-section {
+    flex-direction: column-reverse;
+}
+
+.about-content,
+.about-image {
+    width: 100%;
+    padding-right: 0;
+}
+
+.about-content {
+    margin-top: 40px;
+}
+
+.development-grid {
+    grid-template-columns: 1fr;
+}
+
+.about-section h1 {
+    font-size: 28px;
+}
+
+.about-section h2 {
+    font-size: 22px;
+}
+}
+        </style>
+    </head>
     <body>
-          <!-- Loading Screen -->
-          <div class="loading-screen" id="loadingScreen">
+           <!-- Loading Screen -->
+           <div class="loading-screen" id="loadingScreen">
             <div class="loading-container">
                 <div class="loading-spinner"></div>
                 <div class="loading-logo">
-                    <img src="img/logo_ (2).png" alt="Masterclass Cricket Academy Logo" loading="lazy">
+                    <img src="/img/logo_ (2).png" alt="Masterclass Cricket Academy Logo" loading="lazy">
                 </div>
                 <div class="loading-text">Preparing Your Cricket Experience...</div>
             </div>
@@ -2164,7 +2284,7 @@
             <nav class="headerHero-navbar">
                 <div class="headerHero-navbar-container">
                     <div class="headerHero-navbar-logo">
-                        <a href="index.html"><img src="img/logo_.ico" alt="Masterclass Cricket Logo"
+                        <a href="index.html"><img src="/img/logo_.ico" alt="Masterclass Cricket Logo"
                                 class="headerHero-logo-image"></a>
                         <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
                     </div>
@@ -2195,327 +2315,108 @@
                 </div>
             </nav>
         </header>
-         <!-- testimonail -->
-         <section class="testimonials-container " id="Testimonials" style="background-color: black;">
-            <div class="testimonials-header">
-                <h2 style="font-family: 'Playfair Display', serif;color: white;">Cricket Academy Reviews – Why Players &
-                    Parents Love Masterclass</h2>
-                <p>See why players, parents, and professionals trust <a href="#Academy">Masterclass Cricket Academy</a>.
-                    </p>
-            </div>
-
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-left">
-                    <!-- First row of testimonials -->
 
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                J
-                            </div>
-                            <h3 class="author-name">James Parker – Richmond</h3>
-                        </div>
-                        <p class="testimonial-text">“We’ve trained with **Masterclass Cricket Academy** for 10 years,
-                            and the **professional cricket coaching** is unmatched. Thanks to **expert batting, bowling,
-                            and fielding training**, my son progressed from **borough cricket to the County Winter
-                            Squad**.”</p>
+        <!-- About Section -->
+        <section class="about-section" id="About">
+            <!-- Background animation -->
+            <div class="cricket-ball ball-1"></div>
+            <div class="cricket-ball ball-2"></div>
+
+            <div class="about-container">
+                <!-- Top section with image on right, content on left -->
+                <div class="top-section">
+                    <div class="about-image fade-in">
+                        <img src="/img/AboutBackground.png" alt="Masterclass Cricket Coaches" id="about-img">
                     </div>
+                    <div class="about-content">
+                        <h1 class="fade-in about-header" style="  
+            font-family: 'Playfair Display', serif;">Masterclass Cricket – The Ultimate Coaching Experience</h1>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Sarah Wilson – Chiswick</h3>
-                        </div>
-                        <p class="testimonial-text">“We tried other academies before coming to Masterclass, but nothing
-                            compares to the professionalism and attention to detail here. My daughter started playing
-                            for her school B team, then moved to borough cricket. After working with Uzi and Ani, she’s
-                            now in the County Summer Squad. The investment is worth it!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                D
-                            </div>
-                            <h3 class="author-name">Daniel Simmons – Wimbledon</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “People ask if it’s expensive. I say, ‘You get what you pay for.’ This isn’t just an
-                            academy—it’s an elite coaching program. Thanks to Uzi and the team, my son went from a
-                            school second-team cricketer to playing borough cricket and now regional trials. The
-                            structured coaching and match preparation made all the difference.”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                P
-                            </div>
-                            <h3 class="author-name">Priya Patel – Hounslow</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “My son struggled with his batting, and after just a few months at Masterclass, his
-                            confidence and technique transformed. The one-on-one sessions with Ani and the detailed
-                            reports allowed us to track his progress. He started in borough cricket and has now made the
-                            County Winter Squad!”
+                        <h2 class="fade-in delay-1">What We Specialise In</h2>
+                        <p class="fade-in delay-2">
+                            At Masterclass Cricket, we combine advanced biomechanics with professional playing
+                            experience to develop elite cricketers. Our unique "linking" method ensures players not only
+                            understand technique but feel the difference in their batting, fast bowling, and spin
+                            bowling performance.
                         </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
-                            <h3 class="author-name">Alex Thompson – Clapham</h3>
-                        </div>
-                        <p class="testimonial-text">“We travel two hours every Saturday for a session here. My son was
-                            overlooked at his old academy, but Uzi and Sohaib spotted his potential immediately. After
-                            working on his bowling, he moved up from borough cricket to the regional setup. Now, he’s
-                            pushing for county selection!”
+                        <p class="fade-in delay-2">
+                            We pride ourselves on identifying technical adjustments and designing innovative drills to
+                            accelerate improvement.
                         </p>
+
+                        <h2 class="fade-in delay-3">A Complete Player Development System</h2>
+                       <p> For over 10 years, Masterclass Cricket has been a trusted coaching brand, attracting players
+                            from around the world. Our reputation for elite coaching and international success speaks
+                            for itself.</p>
                     </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Michelle Davies – Kensington</h3>
-                        </div>
-                        <p class="testimonial-text">
-
-                            “My daughter was the only girl at her club and never got real coaching. Masterclass changed
-                            that. After training with Ollie and Ani, she’s now playing in her school’s A team and has
-                            been selected for regional trials. Finally, an academy that values girls’ cricket!”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
-                            <h3 class="author-name">Andrew Carter – Ealing</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “Sohaib corrected my son’s bowling action in just a few weeks, and now he’s bowling quicker
-                            and more accurately. His confidence has skyrocketed, and he’s getting noticed at regional
-                            level. Uzi oversees every player’s development, making sure they get the best coaching.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Simon Bradley – Notting Hill</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “Masterclass isn’t just coaching—it’s a cricket education. The video analysis, structured
-                            feedback, and match scenarios prepare players for real competition. My son has moved from
-                            regional cricket to the County Summer Squad, and his game awareness has improved massively.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                T
-                            </div>
-                            <h3 class="author-name">Thomas Finch – Kingston</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “As a club coach myself, I’ve never seen an academy that provides this level of detail. My
-                            son started in the school B team, moved to borough cricket, and has now been selected for
-                            the County Winter Squad. The technical work from Uzi and Sohaib has been outstanding.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                E
-                            </div>
-                            <h3 class="author-name">Emma Richards – Chelsea</h3>
-                        </div>
-                        <p class="testimonial-text">“The coaches here don’t just create better cricketers; they build
-                            confidence, discipline, and passion. My son started in the school C team and is now the
-                            opening batter for the A team, all thanks to Masterclass.”
-                        </p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Mark Bennett – Twickenham</h3>
-                        </div>
-                        <p class="testimonial-text">
-                            “We’ve been with Masterclass for 8 years. My son has gone from a club player to a
-                            borough-level opener, and now he’s in the County Summer Squad. No gimmicks—just pure,
-                            high-level coaching from Uzi, Ollie, and the team.”</p>
-                    </div>
-
-
-
 
 
                 </div>
-            </div>
 
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-right">
-                    <!-- Second row of testimonials -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                R
-                            </div>
-                            <h3 class="author-name">Rachel Owens – Hammersmith</h3>
+                <!-- Development system in 2x2 grid -->
+                <!-- <div class="development-grid" >
+                    <div class="development-item delay-1">
+                        <div class="item-number">1</div>
+                        <div class="item-content">
+                            <div class="item-title">Technical Adjustments & Drills</div>
+                            <p>Identifying weaknesses and implementing tailored drills to correct them.</p>
                         </div>
-                        <p class="testimonial-text">“My daughter plays cricket for fun, but even at a recreational
-                            level, the improvements have been huge. She went from a school beginner to playing in the A
-                            team. The coaches make learning exciting and engaging.”</p>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
-                            <h3 class="author-name">Mohammed Khan – Southall</h3>
+                    <div class="development-item delay-2">
+                        <div class="item-number">2</div>
+                        <div class="item-content">
+                            <div class="item-title">Strength & Conditioning</div>
+                            <p>Enhancing power, agility, and endurance.</p>
                         </div>
-                        <p class="testimonial-text">“I drive 3 hours weekly for my son’s one-on-one sessions with
-                            Sohaib. The personalized coaching and deep understanding of technique make this academy the
-                            best. He was struggling in borough cricket but has now been selected for the regional
-                            squad!”</p>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                O
-                            </div>
-                            <h3 class="author-name">Oliver James – Fulham</h3>
+                    <div class="development-item delay-3">
+                        <div class="item-number">3</div>
+                        <div class="item-content">
+                            <div class="item-title">Nutrition</div>
+                            <p>Fueling the body for peak performance.</p>
                         </div>
-                        <p class="testimonial-text">“Other academies felt like daycare. At Masterclass, they actually
-                            teach. The coaches push players and set high standards. My son moved up from the school C
-                            team to borough cricket and now has regional trials lined up!”</p>
-                    </div>
-                    <div class="testimonial-card">
-
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                N
-                            </div>
-                            <h3 class="author-name">Nathan Green – Croydon</h3>
-                        </div>
-                        <p class="testimonial-text">“We flew in from Dubai just to train with Uzi and his team. The
-                            level of coaching here is on par with international academies. My son’s game has completely
-                            transformed, and he’s now competing in the County Winter Squad.”</p>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                C
-                            </div>
-                            <h3 class="author-name">Charlotte Adams – Barnes</h3>
+                    <div class="development-item delay-4">
+                        <div class="item-number">4</div>
+                        <div class="item-content">
+                            <div class="item-title">Mindset & Mental Discipline</div>
+                            <p>Developing resilience to perform under pressure.</p>
                         </div>
-                        <p class="testimonial-text">“The structured reports are a game-changer. Most academies just let
-                            kids play, but here, every session is measured and tracked. My son started at borough level
-                            and has now secured a place in the County Summer Squad!”</p>
                     </div>
+                </div> -->
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                R
-                            </div>
-                            <h3 class="author-name">Richard Clarke – Essex</h3>
-                        </div>
-                        <p class="testimonial-text">“As a former cricketer myself, I was skeptical at first. But after
-                            watching Uzi and his team work, I can confidently say they turn good players into great
-                            ones. My son moved from school A team to borough and now regional selection!”</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
-                            <h3 class="author-name">Sophie Brown – Surrey
-                            </h3>
-                        </div>
-                        <p class="testimonial-text">“Masterclass is the reason my son got into the regional setup. The
-                            technical coaching, match preparation, and high-level training all contributed to his
-                            success. Uzi’s knowledge and Ollie’s coaching have been key.”
+                <!-- Legacy and Grassroots in two columns -->
+                <!-- <div class="two-column-section">
+                    <div class="info-box legacy-box fade-in delay-1">
+                        <h2 style="margin-top: 0;">A Globally Respected Legacy</h2>
+                        <p>
+                            For over 10 years, Masterclass Cricket has been a trusted coaching brand, attracting players
+                            from around the world. Our reputation for elite coaching and international success speaks
+                            for itself.
                         </p>
-                    </div>
+                    </div> -->
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                J
-                            </div>
-                            <h3 class="author-name">Jacob Lewis – Guildford</h3>
-                        </div>
-                        <p class="testimonial-text">“What sets Masterclass apart is their ability to tailor coaching to
-                            each child’s strengths and weaknesses. They’re developing smart cricketers, not just players
-                            who can hit the ball. My son has moved from borough to the County Winter Squad under
-                            Sohaib’s coaching!”</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                D
-                            </div>
-                            <h3 class="author-name">David Wright – Birmingham</h3>
-                        </div>
-                        <p class="testimonial-text">“We drive down from Birmingham every half-term just so my son can
-                            train here. The level of coaching is that good. Uzi and his team don’t just teach
-                            cricket—they build champions. My son has gone from regional to the County Summer Squad
-                            thanks to their elite coaching!”</p>
-                    </div>
-                    <div class="testimonial-card">
-
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                K
-                            </div>
-                            <h3 class="author-name">Kesrick Williams – West Indies International Cricketer</h3>
-                        </div>
-                        <p class="testimonial-text">“I’ve played cricket all over the world, but the coaching setup at
-                            Masterclass Cricket is something special. Uzi and his team break down the game in a way that
-                            even professionals can learn from. Any young player training here is in the best hands.”
+                    <!-- <div class="info-box grassroots-box fade-in delay-2">
+                        <h2 style="margin-top: 0;">From Grassroots to the Test Arena</h2>
+                        <p>
+                            Whether you're just starting out or aiming for the highest level, our holistic approach
+                            ensures you develop the technical, tactical, and mental edge needed to excel.
                         </p>
-                    </div>
 
-                    <div class="testimonial-card">
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                N
-                            </div>
-                            <h3 class="author-name">Rayad Emrit – Former West Indies Captain</h3>
-                        </div>
-                        <p class="testimonial-text">“I’ve trained with Uzi and the Masterclass team, and their technical
-                            knowledge is top-tier. They understand what it takes to develop young players, whether it’s
-                            improving fast bowling, perfecting batting technique, or building a match-winning mindset.
-                            If you’re serious about cricket, this is the place to be.”</p>
-                    </div>
+                        <p><strong>For Every Skill We've Got The Drill</strong></p>
 
-
-
-
-                </div>
+                        <button class="cta-button fade-in delay-3"
+                            onclick="window.location.href='https://masterclass-cricket.classforkids.io'">Book a
+                            Session</button>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </section>
-
+         <!-- about JavaScript for animations -->
 
          <!-- Contact Us Section -->
          <section class="contact-us-section " id="Contact">
@@ -2940,7 +2841,7 @@
                     <div class="col-lg-3 col-md-6">
                         <a class="d-flex justify-content-start align-items-center text-white text-decoration-none mb-4"
                             href="Home.html">
-                            <img src="img/logo_.ico" alt="Logo" class="me-2 img-fluid"
+                            <img src="/img/logo_.ico" alt="Logo" class="me-2 img-fluid"
                                 style="width: 50%; max-width: 120px;">
                         </a>
                         <p class="text-white">
@@ -3276,32 +3177,79 @@
         });
         <!-- OnloadAnimation -->
     </script>
-     <!-- tesimonail -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Clone testimonial cards for infinite scroll effect
-            const rows = document.querySelectorAll('.testimonials-row-inner');
+    <script>
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
 
-            rows.forEach(row => {
-                const cards = row.querySelectorAll('.testimonial-card');
-                const clonedCards = Array.from(cards).map(card => card.cloneNode(true));
-                clonedCards.forEach(card => row.appendChild(card));
+        // Function to animate elements when they enter the viewport
+        function animateOnScroll() {
+            // Animate fade-in elements
+            document.querySelectorAll('.fade-in').forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('animated');
+                }
             });
 
-            // Pause animation on hover
-            const testimonialCards = document.querySelectorAll('.testimonial-card');
-            testimonialCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.closest('.testimonials-row-inner').style.animationPlayState = 'paused';
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.closest('.testimonials-row-inner').style.animationPlayState = 'running';
-                });
+            // Animate development items
+            document.querySelectorAll('.development-item').forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('animated');
+                }
             });
+
+            // Animate info boxes
+            document.querySelectorAll('.info-box').forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Image hover effect
+        const aboutImg = document.getElementById('about-img');
+        if (aboutImg) {
+            aboutImg.addEventListener('mouseover', () => {
+                aboutImg.style.transform = 'scale(1.05) rotate(1deg)';
+            });
+
+            aboutImg.addEventListener('mouseout', () => {
+                aboutImg.style.transform = 'scale(1) rotate(0)';
+            });
+        }
+
+        // Pulse animation for CTA button
+        function pulseButton() {
+            const button = document.querySelector('.cta-button');
+            if (button) {
+                setTimeout(() => {
+                    button.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        button.style.transform = 'scale(1)';
+                        setTimeout(pulseButton, 5000);
+                    }, 200);
+                }, 3000);
+            }
+        }
+
+        // Listen for scroll and load events
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            pulseButton();
         });
+
+        // Initial animation call
+        setTimeout(animateOnScroll, 100);
     </script>
+      <!-- about JavaScript for animations -->
+
     </body>
-
-
     </html>
