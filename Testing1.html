@@ -1047,7 +1047,12 @@
         outline: none;
         padding: 12px 15px;
         font-size: 16px;
+        color:black;
+        
     }
+    .subscribe-container input::placeholder
+     { color: black !important; } /* Standard */
+
 
     .subscribe-container button {
         background: #d4ae36;
@@ -7461,7 +7466,7 @@
                                     </a>
                                     <form id="newsletter-form" action="" method="POST" class="subscribe-container">
                                     
-                                        <input type="email" name="email" placeholder="Enter your email" required>
+                                        <input type="email" name="email"  placeholder="Enter your email To Subscribe" required>
                                     
                                         <button type="submit">
                                             Newsletter <i class="fas fa-envelope"></i>
@@ -9433,7 +9438,7 @@
                             <!-- Name Field -->
                             <div class="contact-us-form-group">
                                 <label for="name" class="contact-us-label">Your Name</label>
-                                <input type="text" id="name" name="Name" class="contact-us-input" placeholder="Enter your name" required>
+                                <input type="text" id="name" name="Name" class="contact-us-input"  placeholder="Enter your name" required>
                             </div>
                         
                             <!-- Email Field -->
