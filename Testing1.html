@@ -3252,6 +3252,225 @@
                 box-shadow: 0 0 0 0 rgba(234, 179, 8, 0);
             }
         }
+             /* Keeping existing styles */
+             .ig-reels-section {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .ig-reels-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 640px) {
+            .ig-reels-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .ig-reels-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .ig-social-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(31, 41, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .ig-social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(234, 179, 8, 0.2);
+        }
+
+        .ig-card-header {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ig-profile-image {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .ig-profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ig-profile-info {
+            font-size: 0.875rem;
+        }
+
+        .ig-username {
+            font-weight: 500;
+        }
+
+        .ig-audio-info {
+            color: #9ca3af;
+            font-size: 0.75rem;
+        }
+
+        .ig-view-profile-btn {
+            margin-left: auto;
+            padding: 4px 12px;
+            background-color: #1d4ed8;
+            color: white;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .ig-view-profile-btn:hover {
+            background-color: #1e40af;
+        }
+
+        .ig-card-content {
+            aspect-ratio: 4/5;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .reel-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+            display: block;
+        }
+
+        .reel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .reel-video.playing {
+            display: block;
+        }
+
+        .reel-thumbnail.hidden {
+            display: none;
+        }
+
+        .ig-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .ig-play-button svg {
+            width: 32px;
+            height: 32px;
+            fill: rgba(255, 192, 3, 0.9);
+        }
+
+        .ig-cricket-ball-corner {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            width: 40px;
+            height: 40px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            animation: spin 8s linear infinite;
+            pointer-events: none;
+        }
+
+        .ig-social-card:hover .ig-cricket-ball-corner {
+            opacity: 1;
+        }
+
+        .ig-card-actions {
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ig-action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .ig-action-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .ig-action-btn:hover {
+            color: #eab308;
+        }
+
+        .ig-action-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .ig-card-details {
+            padding: 0 12px 12px;
+        }
+
+        .ig-likes {
+            font-size: 0.875rem;
+            margin-bottom: 4px;
+        }
+
+        .ig-likes-count {
+            font-weight: bold;
+        }
+
+        .ig-view-more {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
         /* Coaches styling */
 
@@ -8160,6 +8379,7 @@
         <!-- instagarma -->
        <!-- Social Media Section -->
    <!-- Social Media Section -->
+   <!-- Social Media Section -->
    <section class="ig-reels-section ">
     <h2 class="ig-section-title">
         CHECK OUT <span class="ig-highlight">OUR SOCIAL MEDIA!</span>
@@ -8281,41 +8501,38 @@
         </svg>
     </div>
 
-    <!-- Reels Grid -->
+
+   
+
+   
     <div class="ig-reels-grid">
         <!-- Social Card 1 -->
         <div class="ig-social-card">
-            <!-- Card Header -->
             <div class="ig-card-header">
                 <div class="ig-profile-image">
-                    <a href="https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==" target="_blank">
+                    <a href="https://www.instagram.com/masterclasscricket" target="_blank">
                         <img src="img/instalogo.JPG" alt="masterclasscricket profile">
                     </a>
-                    
                 </div>
                 <div class="ig-profile-info">
                     <div class="ig-username">masterclasscricket</div>
                     <div class="ig-audio-info">Original audio</div>
                 </div>
-                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank')">
+                    View profile
+                </button>
             </div>
 
-            <!-- Card Content -->
-            <div class="ig-card-content">
-                <video id="video1" src="vedios/v1.mp4"   muted  width="110%" height="100%"></video>
-
-
-                <!-- Play button -->
-                <div class="ig-play-button" id="v1" >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video1" onclick="toggleAudio(this)" >
+            <div class="ig-card-content" onclick="toggleVideo('video1', 'thumbnail1', this)">
+                <img id="thumbnail1" src="img/insta11.jpg" alt="Reel thumbnail" class="reel-thumbnail">
+                <video id="video1" src="vedios/v1.mp4" class="reel-video" loop></video>
+                
+                <div class="ig-play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
-                        
                     </svg>
-                    
                 </div>
 
-                <!-- Cricket ball in corner -->
                 <div class="ig-cricket-ball-corner">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="45" fill="#f43f5e" />
@@ -8324,17 +8541,13 @@
                         <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
                     </svg>
                 </div>
-
-                <!-- Title -->
-                <!-- <div class="ig-content-title">I CAN'T READ THE LENGTH</div> -->
             </div>
 
-            <!-- Card Actions -->
             <div class="ig-card-actions">
                 <div class="ig-action-buttons">
                     <button class="ig-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round" 
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </button>
@@ -8359,62 +8572,101 @@
                 </button>
             </div>
 
-            <!-- Card Details -->
             <div class="ig-card-details">
                 <div class="ig-likes">
-                    <span class="ig-likes-count">1M views</span>
+                    <span class="ig-likes-count">1M Views</span>
                 </div>
-                <!-- <p class="ig-description">
-                    <strong>masterclasscricket</strong> 
-                    Tag a friend who struggles to read length when playing spin? Comment below 👇
-                    .
-                    When facing spin bowling, many batsmen often make the mistake of standing too tall, which can make it difficult for them to judge the length of the ball properly.
-                    .
-                    Our head coach, Uzi, was fortunate to have worked with the legendary Gary Kirsten, who shared an amazing tip with him. Kirsten advised batsmen to look under the ball while batting against spin. This technique helps in picking up the length of the ball early and keeping the head stable.
-                    .
-                   
-                    #CricketWorldCup #CWC19 #CricketFans #CricketLove
-                    #WorldCup2019 #CricketMatch
-                    #CricketHighlight #CricketVideos
-                    #CricketLife #CricketSkills
-                    #CricketPassion #Cricketers
-                   
-                </p> -->
                 <p class="ig-view-more">
                     View more on Instagram
                 </p>
             </div>
         </div>
-
+        <script>
+            // Keep track of currently playing video
+            let currentlyPlaying = null;
+            let currentPlayButton = null;
+            let currentThumbnail = null;
+    
+            function toggleVideo(videoId, thumbnailId, container) {
+                const video = document.getElementById(videoId);
+                const thumbnail = document.getElementById(thumbnailId);
+                const playButton = container.querySelector('.ig-play-button');
+    
+                // If there's a video currently playing and it's not this one, stop it
+                if (currentlyPlaying && currentlyPlaying !== video) {
+                    currentlyPlaying.pause();
+                    currentlyPlaying.style.display = 'none';
+                    if (currentThumbnail) {
+                        currentThumbnail.style.display = 'block';
+                    }
+                    if (currentPlayButton) {
+                        currentPlayButton.style.display = 'flex';
+                    }
+                }
+    
+                // Toggle current video
+                if (video.style.display === 'none' || video.style.display === '') {
+                    // Play this video
+                    thumbnail.style.display = 'none';
+                    video.style.display = 'block';
+                    playButton.style.display = 'none';
+                    video.play().catch(error => {
+                        console.error("Error playing video:", error);
+                    });
+                    currentlyPlaying = video;
+                    currentPlayButton = playButton;
+                    currentThumbnail = thumbnail;
+                } else {
+                    // Stop this video
+                    video.pause();
+                    video.style.display = 'none';
+                    thumbnail.style.display = 'block';
+                    playButton.style.display = 'flex';
+                    currentlyPlaying = null;
+                    currentPlayButton = null;
+                    currentThumbnail = null;
+                }
+            }
+    
+            // Add click event listeners to all action buttons
+            document.addEventListener('DOMContentLoaded', function() {
+                const actionButtons = document.querySelectorAll('.ig-action-btn');
+                actionButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        this.classList.toggle('active');
+                    });
+                });
+            });
+        </script>
+   
         <!-- Social Card 2 -->
         <div class="ig-social-card">
-            <!-- Card Header -->
             <div class="ig-card-header">
                 <div class="ig-profile-image">
-                    <img src="img/instalogo.JPG"
-                        alt="masterclasscricket profile">
+                    <a href="https://www.instagram.com/masterclasscricket" target="_blank">
+                        <img src="img/instalogo.JPG" alt="masterclasscricket profile">
+                    </a>
                 </div>
                 <div class="ig-profile-info">
                     <div class="ig-username">masterclasscricket</div>
                     <div class="ig-audio-info">Original audio</div>
                 </div>
-                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank')">
+                    View profile
+                </button>
             </div>
 
-            <!-- Card Content -->
-            <div class="ig-card-content">
-                <video id="video2" src="vedios/v2.mp4"   muted  width="110%" height="100%"></video>
-
-                <!-- Play button -->
+            <div class="ig-card-content" onclick="toggleVideo('video2', 'thumbnail2', this)">
+                <img id="thumbnail2" src="img/insta2.jpg" alt="Reel thumbnail" class="reel-thumbnail">
+                <video id="video2" src="vedios/v2.mp4" class="reel-video" loop></video>
+                
                 <div class="ig-play-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video2" onclick="toggleAudio(this)" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
-                        
                     </svg>
                 </div>
 
-                <!-- Cricket ball in corner -->
                 <div class="ig-cricket-ball-corner">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="45" fill="#f43f5e" />
@@ -8423,17 +8675,13 @@
                         <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
                     </svg>
                 </div>
-
-                <!-- Title -->
-                <!-- <div class="ig-content-title">MASTER THE YORKER</div> -->
             </div>
 
-            <!-- Card Actions -->
             <div class="ig-card-actions">
                 <div class="ig-action-buttons">
                     <button class="ig-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round" 
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </button>
@@ -8458,21 +8706,10 @@
                 </button>
             </div>
 
-            <!-- Card Details -->
             <div class="ig-card-details">
                 <div class="ig-likes">
                     <span class="ig-likes-count">717k Views</span>
                 </div>
-                <!-- <p class="ig-description">
-                    <strong>masterclasscricket</strong> Struggling with the drive and getting nicked off?
-
-                    It’s likely because your front shoulder is rotating too early, sending your bat down the wrong line.
-                    
-                    The fix?
-                    Focus on dipping your front shoulder into the ball, keeping your elbow high, and driving through with the side of your hand.
-                    .
-                    #Cricket #BattingTips #DriveShot #CoverDrive #StraightDrive #BattingTechnique #ViratKohli #CricketCoaching #CricketSkills #CricketTraining #BattingMasterclass                        
-                </p> -->
                 <p class="ig-view-more">
                     View more on Instagram
                 </p>
@@ -8481,33 +8718,31 @@
 
         <!-- Social Card 3 -->
         <div class="ig-social-card">
-            <!-- Card Header -->
             <div class="ig-card-header">
                 <div class="ig-profile-image">
-                    <img src="img/instalogo.JPG"
-                        alt="masterclasscricket profile">
+                    <a href="https://www.instagram.com/masterclasscricket" target="_blank">
+                        <img src="img/instalogo.JPG" alt="masterclasscricket profile">
+                    </a>
                 </div>
                 <div class="ig-profile-info">
                     <div class="ig-username">masterclasscricket</div>
                     <div class="ig-audio-info">Original audio</div>
                 </div>
-                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank')">
+                    View profile
+                </button>
             </div>
 
-            <!-- Card Content -->
-            <div class="ig-card-content">
-                <video id="video3" src="vedios/v3.mp4"   muted  width="110%" height="100%"></video>
-
-                <!-- Play button -->
+            <div class="ig-card-content" onclick="toggleVideo('video3', 'thumbnail3', this)">
+                <img id="thumbnail3" src="img/inst3.jpg" alt="Reel thumbnail" class="reel-thumbnail">
+                <video id="video3" src="vedios/v3.mp4" class="reel-video" loop></video>
+                
                 <div class="ig-play-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video3" onclick="toggleAudio(this)" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
-                        
                     </svg>
                 </div>
 
-                <!-- Cricket ball in corner -->
                 <div class="ig-cricket-ball-corner">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="45" fill="#f43f5e" />
@@ -8516,17 +8751,13 @@
                         <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
                     </svg>
                 </div>
-
-                <!-- Title -->
-                <!-- <div class="ig-content-title">FIELD PLACEMENT</div> -->
             </div>
 
-            <!-- Card Actions -->
             <div class="ig-card-actions">
                 <div class="ig-action-buttons">
                     <button class="ig-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round" 
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </button>
@@ -8551,19 +8782,10 @@
                 </button>
             </div>
 
-            <!-- Card Details -->
             <div class="ig-card-details">
                 <div class="ig-likes">
                     <span class="ig-likes-count">1M Views</span>
                 </div>
-                <!-- <p class="ig-description">
-                    <strong>masterclasscricket</strong> Read The Caption⬇️⬇️
-                    .
-                    The secret to being a game-changing leg spin bowler lies in the split phase position rather than the release position.
-                    .
-                    Many coaches mistakenly focus on the release position when trying to help spinners improve their ability to spin the ball. However, it is crucial to observe and adjust the wrist position during the split phase in order to enhance alignment and achieve better spin. It’s important to note that not all bowlers need to make these adjustments, as some can still generate spin with a closed wrist.
-                    #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                </p> -->
                 <p class="ig-view-more">
                     View more on Instagram
                 </p>
@@ -8572,33 +8794,31 @@
 
         <!-- Social Card 4 -->
         <div class="ig-social-card">
-            <!-- Card Header -->
             <div class="ig-card-header">
                 <div class="ig-profile-image">
-                    <img src="img/instalogo.JPG"
-                        alt="masterclasscricket profile">
+                    <a href="https://www.instagram.com/masterclasscricket" target="_blank">
+                        <img src="img/instalogo.JPG" alt="masterclasscricket profile">
+                    </a>
                 </div>
                 <div class="ig-profile-info">
                     <div class="ig-username">masterclasscricket</div>
                     <div class="ig-audio-info">Original audio</div>
                 </div>
-                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket?igsh=MWJ4eDJqaHhkN2x3NQ==', '_blank')">View profile</button>
-
+                <button class="ig-view-profile-btn" onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank')">
+                    View profile
+                </button>
             </div>
 
-            <!-- Card Content -->
-            <div class="ig-card-content">
-                <video id="video4" src="vedios/v4.mp4"   muted  width="110%" height="100%"></video>
-
-                <!-- Play button -->
+            <div class="ig-card-content" onclick="toggleVideo('video4', 'thumbnail4', this)">
+                <img id="thumbnail4" src="img/insta4.jpg" alt="Reel thumbnail" class="reel-thumbnail">
+                <video id="video4" src="vedios/v4.mp4" class="reel-video" loop></video>
+                
                 <div class="ig-play-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-video-id="video4" onclick="toggleAudio(this)" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
-                        
                     </svg>
                 </div>
 
-                <!-- Cricket ball in corner -->
                 <div class="ig-cricket-ball-corner">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="45" fill="#f43f5e" />
@@ -8607,17 +8827,13 @@
                         <path d="M50,5 C35,20 35,80 50,95" stroke="white" strokeWidth="4" fill="none" />
                     </svg>
                 </div>
-
-                <!-- Title -->
-                <!-- <div class="ig-content-title">SWING BOWLING</div> -->
             </div>
 
-            <!-- Card Actions -->
             <div class="ig-card-actions">
                 <div class="ig-action-buttons">
                     <button class="ig-action-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round"
+                            <path strokeLinecap="round" strokeLinejoin="round" 
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </button>
@@ -8642,24 +8858,16 @@
                 </button>
             </div>
 
-            <!-- Card Details -->
             <div class="ig-card-details">
                 <div class="ig-likes">
                     <span class="ig-likes-count">92.7k Views</span>
                 </div>
-                <!-- <p class="ig-description">
-                    <strong>masterclasscricket</strong> Tag a bowler who’s effort ball always goes down the legside?
-                    .
-                    When releasing the ball, it is important to ensure that your wrist remains stable and does not collapse. To address this issue, it is crucial to focus on the cues provided in the video clip. 
-                    #Cricket #Batting #CricketLove #CricketLife #CricketPassion #BattingSkills #CricketBatting #fastbowiing #bowling #ipl
-                </p> -->
                 <p class="ig-view-more">
                     View more on Instagram
                 </p>
             </div>
         </div>
     </div>
-
     <!-- Follow Button -->
     <div class="ig-follow-btn-container">
         <button class="ig-follow-btn"onclick="window.open('https://www.instagram.com/masterclasscricket', '_blank', 'noopener,noreferrer')">
