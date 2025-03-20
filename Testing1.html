@@ -1038,9 +1038,10 @@
         overflow: hidden;
         width: 100%;
         max-width: 400px;
-        background: #fff;
+        background: #d4ae36;
     }
     .subscribe-container input {
+        background: #d4ae36;
         flex: 1;
         border: none;
         outline: none;
@@ -1063,7 +1064,6 @@
     .subscribe-container button i {
         margin-left: 8px;
     }
-
 .headerHero-video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -7230,7 +7230,7 @@
         overflow: hidden;
         width: 100%;
         max-width: 400px;
-        background: #fff;
+        background: #d4ae36
     }
 
     .subscribe-container input {
@@ -7464,7 +7464,7 @@
                                         <input type="email" name="email" placeholder="Enter your email" required>
                                     
                                         <button type="submit">
-                                            Subscribe <i class="fas fa-envelope"></i>
+                                            Newsletter <i class="fas fa-envelope"></i>
                                         </button>
                                     </form>
                                 </div>
@@ -7481,7 +7481,7 @@
                                     })
                                     .then(response => response.text())
                                     .then(data => {
-                                        alert("Subscription successful!");
+                                        alert("Subscription successful for Newsletter!");
                                         document.getElementById("newsletter-form").reset();
                                     })
                                     .catch(error => console.error("Error!", error.message));
