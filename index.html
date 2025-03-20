@@ -310,19 +310,49 @@
 </style>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hide main content initially
+        const mainContent = document.querySelector('body > *:not(#countdown-overlay)');
+        if (mainContent) {
+            Array.from(document.body.children).forEach(child => {
+                if (child.id !== 'countdown-overlay') {
+                    child.style.display = 'none';
+                }
+            });
+        }
+        
+        // Calculate the target time for 6:30 PM GMT
+        const targetTime = new Date();
+        targetTime.setUTCHours(18, 30, 0, 0);  // Set time to 6:30 PM GMT
+
+        // Get the current UTC time
+        const currentTime = new Date();
+
+        // Calculate the time difference in seconds
+        const remainingTimeInSeconds = Math.floor((targetTime - currentTime) / 1000);
+
+        if (remainingTimeInSeconds > 0) {
+            // Start the countdown
+            startCountdown(remainingTimeInSeconds);
+        } else {
+            // If the target time has already passed, display an alert or handle accordingly
+            alert("The target time (6:30 PM GMT) has already passed.");
+        }
+    });
+
     function startCountdown(durationInSeconds) {
         const overlay = document.getElementById("countdown-overlay");
         const hoursElement = document.getElementById("hours");
         const minutesElement = document.getElementById("minutes");
         const secondsElement = document.getElementById("seconds");
-        let remainingTime = 11*60;
+        let remainingTime = durationInSeconds;
 
         function updateTimer() {
-            let hours = Math.floor(remainingTime / 3600);
-            let minutes = Math.floor((remainingTime % 710) / 60);
-            let seconds = remainingTime % 60;
-            
-            // Format with leading zeros
+            let hours = Math.floor(remainingTime / 3600); // Calculate hours
+            let minutes = Math.floor((remainingTime % 3600) / 60); // Calculate minutes
+            let seconds = remainingTime % 60; // Calculate seconds
+
+            // Format with leading zeros for single digits
             hours = hours < 10 ? "0" + hours : hours;
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
@@ -332,29 +362,32 @@
             minutesElement.textContent = minutes;
             secondsElement.textContent = seconds;
             
-            // Change colors as time decreases
-            if (remainingTime < 300) { // Less than 5 minutes
-                document.documentElement.style.setProperty('--cricket-gold', '#ff7700');
-                document.querySelectorAll('.time-segment span:first-child').forEach(el => {
-                    el.style.animation = 'pulse 0.5s infinite';
-                });
-            } else if (remainingTime < 600) { // Less than 10 minutes
-                document.documentElement.style.setProperty('--cricket-gold', '#ffa500');
-            }
-
             if (remainingTime > 0) {
                 remainingTime--;
-                setTimeout(updateTimer, 1000);
+                setTimeout(updateTimer, 1000); // Update every second
             } else {
-                // Add a fade-out animation when the countdown ends
-                overlay.style.animation = 'fadeOut 2s forwards';
+                // When countdown is complete:
+                // 1. Hide overlay with animation
+                overlay.style.animation = 'fadeOut 1s forwards';
+                
+                // 2. Remove overlay completely after animation
                 setTimeout(() => {
                     overlay.style.display = "none";
-                }, 2000);
+                    
+                    // 3. Show all main content
+                    Array.from(document.body.children).forEach(child => {
+                        if (child.id !== 'countdown-overlay') {
+                            child.style.display = '';
+                        }
+                    });
+                }, 1000);
             }
         }
 
-        // Add this animation for the ending
+        // Start the timer
+        updateTimer();
+        
+        // Add fadeOut animation (for overlay)
         const style = document.createElement('style');
         style.textContent = `
             @keyframes fadeOut {
@@ -363,46 +396,5 @@
             }
         `;
         document.head.appendChild(style);
-
-        // Start the timer
-        updateTimer();
-        
-        // Add some motion to the particles in the background for more visual interest
-        setInterval(() => {
-            const particles = document.createElement('div');
-            particles.className = 'cricket-particle';
-            particles.style.cssText = `
-                position: absolute;
-                width: 5px;
-                height: 5px;
-                background: ${Math.random() > 0.5 ? 'var(--cricket-gold)' : 'var(--cricket-red)'};
-                border-radius: 50%;
-                top: ${Math.random() * 100}%;
-                left: ${Math.random() * 100}%;
-                opacity: 0.6;
-                animation: particleFade 3s forwards;
-            `;
-            
-            overlay.appendChild(particles);
-            
-            setTimeout(() => {
-                particles.remove();
-            }, 3000);
-        }, 500);
     }
-
-    // Add more visual interest with a particle fade animation
-    const particleStyle = document.createElement('style');
-    particleStyle.textContent = `
-        @keyframes particleFade {
-            0% { transform: translate(0, 0); opacity: 0.6; }
-            100% { transform: translate(${Math.random() > 0.5 ? '+' : '-'}50px, ${Math.random() > 0.5 ? '+' : '-'}50px); opacity: 0; }
-        }
-    `;
-    document.head.appendChild(particleStyle);
-
-    // Start the countdown for 1 hour (3600 seconds)
-    document.addEventListener('DOMContentLoaded', function() {
-        startCountdown(3600);
-    });
 </script>
