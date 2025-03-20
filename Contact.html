@@ -2536,87 +2536,85 @@
         </footer>
           <!-- Footer -->
 
-         <!-- newhero -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Mobile Navigation Toggle
-            const navToggle = document.getElementById('headerHeroNavToggle');
-            const navMenu = document.getElementById('headerHeroNavMenu');
-            const body = document.body;
-
-            if (navToggle && navMenu) {
-                navToggle.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    body.classList.toggle('menu-open');
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Mobile Navigation Toggle
+                const navToggle = document.getElementById('headerHeroNavToggle');
+                const navMenu = document.getElementById('headerHeroNavMenu');
+                const body = document.body;
+                
+                if(navToggle && navMenu) {
+                    navToggle.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        navMenu.classList.toggle('active');
+                        body.classList.toggle('menu-open');
+                    });
+                }
+                
+                // Close menu when clicking a link
+                const navLinks = document.querySelectorAll('.headerHero-nav-link');
+                
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        // Set active state
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Close mobile menu after click
+                        if(window.innerWidth < 992 && navMenu && navMenu.classList.contains('active')) {
+                            navToggle.classList.remove('active');
+                            navMenu.classList.remove('active');
+                            body.classList.remove('menu-open');
+                        }
+                    });
                 });
-            }
-
-            // Close menu when clicking a link
-            const navLinks = document.querySelectorAll('.headerHero-nav-link');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    // Set active state
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-
-                    // Close mobile menu after click
-                    if (window.innerWidth < 992 && navMenu && navMenu.classList.contains('active')) {
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isNavbarToggle = event.target.closest('#headerHeroNavToggle');
+                    const isNavMenu = event.target.closest('#headerHeroNavMenu');
+                    
+                    if(!isNavbarToggle && !isNavMenu && navMenu && navMenu.classList.contains('active')) {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        body.classList.remove('menu-open');
+                    }
+                });
+                
+                // Enhanced scroll effect for navbar
+                function updateNavbar() {
+                    const navbar = document.querySelector('.headerHero-navbar');
+                    
+                    if(navbar) {
+                        if(window.scrollY > 50) {
+                            navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+                            navbar.style.padding = '12px 0';
+                            navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+                        } else {
+                            navbar.style.background = 'rgba(0, 0, 0, 0.8)';
+                            navbar.style.padding = '20px 0';
+                            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+                        }
+                    }
+                }
+                
+                // Initialize navbar state
+                updateNavbar();
+                
+                // Update on scroll
+                window.addEventListener('scroll', updateNavbar);
+                
+                // Update on resize
+                window.addEventListener('resize', function() {
+                    // Reset mobile menu when resizing to desktop
+                    if(window.innerWidth >= 992 && navMenu && navMenu.classList.contains('active')) {
                         navToggle.classList.remove('active');
                         navMenu.classList.remove('active');
                         body.classList.remove('menu-open');
                     }
                 });
             });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function (event) {
-                const isNavbarToggle = event.target.closest('#headerHeroNavToggle');
-                const isNavMenu = event.target.closest('#headerHeroNavMenu');
-
-                if (!isNavbarToggle && !isNavMenu && navMenu && navMenu.classList.contains('active')) {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                }
-            });
-
-            // Enhanced scroll effect for navbar
-            function updateNavbar() {
-                const navbar = document.querySelector('.headerHero-navbar');
-
-                if (navbar) {
-                    if (window.scrollY > 50) {
-                        navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-                        navbar.style.padding = '12px 0';
-                        navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-                    } else {
-                        navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-                        navbar.style.padding = '20px 0';
-                        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
-                    }
-                }
-            }
-
-            // Initialize navbar state
-            updateNavbar();
-
-            // Update on scroll
-            window.addEventListener('scroll', updateNavbar);
-
-            // Update on resize
-            window.addEventListener('resize', function () {
-                // Reset mobile menu when resizing to desktop
-                if (window.innerWidth >= 992 && navMenu && navMenu.classList.contains('active')) {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    body.classList.remove('menu-open');
-                }
-            });
-        });
-    </script>
-     <!-- newhero -->
+        </script>
 
      <!-- contact us -->
     <script>
