@@ -1980,6 +1980,7 @@
             min-height: 80vh;
         }
 
+
         /* Cricket Background Elements */
         .cricket-bg-elements {
             position: absolute;
@@ -1990,6 +1991,7 @@
             pointer-events: none;
             z-index: 1;
         }
+ 
 
         /* Cricket Ball Animation */
         .cricket-ball {
@@ -2002,11 +2004,14 @@
             filter: drop-shadow(0 0 10px rgba(197, 48, 48, 0.5));
         }
 
+
+
         .cricket-ball-1 {
             top: 10%;
             right: 15%;
             animation: floatBall 25s ease-in-out infinite;
         }
+   
 
         .cricket-ball-2 {
             bottom: 15%;
@@ -2016,6 +2021,7 @@
             animation: floatBall 20s ease-in-out infinite reverse;
             animation-delay: -5s;
         }
+  
 
         /* Cricket Stumps Animation */
         .cricket-stumps {
@@ -2029,6 +2035,7 @@
             animation: rotateStumps 30s linear infinite;
             transform-origin: bottom center;
         }
+   
 
         /* Cricket Bat Animation */
         .cricket-bat {
@@ -2042,6 +2049,7 @@
             animation: swingBat 15s ease-in-out infinite;
             transform-origin: top center;
         }
+
 
         /* Pattern Background */
         .cricket-pattern {
@@ -2058,6 +2066,7 @@
             z-index: 0;
         }
 
+
         /* Decorative Elements for Letter */
         .letter-decorative-element {
             position: absolute;
@@ -2068,11 +2077,15 @@
             z-index: 1;
         }
 
+   
+
         .letter-decorative-element-1 {
             top: 10%;
             right: 5%;
             animation: rotate 30s linear infinite;
         }
+   
+
 
         .letter-decorative-element-2 {
             bottom: 10%;
@@ -2080,19 +2093,22 @@
             animation: rotate 30s linear infinite reverse;
         }
 
+  
         /* Letter Container */
         .founders-letter-container {
             position: relative;
-            max-width: 100%;
-            margin: 0 auto;
+            max-width: 1200px; /* Added max-width for better control */  
+             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: flex-start; /* Changed from center to flex-start for better alignment */
+            justify-content: center; 
             gap: 30px;
             z-index: 2;
             padding: 0 20px;
             /* border: 2px solid white; */
         }
+  
 
         /* Founder Image Column */
         .founder-image-column {
@@ -2106,6 +2122,7 @@
             /* border: 3px solid rgb(203, 31, 31); */
             /* margin-right: 100px; */
         }
+        
 
         .founder-image-wrap {
             position: relative;
@@ -2154,7 +2171,7 @@
 
         /* Founder Info Card */
         .founder-info-card {
-            position: absolute;
+            position: relative;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -2653,9 +2670,12 @@
             .founders-letter-section {
                 padding: 60px 0;
             }
+            .founder-image-column {
+                margin-bottom: 0%;
+            }
             
             .letter-content-column{
-                margin-top: -12%;
+                margin-top: -10%;
                 /* border: 1px solid red; */
 
             }
@@ -2682,21 +2702,54 @@
                 transform: translateY(50%);
             }
         }
+        @media (max-width: 768px) {
+    .founders-letter-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .letter-content-column {
+        width: 100%;
+        margin: auto;
+    }
+
+    .founder-image-column {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
         @media (max-width: 375px) {
+            /* .founders-letter-section{
+                justify-content: center;
+                text-align: center;
+                width: 300px;
+            } */
+            .founders-letter-section {
+    width: 350px;
+    /* border: 1px solid red; */
+    margin-right: 5%;
+    text-align: center;
+    margin: auto; 
+    display: block;
+}
+
+
             .founder-image-column {
                 /* border: 1px solid red; */
                 justify-content: center;
                 margin-bottom: 20px;
                 order: 1;
-                left: -8%;
+                left: 2%;
             }
 
             .letter-content-column {
                 order: 2;
                 justify-content: center;
                 width: 100%;
-                left: -8%;
+                left: 2%;
                 /* border: 1px solid red; */
             }
 
@@ -2705,20 +2758,18 @@
 
         @media (max-width: 320px) {
             .founder-image-column {
-
                 /* border: 1px solid red; */
                 justify-content: center;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 order: 1;
-                left: -20%;
+                left: 2%;
             }
 
             .letter-content-column {
                 order: 2;
                 justify-content: center;
                 width: 100%;
-                left: -20%;
-                /*  */
+                left: 2%;
                 /* border: 1px solid red; */
             }
         }
