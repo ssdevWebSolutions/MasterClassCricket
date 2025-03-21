@@ -1971,211 +1971,189 @@
             }
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-.testimonials-container {
-    background-color: #fffcfc;
-    margin: 0 auto;
-    padding: 2rem;
-    overflow: hidden; /* Important to contain animations */
-}
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f5f5f5;
+        }
 
-.testimonials-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+        .testimonials-container {
+            background-color: black;
+            padding: 3rem 1rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
 
-.testimonials-header h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #060606;
-    margin-bottom: 1rem;
-}
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.testimonials-header p {
-    font-size: 1.2rem;
-    color: #aaa;
-    max-width: 600px;
-    margin: 0 auto;
-}
+        .testimonials-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
 
-.testimonials-row {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-    overflow-x: hidden;
-    position: relative;
-    padding: 1rem 0;
-    width: 100%;
-}
+        .testimonials-header p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-.testimonials-row-inner {
-    display: flex;
-    gap: 1.5rem;
-    min-width: 100%;
-    will-change: transform; /* Performance optimization */
-}
+        .testimonials-header a {
+            color: #ffC007;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.testimonial-card {
-    background-color: rgb(255, 192, 7);
-    border-radius: 10px;
-    padding: 1.5rem;
-    min-width: 320px;
-    max-width: 320px;
-    flex: 0 0 auto;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    user-select: none; /* Prevent selection on mobile */
-    -webkit-user-select: none;
-    touch-action: pan-y; /* Better touch handling */
-}
+        .testimonials-header a:hover {
+            color: white;
+        }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    background-color: rgb(2, 2, 2);
-    color: white;
-}
+        .testimonials-track {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-bottom: 2rem;
+            overflow: visible;
+        }
 
-.testimonial-card:hover p {
-    color: white;
-}
+        .testimonials-track-inner {
+            display: flex;
+            gap: 1.5rem;
+            position: relative;
+        }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
+        .reverse .testimonials-track-inner {
+            flex-direction: row-reverse;
+        }
 
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 1rem;
-    background-color: rgb(170, 39, 43);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #000;
-}
+        .testimonial-card {
+            background-color: rgb(255, 192, 7);
+            border-radius: 10px;
+            padding: 1.8rem;
+            min-width: 320px;
+            max-width: 320px;
+            flex: 0 0 auto;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            cursor: pointer;
+        }
 
-.author-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background-color: rgb(2, 2, 2);
+            color: white;
+        }
 
-.testimonial-text {
-    color: #000;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    height: 110px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    transition: color 0.3s ease;
-}
+        .testimonial-card:hover .testimonial-text {
+            color: white;
+        }
 
-.company-logo {
-    width: 120px;
-    height: auto;
-    opacity: 0.7;
-    margin-bottom: 1rem;
-}
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
 
-/* Animation classes - Updated for better mobile performance */
-.scroll-left {
-    animation: scrollLeft 30s linear infinite;
-    animation-play-state: running !important; /* Force animation to run */
-}
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+            background-color: rgb(170, 39, 43);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #000;
+        }
 
-.scroll-right {
-    animation: scrollRight 30s linear infinite;
-    animation-play-state: running !important; /* Force animation to run */
-}
+        .author-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
 
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+        .testimonial-text {
+            color: #000;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            height: 110px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            transition: color 0.3s ease;
+        }
 
-@keyframes scrollRight {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+        @media (max-width: 1024px) {
+            .testimonials-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .testimonial-card {
+                min-width: 280px;
+                max-width: 280px;
+            }
+        }
 
-/* Media queries for responsive design */
-@media (max-width: 1024px) {
-    .testimonial-card {
-        min-width: 280px;
-        max-width: 280px;
-    }
+        @media (max-width: 768px) {
+            .testimonials-header h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-header p {
+                font-size: 1rem;
+            }
+            
+            .testimonial-card {
+                min-width: 260px;
+                max-width: 260px;
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-container {
+                padding: 2rem 1rem;
+            }
+            
+            .testimonials-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .testimonial-card {
+                min-width: 230px;
+                max-width: 230px;
+                padding: 1.2rem;
+            }
+            
+            .testimonial-text {
+                font-size: 0.9rem;
+                height: 100px;
+            }
+        }
     
-    .testimonials-header h2 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonial-card {
-        min-width: 260px;
-        max-width: 260px;
-    }
-    
-    .testimonials-header h2 {
-        font-size: 2rem;
-    }
-    
-    .testimonials-header p {
-        font-size: 1rem;
-    }
-    
-    /* Enhanced animation for mobile */
-    .scroll-left, .scroll-right {
-        /* Slightly faster on mobile for better user experience */
-        animation-duration: 25s;
-    }
-}
-
-/* Specific mobile fixes to ensure animations keep running */
-@media (max-width: 480px) {
-    .testimonials-container {
-        padding: 1.5rem 1rem;
-    }
-    
-    .testimonial-card {
-        min-width: 220px;
-        max-width: 220px;
-        padding: 1.2rem;
-    }
-    
-    .testimonial-text {
-        font-size: 0.9rem;
-        height: 100px;
-    }
-    
-    /* Even faster animations on small screens */
-    .scroll-left, .scroll-right {
-        animation-duration: 20s;
-    }
-}
 
 
 
@@ -2233,166 +2211,104 @@
             </nav>
         </header>
          <!-- testimonail -->
-         <section class="testimonials-container" id="Testimonials" style="background-color: black;">
+         <section class="testimonials-container" id="Testimonials">
             <div class="testimonials-header">
-                <h2 style="font-family: 'Playfair Display', serif;color: white;">Cricket Academy Reviews – Why Players &
-                    Parents Love Masterclass</h2>
-                <p>See why players, parents, and professionals trust <a href="#Academy">Masterclass Cricket Academy</a>.
-                </p>
+                <h2>Cricket Academy Reviews – Why Players & Parents Love Masterclass</h2>
+                <p>See why players, parents, and professionals trust <a href="#Academy">Masterclass Cricket Academy</a>.</p>
             </div>
         
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-left">
-                    <!-- First row of testimonials -->
+            <div class="testimonials-track">
+                <div class="testimonials-track-inner" id="track1">
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                J
-                            </div>
+                            <div class="author-avatar">J</div>
                             <h3 class="author-name">James Parker – Richmond</h3>
                         </div>
-                        <p class="testimonial-text">"We've trained with **Masterclass Cricket Academy** for 10 years,
-                            and the **professional cricket coaching** is unmatched. Thanks to **expert batting, bowling,
-                            and fielding training**, my son progressed from **borough cricket to the County Winter
-                            Squad**."</p>
+                        <p class="testimonial-text">"We've trained with Masterclass Cricket Academy for 10 years, and the professional cricket coaching is unmatched. Thanks to expert batting, bowling, and fielding training, my son progressed from borough cricket to the County Winter Squad."</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                S
-                            </div>
+                            <div class="author-avatar">S</div>
                             <h3 class="author-name">Sarah Wilson – Chiswick</h3>
                         </div>
-                        <p class="testimonial-text">"We tried other academies before coming to Masterclass, but nothing
-                            compares to the professionalism and attention to detail here. My daughter started playing
-                            for her school B team, then moved to borough cricket. After working with Uzi and Ani, she's
-                            now in the County Summer Squad. The investment is worth it!"</p>
+                        <p class="testimonial-text">"We tried other academies before coming to Masterclass, but nothing compares to the professionalism and attention to detail here. My daughter started playing for her school B team, then moved to borough cricket. After working with Uzi and Ani, she's now in the County Summer Squad. The investment is worth it!"</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                D
-                            </div>
+                            <div class="author-avatar">D</div>
                             <h3 class="author-name">Daniel Simmons – Wimbledon</h3>
                         </div>
-                        <p class="testimonial-text">
-                            "People ask if it's expensive. I say, 'You get what you pay for.' This isn't just an
-                            academy—it's an elite coaching program. Thanks to Uzi and the team, my son went from a
-                            school second-team cricketer to playing borough cricket and now regional trials. The
-                            structured coaching and match preparation made all the difference."</p>
+                        <p class="testimonial-text">"People ask if it's expensive. I say, 'You get what you pay for.' This isn't just an academy—it's an elite coaching program. Thanks to Uzi and the team, my son went from a school second-team cricketer to playing borough cricket and now regional trials. The structured coaching and match preparation made all the difference."</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                P
-                            </div>
+                            <div class="author-avatar">P</div>
                             <h3 class="author-name">Priya Patel – Hounslow</h3>
                         </div>
-                        <p class="testimonial-text">
-                            "My son struggled with his batting, and after just a few months at Masterclass, his
-                            confidence and technique transformed. The one-on-one sessions with Ani and the detailed
-                            reports allowed us to track his progress. He started in borough cricket and has now made the
-                            County Winter Squad!"
-                        </p>
+                        <p class="testimonial-text">"My son struggled with his batting, and after just a few months at Masterclass, his confidence and technique transformed. The one-on-one sessions with Ani and the detailed reports allowed us to track his progress. He started in borough cricket and has now made the County Winter Squad!"</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
+                            <div class="author-avatar">A</div>
                             <h3 class="author-name">Alex Thompson – Clapham</h3>
                         </div>
-                        <p class="testimonial-text">"We travel two hours every Saturday for a session here. My son was
-                            overlooked at his old academy, but Uzi and Sohaib spotted his potential immediately. After
-                            working on his bowling, he moved up from borough cricket to the regional setup. Now, he's
-                            pushing for county selection!"
-                        </p>
+                        <p class="testimonial-text">"We travel two hours every Saturday for a session here. My son was overlooked at his old academy, but Uzi and Sohaib spotted his potential immediately. After working on his bowling, he moved up from borough cricket to the regional setup. Now, he's pushing for county selection!"</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
+                            <div class="author-avatar">M</div>
                             <h3 class="author-name">Michelle Davies – Kensington</h3>
                         </div>
-                        <p class="testimonial-text">
-                            "My daughter was the only girl at her club and never got real coaching. Masterclass changed
-                            that. After training with Ollie and Ani, she's now playing in her school's A team and has
-                            been selected for regional trials. Finally, an academy that values girls' cricket!"
-                        </p>
+                        <p class="testimonial-text">"My daughter was the only girl at her club and never got real coaching. Masterclass changed that. After training with Ollie and Ani, she's now playing in her school's A team and has been selected for regional trials. Finally, an academy that values girls' cricket!"</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                A
-                            </div>
+                            <div class="author-avatar">A</div>
                             <h3 class="author-name">Andrew Carter – Ealing</h3>
                         </div>
-                        <p class="testimonial-text">
-                            "Sohaib corrected my son's bowling action in just a few weeks, and now he's bowling quicker
-                            and more accurately. His confidence has skyrocketed, and he's getting noticed at regional
-                            level. Uzi oversees every player's development, making sure they get the best coaching."
-                        </p>
+                        <p class="testimonial-text">"Sohaib corrected my son's bowling action in just a few weeks, and now he's bowling quicker and more accurately. His confidence has skyrocketed, and he's getting noticed at regional level. Uzi oversees every player's development, making sure they get the best coaching."</p>
                     </div>
                 </div>
             </div>
         
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-right">
-                    <!-- Second row of testimonials -->
+            <div class="testimonials-track reverse">
+                <div class="testimonials-track-inner" id="track2">
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                R
-                            </div>
+                            <div class="author-avatar">R</div>
                             <h3 class="author-name">Rachel Owens – Hammersmith</h3>
                         </div>
-                        <p class="testimonial-text">"My daughter plays cricket for fun, but even at a recreational
-                            level, the improvements have been huge. She went from a school beginner to playing in the A
-                            team. The coaches make learning exciting and engaging."</p>
+                        <p class="testimonial-text">"My daughter plays cricket for fun, but even at a recreational level, the improvements have been huge. She went from a school beginner to playing in the A team. The coaches make learning exciting and engaging."</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                M
-                            </div>
+                            <div class="author-avatar">M</div>
                             <h3 class="author-name">Mohammed Khan – Southall</h3>
                         </div>
-                        <p class="testimonial-text">"I drive 3 hours weekly for my son's one-on-one sessions with
-                            Sohaib. The personalized coaching and deep understanding of technique make this academy the
-                            best. He was struggling in borough cricket but has now been selected for the regional
-                            squad!"</p>
+                        <p class="testimonial-text">"I drive 3 hours weekly for my son's one-on-one sessions with Sohaib. The personalized coaching and deep understanding of technique make this academy the best. He was struggling in borough cricket but has now been selected for the regional squad!"</p>
                     </div>
         
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                O
-                            </div>
+                            <div class="author-avatar">O</div>
                             <h3 class="author-name">Oliver James – Fulham</h3>
                         </div>
-                        <p class="testimonial-text">"Other academies felt like daycare. At Masterclass, they actually
-                            teach. The coaches push players and set high standards. My son moved up from the school C
-                            team to borough cricket and now has regional trials lined up!"</p>
+                        <p class="testimonial-text">"Other academies felt like daycare. At Masterclass, they actually teach. The coaches push players and set high standards. My son moved up from the school C team to borough cricket and now has regional trials lined up!"</p>
                     </div>
                     
                     <div class="testimonial-card">
                         <div class="testimonial-author">
-                            <div class="author-avatar">
-                                N
-                            </div>
+                            <div class="author-avatar">N</div>
                             <h3 class="author-name">Nathan Green – Croydon</h3>
                         </div>
-                        <p class="testimonial-text">"We flew in from Dubai just to train with Uzi and his team. The
-                            level of coaching here is on par with international academies. My son's game has completely
-                            transformed, and he's now competing in the County Winter Squad."</p>
+                        <p class="testimonial-text">"We flew in from Dubai just to train with Uzi and his team. The level of coaching here is on par with international academies. My son's game has completely transformed, and he's now competing in the County Winter Squad."</p>
                     </div>
                 </div>
             </div>
@@ -3161,110 +3077,150 @@
      <!-- tesimonail -->
      <script>
         document.addEventListener('DOMContentLoaded', function() {
-        // Clone testimonial cards for infinite scroll effect
-        const rows = document.querySelectorAll('.testimonials-row-inner');
-    
-        rows.forEach(row => {
-            // Clone all cards in the row
-            const cards = row.querySelectorAll('.testimonial-card');
-            const clonedCards = Array.from(cards).map(card => card.cloneNode(true));
+        // Global variables
+        let isAnyCardPaused = false;
+        let animations = [];
+        
+        // Calculate the total width of all cards in a track
+        function getTrackWidth(track) {
+            const cards = track.querySelectorAll('.testimonial-card');
+            let totalWidth = 0;
             
-            // Append clones to create continuity in the scroll
-            clonedCards.forEach(card => row.appendChild(card));
-        });
-    
-        // Make sure animations are always running, especially on mobile
-        function ensureAnimationsRunning() {
-            const rowInners = document.querySelectorAll('.testimonials-row-inner');
-            
-            rowInners.forEach(row => {
-                // Force animation to run
-                row.style.animationPlayState = 'running';
+            cards.forEach(card => {
+                const styles = window.getComputedStyle(card);
+                const width = parseFloat(styles.width);
+                const marginRight = parseFloat(styles.marginRight) || 0;
+                const marginLeft = parseFloat(styles.marginLeft) || 0;
                 
-                // Fix for some mobile browsers - restart animation
-                const currentAnimation = row.style.animation;
-                row.style.animation = 'none';
-                
-                // Trigger reflow
-                void row.offsetWidth;
-                
-                // Restart animation
-                row.style.animation = currentAnimation;
+                totalWidth += width + marginRight + marginLeft + 24; // Adding 24px for the gap
             });
+            
+            return totalWidth;
         }
-    
-        // Pause animation on hover (desktop only)
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        testimonialCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Only pause on larger screens (desktop)
-                if (window.innerWidth > 768) {
-                    card.closest('.testimonials-row-inner').style.animationPlayState = 'paused';
+        
+        // Handle the animation for a specific track
+        function animateTrack(track, isReverse) {
+            const trackWidth = getTrackWidth(track);
+            const duration = 20000; // Fixed duration for consistent speeds
+            let isPaused = false;
+            let startTime = null;
+            let pausedAt = 0;
+            let currentPosition = isReverse ? 0 : -trackWidth / 4;
+            
+            // Initial positioning
+            track.style.transform = `translateX(${currentPosition}px)`;
+            
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                
+                if (isPaused) {
+                    // Maintain current position
+                    requestAnimationFrame(step);
+                    return;
                 }
-            });
-    
-            card.addEventListener('mouseleave', () => {
-                card.closest('.testimonials-row-inner').style.animationPlayState = 'running';
-            });
-        });
-    
-        // Mobile-specific enhancements
-        function setupMobileExperience() {
-            if (window.innerWidth <= 768) {
-                // Force animations to run on mobile
-                ensureAnimationsRunning();
                 
-                // Check if using iOS (which has more animation issues)
-                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                const elapsed = (timestamp - startTime - pausedAt) % duration;
+                const progress = elapsed / duration;
                 
-                if (isIOS) {
-                    // Add specific iOS fixes
-                    document.querySelectorAll('.testimonials-row-inner').forEach(row => {
-                        // iOS sometimes needs hardware acceleration explicitly enabled
-                        row.style.transform = 'translate3d(0, 0, 0)';
-                        row.style.backfaceVisibility = 'hidden';
-                        row.style.perspective = '1000px';
+                // Calculate position based on direction
+                if (isReverse) {
+                    currentPosition = -(trackWidth * 0.5 * progress);
+                } else {
+                    currentPosition = -trackWidth / 4 - (trackWidth * 0.5 * progress);
+                }
+                
+                // Apply the transform
+                track.style.transform = `translateX(${currentPosition}px)`;
+                requestAnimationFrame(step);
+            }
+            
+            // Start the animation
+            requestAnimationFrame(step);
+            
+            // Return control functions
+            return {
+                pause: () => { 
+                    if (!isPaused) {
+                        isPaused = true;
+                        pausedAt += performance.now() - startTime;
+                    }
+                },
+                resume: () => { 
+                    if (isPaused) {
+                        isPaused = false;
+                        startTime = performance.now();
+                    }
+                }
+            };
+        }
+        
+        // Setup tracks and events
+        function initialize() {
+            const tracks = document.querySelectorAll('.testimonials-track-inner');
+            
+            tracks.forEach(track => {
+                const isReverse = track.parentElement.classList.contains('reverse');
+                const animation = animateTrack(track, isReverse);
+                animations.push(animation);
+                
+                // Add pause/resume handlers to all cards
+                const cards = track.querySelectorAll('.testimonial-card');
+                
+                cards.forEach(card => {
+                    // Desktop hover events
+                    card.addEventListener('mouseenter', () => {
+                        if (window.innerWidth > 768) {
+                            isAnyCardPaused = true;
+                            animations.forEach(anim => anim.pause());
+                        }
                     });
+                    
+                    // Mobile click events
+                    card.addEventListener('click', (e) => {
+                        if (window.innerWidth <= 768) {
+                            isAnyCardPaused = true;
+                            animations.forEach(anim => anim.pause());
+                            e.stopPropagation();
+                        }
+                    });
+                });
+            });
+            
+            // Global events to resume animations
+            document.addEventListener('mousemove', (e) => {
+                if (window.innerWidth <= 768 || !isAnyCardPaused) return;
+                
+                const element = document.elementFromPoint(e.clientX, e.clientY);
+                if (!element || !element.closest('.testimonial-card')) {
+                    isAnyCardPaused = false;
+                    animations.forEach(anim => anim.resume());
                 }
-            }
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth > 768 || !isAnyCardPaused) return;
+                
+                const element = document.elementFromPoint(e.clientX, e.clientY);
+                if (!element || !element.closest('.testimonial-card')) {
+                    isAnyCardPaused = false;
+                    animations.forEach(anim => anim.resume());
+                }
+            });
+            
+            // Pause on page visibility change
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    animations.forEach(anim => anim.pause());
+                } else if (!isAnyCardPaused) {
+                    animations.forEach(anim => anim.resume());
+                }
+            });
         }
         
-        // Run immediately and on resize
-        setupMobileExperience();
-        window.addEventListener('resize', setupMobileExperience);
-        
-        // Force check animations periodically on mobile to keep them running
-        setInterval(function() {
-            if (window.innerWidth <= 768) {
-                ensureAnimationsRunning();
-            }
-        }, 5000); // Check every 5 seconds on mobile
-        
-        // Handle visibility change (when user switches tabs/apps and returns)
-        document.addEventListener('visibilitychange', function() {
-            if (document.visibilityState === 'visible') {
-                // User has returned to the page, ensure animations are running
-                ensureAnimationsRunning();
-            }
-        });
-        
-        // Handle page load and readystatechange events
-        window.addEventListener('load', ensureAnimationsRunning);
-        document.addEventListener('readystatechange', function() {
-            if (document.readyState === 'complete') {
-                ensureAnimationsRunning();
-            }
-        });
-        
-        // Handle touch events to keep animations running on mobile
-        document.querySelectorAll('.testimonials-row').forEach(row => {
-            row.addEventListener('touchstart', function() {
-                // On any touch, ensure animations continue
-                setTimeout(ensureAnimationsRunning, 300);
-            });
-        });
+        // Initialize the carousel
+        initialize();
     });
-    </script>
+      </script>
     </body>
 
 
