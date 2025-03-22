@@ -4312,8 +4312,12 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
         }
-
+ 
         .partner-card {
+            display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    text-align: center;
             width: 200px;
             height: 150px;
             background: #D4AF37;
@@ -7574,6 +7578,24 @@
     }
 }
 
+.partner-card {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align content */
+    text-align: center;
+}
+
+.coupon-code {
+    margin-top: 10px;
+    font-size: 10px;
+    color: #fff; /* White text */
+    background: black; /* Green background */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: fit-content;
+}
+
 
     </style>
 </head>
@@ -9621,10 +9643,14 @@
                 <a href="https://b3cricket.com/" target="_blank" class="partner-link">
                     <div class="partner-card">
                         <div class="partner-ring"></div>
-                        <img class="partner-logo" src="img/B3_Cricket_logowhite.avif" alt="Platinum Cricket Sponsorship Partner">
+                        <img class="partner-logo" src="img/B3_Cricket_logowhite.avif" alt="Platinum Cricket Sponsorship Partner" width="45%">
                         <div class="partner-level">Platinum Partner</div>
+                        <div class="coupon-code">Use Code: <strong>MCC10</strong> for a Discount!</div>
                     </div>
-                </a>                
+                </a>
+                
+                
+                                
                 <div class="partner-card">
                     <div class="partner-ring"></div>
                     <img class="partner-logo" src="img/comingsoon.jpg" alt="Cricket Gear Sponsor - Gold Partner">
