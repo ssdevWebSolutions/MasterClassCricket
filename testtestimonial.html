@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masterclass Cricket Academy Testimonials</title>
+    <title>Masterclass Cricket Academy - Testimonials</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
@@ -240,44 +240,29 @@
             <p>See why players, parents, and professionals trust Masterclass Cricket Academy.</p>
         </div>
 
-        <!-- Desktop testimonials with infinite scroll -->
-        <div class="desktop-testimonials">
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-left" id="track1">
-                    <!-- First row of testimonials will be populated by JS -->
-                </div>
-            </div>
-
-            <div class="testimonials-row">
-                <div class="testimonials-row-inner scroll-right" id="track2">
-                    <!-- Second row of testimonials will be populated by JS -->
-                </div>
+        <div class="testimonials-row">
+            <div class="testimonials-row-inner scroll-left" id="track1">
+                <!-- First row of testimonials will be populated by JS -->
             </div>
         </div>
-        
-        <!-- Mobile testimonials with navigation buttons -->
-        <div class="mobile-testimonials">
-            <div class="mobile-carousel">
-                <div class="mobile-carousel-inner" id="mobile-track">
-                    <!-- All testimonials for mobile will be populated here -->
-                </div>
-                <div class="nav-buttons">
-                    <button class="nav-btn prev-btn">←</button>
-                    <button class="nav-btn next-btn">→</button>
-                </div>
+
+        <div class="testimonials-row">
+            <div class="testimonials-row-inner scroll-right" id="track2">
+                <!-- Second row of testimonials will be populated by JS -->
             </div>
         </div>
     </section>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Testimonial data
+        // Testimonial data (truncated for brevity)
         const firstRowTestimonials = [
             {
                 name: "James Parker – Richmond",
                 avatar: "J",
                 text: "We've trained with Masterclass Cricket Academy for 10 years, and the professional cricket coaching is unmatched. Thanks to expert batting, bowling, and fielding training, my son progressed from borough cricket to the County Winter Squad."
             },
+          
             {
                 name: "Sarah Wilson – Chiswick",
                 avatar: "S",
@@ -307,27 +292,34 @@
                 name: "Andrew Carter – Ealing",
                 avatar: "A",
                 text: "Sohaib corrected my son's bowling action in just a few weeks, and now he's bowling quicker and more accurately. His confidence has skyrocketed, and he's getting noticed at regional level. Uzi oversees every player's development, making sure they get the best coaching."
-            },
-            {
-                name: "Simon Bradley – Notting Hill",
-                avatar: "S",
-                text:"Masterclass isn't just coaching—it's a cricket education. The video analysis, structured feedback, and match scenarios prepare players for real competition. My son has moved from regional cricket to the County Summer Squad, and his game awareness has improved massively."
-            },
-            {
-                name: "Thomas Finch – Kingston",
-                avatar: "T",
-                text:"As a club coach myself, I've never seen an academy that provides this level of detail. My son started in the school B team, moved to borough cricket, and has now been selected for the County Winter Squad. The technical work from Uzi and Sohaib has been outstanding."
-            },
-            {
-                name: "Emma Richards – Chelsea",
-                avatar: "E",
-                text:"The coaches here don't just create better cricketers; they build confidence, discipline, and passion. My son started in the school C team and is now the opening batter for the A team, all thanks to Masterclass."
-            },
-            {
-                name: "Mark Bennett – Twickenham",
-                avatar: "M",
-                text:"We've been with Masterclass for 8 years. My son has gone from a club player to a borough-level opener, and now he's in the County Summer Squad. No gimmicks—just pure, high-level coaching from Uzi, Ollie, and the team."
             }
+,
+{
+    name: "Simon Bradley – Notting Hill",
+                avatar: "S",
+                text:"Masterclass isn’t just coaching—it’s a cricket education. The video analysis, structured feedback, and match scenarios prepare players for real competition. My son has moved from regional cricket to the County Summer Squad, and his game awareness has improved massively."
+
+},
+{
+    name: "Thomas Finch – Kingston",
+    avatar: "T",
+    text:"“As a club coach myself, I’ve never seen an academy that provides this level of detail. My son started in the school B team, moved to borough cricket, and has now been selected for the County Winter Squad. The technical work from Uzi and Sohaib has been outstanding.”"
+}
+,
+{
+    name: "Emma Richards – Chelsea",
+    avatar: "E",
+    text:"“The coaches here don’t just create better cricketers; they build confidence, discipline, and passion. My son started in the school C team and is now the opening batter for the A team, all thanks to Masterclass.”"
+}
+,
+{
+    name: " Mark Bennett – Twickenham",
+    avatar: "M",
+    text:"“We’ve been with Masterclass for 8 years. My son has gone from a club player to a borough-level opener, and now he’s in the County Summer Squad. No gimmicks—just pure, high-level coaching from Uzi, Ollie, and the team.”"
+}
+
+            
+            // Add more testimonials...
         ];
 
         const secondRowTestimonials = [
@@ -341,6 +333,7 @@
                 avatar: "M",
                 text: "I drive 3 hours weekly for my son's one-on-one sessions with Sohaib. The personalized coaching and deep understanding of technique make this academy the best. He was struggling in borough cricket but has now been selected for the regional squad!"
             },
+           
             {
                 name: "Oliver James – Fulham",
                 avatar: "O",
@@ -354,42 +347,46 @@
             {
                 name: "Charlotte Adams – Barnes",
                 avatar: "C",
-                text:"The structured reports are a game-changer. Most academies just let kids play, but here, every session is measured and tracked. My son started at borough level and has now secured a place in the County Summer Squad!"
-            },
-            {
+                text:"“The structured reports are a game-changer. Most academies just let kids play, but here, every session is measured and tracked. My son started at borough level and has now secured a place in the County Summer Squad!”"
+
+            }
+            ,{
                 name: "Richard Clarke – Essex",
                 avatar: "R",
-                text:"As a former cricketer myself, I was skeptical at first. But after watching Uzi and his team work, I can confidently say they turn good players into great ones. My son moved from school A team to borough and now regional selection!"
-            },
+                text:"“As a former cricketer myself, I was skeptical at first. But after watching Uzi and his team work, I can confidently say they turn good players into great ones. My son moved from school A team to borough and now regional selection!”"
+            }
+            ,
             {
                 name: "Sophie Brown – Surrey",
                 avatar: "S",
-                text:"Masterclass is the reason my son got into the regional setup. The technical coaching, match preparation, and high-level training all contributed to his success. Uzi's knowledge and Ollie's coaching have been key."
+                text:"“Masterclass is the reason my son got into the regional setup. The technical coaching, match preparation, and high-level training all contributed to his success. Uzi’s knowledge and Ollie’s coaching have been key.”"
             },
             {
                 name: "Jacob Lewis – Guildford",
                 avatar: "J",
-                text:"What sets Masterclass apart is their ability to tailor coaching to each child's strengths and weaknesses. They're developing smart cricketers, not just players who can hit the ball. My son has moved from borough to the County Winter Squad under Sohaib's coaching!"
-            },
+                text:"“What sets Masterclass apart is their ability to tailor coaching to each child’s strengths and weaknesses. They’re developing smart cricketers, not just players who can hit the ball. My son has moved from borough to the County Winter Squad under Sohaib’s coaching!”"
+            }
+            ,
             {
                 name: "David Wright – Birmingham",
                 avatar: "D",
-                text:"We drive down from Birmingham every half-term just so my son can train here. The level of coaching is that good. Uzi and his team don't just teach cricket—they build champions. My son has gone from regional to the County Summer Squad thanks to their elite coaching!"
-            },
+                text:"“We drive down from Birmingham every half-term just so my son can train here. The level of coaching is that good. Uzi and his team don’t just teach cricket—they build champions. My son has gone from regional to the County Summer Squad thanks to their elite coaching!”"
+            }
+            ,
             {
                 name: "Kesrick Williams – West Indies International Cricketer",
                 avatar: "K",
-                text:"I've played cricket all over the world, but the coaching setup at Masterclass Cricket is something special. Uzi and his team break down the game in a way that even professionals can learn from. Any young player training here is in the best hands."
-            },
+                text:"“I’ve played cricket all over the world, but the coaching setup at Masterclass Cricket is something special. Uzi and his team break down the game in a way that even professionals can learn from. Any young player training here is in the best hands.”"
+            }
+            ,
             {
                 name: "Rayad Emrit – Former West Indies Captain",
                 avatar: "R",
-                text:"I've trained with Uzi and the Masterclass team, and their technical knowledge is top-tier. They understand what it takes to develop young players, whether it's improving fast bowling, perfecting batting technique, or building a match-winning mindset. If you're serious about cricket, this is the place to be."
+                text:"“I’ve trained with Uzi and the Masterclass team, and their technical knowledge is top-tier. They understand what it takes to develop young players, whether it’s improving fast bowling, perfecting batting technique, or building a match-winning mindset. If you’re serious about cricket, this is the place to be.”"
             }
+         
+            // Add more testimonials...
         ];
-
-        // Combine all testimonials for mobile view
-        const allTestimonials = [...firstRowTestimonials, ...secondRowTestimonials];
 
         // Function to create testimonial cards
         function createTestimonialCards(testimonials, container) {
@@ -410,107 +407,19 @@
         // Populate rows with testimonials
         const firstRow = document.getElementById('track1');
         const secondRow = document.getElementById('track2');
-        const mobileTrack = document.getElementById('mobile-track');
         
         createTestimonialCards(firstRowTestimonials, firstRow);
         createTestimonialCards(secondRowTestimonials, secondRow);
-        
-        // For mobile, create a circular carousel by adding clones at beginning and end
-        function setupMobileCarousel() {
-            // First, add all testimonials
-            createTestimonialCards(allTestimonials, mobileTrack);
-            
-            // Then, clone the first testimonial and add it to the end
-            const firstCard = mobileTrack.querySelector('.testimonial-card');
-            const lastCard = mobileTrack.querySelectorAll('.testimonial-card')[allTestimonials.length - 1];
-            
-            const firstCardClone = firstCard.cloneNode(true);
-            const lastCardClone = lastCard.cloneNode(true);
-            
-            // Add clones to create circular effect
-            mobileTrack.appendChild(firstCardClone);
-            mobileTrack.insertBefore(lastCardClone, mobileTrack.firstChild);
-        }
-        
-        setupMobileCarousel();
 
-        // Create infinite scroll on desktop
+        // Duplicate cards for infinite scroll
         const rows = [firstRow, secondRow];
         rows.forEach(row => {
             const cards = row.querySelectorAll('.testimonial-card');
-            
-            // Create duplicates of cards for infinite scroll effect
-            const cardCount = cards.length;
-            for (let i = 0; i < cardCount; i++) {
-                const clonedCard = cards[i].cloneNode(true);
-                row.appendChild(clonedCard);
-            }
+            const clonedCards = Array.from(cards).map(card => card.cloneNode(true));
+            clonedCards.forEach(card => row.appendChild(card));
         });
 
-        // Mobile carousel navigation
-        let currentIndex = 1; // Start at 1 because of the cloned item at the beginning
-        const totalItems = allTestimonials.length + 2; // +2 for clones at beginning and end
-        let isAnimating = false;
-        
-        function updateMobileCarousel() {
-            isAnimating = true;
-            const cardWidth = mobileTrack.querySelector('.testimonial-card').offsetWidth;
-            const gapWidth = 24; // 1.5rem in pixels
-            
-            mobileTrack.style.transition = 'transform 0.5s ease';
-            mobileTrack.style.transform = `translateX(-${currentIndex * (cardWidth + gapWidth)}px)`;
-            
-            // After animation completes, check if we need to jump
-            setTimeout(() => {
-                // If we're at the end clone, jump to the first real item
-                if (currentIndex === totalItems - 1) {
-                    mobileTrack.style.transition = 'none';
-                    currentIndex = 1;
-                    mobileTrack.style.transform = `translateX(-${currentIndex * (cardWidth + gapWidth)}px)`;
-                }
-                
-                // If we're at the beginning clone, jump to the last real item
-                if (currentIndex === 0) {
-                    mobileTrack.style.transition = 'none';
-                    currentIndex = totalItems - 2;
-                    mobileTrack.style.transform = `translateX(-${currentIndex * (cardWidth + gapWidth)}px)`;
-                }
-                
-                // Re-enable transitions after the jump
-                setTimeout(() => {
-                    mobileTrack.style.transition = 'transform 0.5s ease';
-                    isAnimating = false;
-                }, 50);
-            }, 500);
-        }
-        
-        // Initialize the carousel position
-        function initMobileCarousel() {
-            const cardWidth = mobileTrack.querySelector('.testimonial-card').offsetWidth;
-            const gapWidth = 24; // 1.5rem in pixels
-            
-            // Start at the first real item (index 1, after the clone)
-            mobileTrack.style.transition = 'none';
-            mobileTrack.style.transform = `translateX(-${cardWidth + gapWidth}px)`;
-        }
-        
-        // Call on load
-        setTimeout(initMobileCarousel, 100);
-        
-        // Handle button clicks
-        document.querySelector('.prev-btn').addEventListener('click', function() {
-            if (isAnimating) return;
-            currentIndex--;
-            updateMobileCarousel();
-        });
-        
-        document.querySelector('.next-btn').addEventListener('click', function() {
-            if (isAnimating) return;
-            currentIndex++;
-            updateMobileCarousel();
-        });
-
-        // Pause and resume functionality for desktop
+        // Pause and resume functionality
         function pauseRow(row, activeCard = null) {
             row.style.animationPlayState = 'paused';
             
@@ -519,55 +428,59 @@
                 card.classList.remove('active');
             });
 
-            // Add active class to the specific card if provided
-            if (activeCard) {
-                activeCard.classList.add('active');
+                if (activeCard) {
+                    activeCard.classList.add('active');
+                }
             }
-        }
 
-        function resumeRow(row) {
-            row.style.animationPlayState = 'running';
-            
-            // Remove active class from all cards
-            row.querySelectorAll('.testimonial-card').forEach(card => {
-                card.classList.remove('active');
-            });
-        }
+            function resumeRow(row) {
+                row.style.animationPlayState = 'running';
+                
+                row.querySelectorAll('.testimonial-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+            }
 
-        // Interaction handling for desktop
+        // Interaction handling for both desktop and mobile
         rows.forEach(row => {
             let isHovering = false;
 
-            // Desktop hover interactions
-            row.addEventListener('mouseenter', (e) => {
-                isHovering = true;
-                
-                // Check if hovering over a card
-                const card = e.target.closest('.testimonial-card');
-                if (card) {
-                    pauseRow(row, card);
-                }
-            });
-
-            row.addEventListener('mousemove', (e) => {
-                if (isHovering) {
+                row.addEventListener('mouseenter', (e) => {
+                    isHovering = true;
+                    
                     const card = e.target.closest('.testimonial-card');
                     if (card) {
                         pauseRow(row, card);
                     }
-                }
-            });
+                });
+
+                row.addEventListener('mousemove', (e) => {
+                    if (isHovering) {
+                        const card = e.target.closest('.testimonial-card');
+                        if (card) {
+                            pauseRow(row, card);
+                        }
+                    }
+                });
 
             row.addEventListener('mouseleave', () => {
                 isHovering = false;
                 resumeRow(row);
             });
+
+            // Touch interactions
+            row.addEventListener('touchstart', (e) => {
+                const card = e.target.closest('.testimonial-card');
+                if (card) {
+                    // Pause this specific row and highlight the card
+                    pauseRow(row, card);
+                }
+            });
         });
-        
-        // Handle window resizing
-        window.addEventListener('resize', function() {
-            // Update carousel position if the window size changes
-            initMobileCarousel();
+
+        // Resume on touch end
+        document.addEventListener('touchend', function() {
+            rows.forEach(resumeRow);
         });
     });
     </script>
