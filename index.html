@@ -20,6 +20,8 @@
     <link rel="canonical" href="https://masterclass-cricket.classforkids.io">
     <link rel="icon" href="img/logo_ (2).png" type="image/x-icon">
     <link rel="icon" href="img/logo_ (2).png" type="image/x-icon">
+    <link rel="icon" href="img/logo_ (2).png" type="image/x-icon">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -571,91 +573,92 @@
             background: #faeb33;
             color: black;
         }
-        @media (max-height: 678px) {
-    .popup-box {
-        top: max(10%, 50%); /* Ensures it never starts under the navbar */
-        transform: translate(-50%, -50%);
-        z-index: 1000; /* Keeps it above other elements */
-    }
-}
 
-@media (min-width: 900px) and (max-height: 8000px) {
-    .popup-box {
-        width: 35%;
-        max-width: 500px;
-        max-height: 90vh;
-        padding: 15px;
-        overflow-y: auto;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #aa272b;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+    @media (max-height: 678px) {
+        .popup-box {
+            top: max(10%, 50%); /* Ensures it never starts under the navbar */
+            transform: translate(-50%, -50%);
+            z-index: 1000; /* Keeps it above other elements */
+        }
     }
 
-    .popup-img {
-        max-height: 350px;
-        width: auto;
-        object-fit: contain;
+    @media (min-width: 900px) and (max-height: 800px) {
+        .popup-box {
+            width: 35%;
+            max-width: 500px;
+            max-height: 90vh;
+            padding: 15px;
+            overflow-y: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #aa272b;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .popup-img {
+            max-height: 350px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .redirect-btn {
+            width: 80%;
+        }
     }
 
-    .redirect-btn {
-        width: 80%;
-    }
-}
 
+    @media (min-height: 500px) and (max-height: 600px) {
+        .popup-box {
+            margin-top: 8%;
+        
+        }
+    }
+    @media (min-height: 600px) and (max-height: 678px) {
+        .popup-box {
+            margin-top: 4%;
+        
+        }
+    }
+    @media (max-width: 768px) {
+        .popup-box {
+            width: 50%;
+            max-width: 90%;
+            padding: 15px;
+            top: 15%;
+        }
 
-@media (min-height: 500px) and (max-height: 600px) {
-    .popup-box {
-        margin-top: 8%;
-       
-    }
-}
-@media (min-height: 600px) and (max-height: 678px) {
-    .popup-box {
-        margin-top: 4%;
-       
-    }
-}
-@media (max-width: 768px) {
-    .popup-box {
-        width: 50%;
-        max-width: 90%;
-        padding: 15px;
-        top: 15%;
-    }
+        .popup-img {
+            max-width: 90%;
+        }
 
-    .popup-img {
-        max-width: 90%;
-    }
-
-    .redirect-btn {
-        width: 80%;
-    }
-}
-
-@media (max-width: 425px) {
-    .popup-box {
-        width: 80%;
-        max-width: 90%;
-        padding: 15px;
+        .redirect-btn {
+            width: 80%;
+        }
     }
 
-    .popup-img {
-        max-width: 90%;
-    }
+    @media (max-width: 425px) {
+        .popup-box {
+            width: 80%;
+            max-width: 90%;
+            padding: 15px;
+        }
 
-    .redirect-btn {
-        width: 80%;
+        .popup-img {
+            max-width: 90%;
+        }
+
+        .redirect-btn {
+            width: 80%;
+        }
     }
-}
 
             /* Header & Hero Variables */
             :root {
@@ -736,6 +739,24 @@
   margin: 0 15px;
   position: relative;
 }
+@media (min-width: 1124px)  and (max-width: 1180px) {
+  .headerHero-nav-item {
+    font-size: .7rem;
+    
+  }
+  .headerHero-logo-text {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width:1050 )  and (max-width: 1124px) {
+  .headerHero-nav-item {
+    font-size: .2rem;
+  }
+  .headerHero-logo-text {
+    font-size: 1.2rem;
+  }
+}
+
 
 .headerHero-nav-link {
   color: var(--headerHero-secondary-color);
@@ -1176,6 +1197,12 @@
   .headerHero-title-top {
     font-size: 3.5rem;
   }
+}
+
+@media (min-width:1000px) and (max-width:1180px) {
+    .headerHero-navbar-menu {
+        font-size: x-small;
+    }
 }
 
 @media (max-width: 991px) {
@@ -7711,40 +7738,40 @@
         <div class="headerHero-gradient headerHero-gradient-1"></div>
         <div class="headerHero-gradient headerHero-gradient-2"></div>
       
-            <!-- Navigation Bar -->
-            <nav class="headerHero-navbar">
-                <div class="headerHero-navbar-container">
-                    <div class="headerHero-navbar-logo">
-                        <a href="index.html"><img src="/img/logo_.ico" alt="Masterclass Cricket Logo"
-                                class="headerHero-logo-image"></a>
-                        <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
-                    </div>
-
-                    <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-
-                    <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
-                        <li class="headerHero-nav-item"><a href="index.html" class="headerHero-nav-link active">Home</a></li>
-
-                        <li class="headerHero-nav-item"><a href="About.html" class="headerHero-nav-link">About Us</a></li>
-                        <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Meet The Owner</a></li>
-                        <!-- <li class="headerHero-nav-item"><a href="#Gallery" class="headerHero-nav-link">MatchMoments</a></li> -->
-                        <!-- <li class="headerHero-nav-item"><a href="#Events&Updates" class="headerHero-nav-link">Programs</a></li> -->
-                        <li class="headerHero-nav-item"><a href="Testimonials.html"
-                                class="headerHero-nav-link">Testimonials</a></li>
-                        <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact Us</a></li>
-
-                        <li class="headerHero-nav-item headerHero-nav-cta">
-                            <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
-                        </li>
-                        
-                    </ul>
+        <!-- Navigation Bar -->
+        <nav class="headerHero-navbar">
+            <div class="headerHero-navbar-container">
+                <div class="headerHero-navbar-logo">
+                    <a href="index.html"><img src="/img/logo_.ico" alt="Masterclass Cricket Logo"
+                            class="headerHero-logo-image"></a>
+                    <span class="headerHero-logo-text">MASTERCLASS CRICKET</span>
                 </div>
-            </nav>
+
+                <div class="headerHero-navbar-toggle" id="headerHeroNavToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <ul class="headerHero-navbar-menu" id="headerHeroNavMenu">
+                    <li class="headerHero-nav-item"><a href="index.html" class="headerHero-nav-link ">Home</a></li>
+
+                    <li class="headerHero-nav-item"><a href="About.html" class="headerHero-nav-link active">About Us</a></li>
+                    <li class="headerHero-nav-item"><a href="Coach.html" class="headerHero-nav-link">Meet The Owner</a></li>
+                    <!-- <li class="headerHero-nav-item"><a href="#Gallery" class="headerHero-nav-link">MatchMoments</a></li> -->
+                    <!-- <li class="headerHero-nav-item"><a href="#Events&Updates" class="headerHero-nav-link">Programs</a></li> -->
+                    <li class="headerHero-nav-item"><a href="Testimonials.html"
+                            class="headerHero-nav-link">Testimonials</a></li>
+                    <li class="headerHero-nav-item"><a href="Contact.html" class="headerHero-nav-link">Contact Us</a></li>
+
+                    <li class="headerHero-nav-item headerHero-nav-cta">
+                        <a href="https://wa.me/447961692226" class="headerHero-book-now-btn">Book Now</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
         </header>
 
         <script>
