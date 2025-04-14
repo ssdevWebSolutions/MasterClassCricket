@@ -112,9 +112,11 @@
             font-family: 'Poppins', sans-serif;
             color: var(--headerHero-secondary-color);
             background-color: var(--headerHero-dark-color);
-            overflow-x: hidden;
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            
         }
         /* Loading Screen Styles */
         .loading-screen {
@@ -1024,11 +1026,14 @@
         }
 
         .contact-us-form-container {
-            flex: 1;
-            min-width: 300px;
-            transform-style: preserve-3d;
-            perspective: 1000px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+        .contact-us-form-container {
+    height: calc(var(--vh, 1vh) * 100);
+}
 
         /* Contact Info Styles */
         .contact-us-info-title {
@@ -1185,6 +1190,7 @@
             transform: translateZ(5px);
         }
 
+
         .contact-us-input,
         .contact-us-textarea {
             width: 100%;
@@ -1204,6 +1210,16 @@
             box-shadow: 0 0 0 2px rgba(234, 179, 8, 0.3);
             outline: none;
         }
+
+        .contact-us-input,
+        .contact-us-textarea {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 12px;
+            width: 100%;
+            max-width: 100%;
+        }
+
 
         .contact-us-textarea {
             resize: vertical;
@@ -2677,6 +2693,14 @@
         });
     </script>
      <!-- contact us -->
+        <script>
+            function setViewportHeight() {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            }
+                window.addEventListener('resize', setViewportHeight);
+                setViewportHeight();
+        </script>
 
      <!-- socialstats -->
      <script>

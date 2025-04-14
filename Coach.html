@@ -256,7 +256,7 @@
              /* Header & Hero Section */
              .headerHero-section {
             position: relative;
-            min-height: 15vh;
+            /* min-height: 15vh; */
             width: 100%;
             background-color: var(--headerHero-dark-color);
             overflow: hidden;
@@ -2217,18 +2217,18 @@
         }
 
         /* Letter Content Column */
-        .letter-content-column {
-            /* border: 1px solid red; */
+        /* .letter-content-column {
+           
             flex: 1.5;
             min-width: 50%;
             position: relative;
             padding: 5%;
-        }
+        } */
 
-        .letter-header {
+        /* .letter-header {
             margin-bottom: 30px;
             position: relative;
-        }
+        } */
 
         .letter-title {
             font-family: 'Playfair Display', serif;
@@ -2552,233 +2552,142 @@
                 transform: translateY(0);
             }
         }
+        .founders-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+}
+/* Main Card Styles */
+.founder-info-card,
+.letter-content-column {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 45%;
+    min-width: 300px;
+    position: relative;
+    z-index: 1;
+   
+}
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .founders-letter-container {
+/* Inside the Card */
+.founder-details {
+    margin-top: 20px;
+}
 
-                flex-direction: column;
-                padding: 0 20px;
-            }
+/* Founder Details (All Rows) */
+.founder-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
 
-            .founder-image-column {
-                margin-bottom: 20px;
-                order: 1;
-            }
+/* Icon Styles */
+.founder-detail i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: #007bff;
+}
 
-            .letter-content-column {
-                order: 2;
-                width: 100%;
-            }
+/* Text Styles */
+.founder-detail p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
 
-            .founder-image-wrap {
-                max-width: 350px;
-            }
+/* Founder Name Heading */
+.founder-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+ 
+}
 
-            .letter-title {
-                font-size: 2.3rem;
-            }
-        }
+/* Letter Section Scrollable */
+.letter-content-scroll {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
 
-        @media (max-width: 768px) {
-            .founders-letter-section {
-                padding: 60px 0;
-            }
-            .founder-image-column {
-                margin-bottom: 0%;
-            }
-            
-            .letter-content-column{
-                margin-top: -10%;
-                /* border: 1px solid red; */
+/* --------------------------- */
+/* 🖥 Responsive Behavior Below */
+/* --------------------------- */
 
-            }
-            .letter-content-scroll {
-                height: 350px;
-                padding: 25px;
-            }
-
-            .letter-title {
-                font-size: 2rem;
-            }
-
-            .letter-text {
-                font-size: 1rem;
-                line-height: 1.7;
-            }
-
-            .cricket-quote {
-                padding: 15px 20px;
-                font-size: 1rem;
-            }
-
-            .founder-info-card {
-                /* border-top: 1px solid red; */
-                margin-bottom: 10%;
-                margin-top: -15%;
-                transform: translateY(50%);
-            }
-        }
-        @media (max-width: 768px) {
-    .founders-letter-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
+/* Tablets */
+@media (min-width: 768px) {
+    .founder-info-card,
     .letter-content-column {
-       
+        width:100%;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .founder-info-card,
+    .letter-content-column {
         width: 100%;
-        margin: auto;
+        padding: 20px;
     }
-
-    .founder-image-column {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: -5%;
+    .founder-name {
+        font-size: 22px;
     }
-}
-@media (max-width: 425px) {
-    .founder-image-column {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 5%;
+    .founder-detail p {
+        font-size: 14px;
     }
-  
-    .founder-name{
-        margin-top: 10%;
-        /* border: 1px solid red; */
-
+    .founder-detail i {
+        font-size: 18px;
+    }
+    .letter-content-scroll p {
+        font-size: 14px;
     }
 }
 
-        @media (max-width: 375px) {
-            /* .founders-letter-section{
-                justify-content: center;
-                text-align: center;
-                width: 300px;
-            } */
-            .founder-image-column {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 50%;
+/* Small Mobiles */
+@media (max-width: 480px) {
+    .founder-info-card,
+    .letter-content-column {
+        width: 100%;
+        padding: 18px;
     }
-    .letter-content-column{
-        top: 40px;
+    .founder-name {
+        font-size: 20px;
     }
-  
-    .founder-name{
-        margin-top: 0%;
-        /* border: 1px solid red; */
-
+    .founder-detail p {
+        font-size: 13px;
     }
-            .founders-letter-section {
-    width: 350px;
-    /* border: 1px solid red; */
-    margin-right: 5%;
-    text-align: center;
-    margin: auto; 
-    display: block;
+    .founder-detail i {
+        font-size: 16px;
+    }
+    .letter-content-scroll p {
+        font-size: 13px;
+    }
 }
-.founder-info-card {
-                /* border-top: 1px solid yellow; */
-                margin-bottom: 40%;
-                margin-top: -85%;
-                transform: translateY(50%);
-            }
-            .letter-content-column{
-                margin-top: 55%;
-                /* border: 1px solid red; */
-            }
-           
 
-
-            .founder-image-column {
-                /* border: 1px solid red; */
-                justify-content: center;
-                margin-bottom: 20px;
-                order: 1;
-                left: 2%;
-            }
-
-            .letter-content-column {
-                order: 2;
-                justify-content: center;
-                width: 100%;
-                left: 2%;
-                /* border: 1px solid red; */
-            }
-
-
-        }
-
-        @media (max-width: 320px) {
-            .founder-image-column {
-                /* border: 1px solid red; */
-                justify-content: center;
-                margin-bottom: 20px;
-                order: 1;
-                left: 2%;
-            }
-
-            .letter-content-column {
-                order: 2;
-                justify-content: center;
-                width: 100%;
-                left: 2%;
-                /* border: 1px solid red; */
-            }
-            .letter-content-column{
-                margin-top: 10%;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .founders-letter-section {
-
-                padding: 1px;
-                
-
-            }
-            .letter-content-column{
-                margin-top: -12%;
-                /* border: 1px solid red; */
-
-            }
-
-            .letter-title {
-                font-size: 1.8rem;
-              
-
-            }
-
-            .letter-content-scroll {
-                height: 300px;
-                padding: 20px;
-            }
-
-            .founder-image-wrap {
-                max-width: 280px;
-            }
-
-            .founder-role-badge {
-                padding: 8px 15px;
-                font-size: 0.7rem;
-            }
-
-            .founder-name {
-                font-family:  'Playfair Display', serif;
-                font-size: 1.5rem;
-            }
-            .founder-info-card {
-                /* border-top: 1px solid red; */
-                margin-bottom: 30%;
-                margin-top: -45%;
-                transform: translateY(50%);
-            }
-           
-        }
+/* Very Small Screens (Below 300px) */
+@media (max-width: 300px) {
+    .founder-info-card,
+    .letter-content-column {
+        font-size: 12px;
+        padding: 15px;
+    }
+    .founder-name {
+        font-size: 18px;
+    }
+    .founder-detail p {
+        font-size: 12px;
+    }
+    .founder-detail i {
+        font-size: 14px;
+    }
+    .letter-content-scroll p {
+        font-size: 12px;
+    }
+}
 
         .lettercoach{
         margin-top: 5%;
@@ -2883,34 +2792,35 @@
                 <div class="lettercoach">
                     <h2 style="font-size: 1.5rem; display: block;">"A Letter from the Head Coach & Founder Of Masterclass Cricket "</h2>
                 </div>
+<!-- Founder Info Card -->
+<div class="founder-info-card">
+    <h3 class="founder-name">Uzi Arif</h3>
+    <!-- <div class="founder-role">Head Coach & Founder</div> -->
+    
+    <div class="founder-details">
+        <div class="founder-detail">
+            <i class="fas fa-calendar-alt"></i>
+            <p>Played Country Cricket For *OVER A DECADE (2008-2018)</p>
+        </div>
+        <div class="founder-detail">
+            <i class="fas fa-trophy"></i>
+            <p>Clocked 92.4mph & Nicknamed "The Rocketman"</p>
+        </div>
+        <div class="founder-detail">
+            <i class="fas fa-graduation-cap"></i>
+            <p>Assistant Bowling Coach Bangladesh Premier League (Chattogram Challengers)</p>
+        </div>
+        <div class="founder-detail">
+            <i class="fas fa-users"></i>
+            <p>Highest wickets in a game</p>
+        </div>
+        <div class="founder-detail">
+            <i class="fas fa-building"></i>
+            <p>11 Wickets for - 73 runs against Northamptonshire CCC</p>
+        </div>
+    </div>
+</div>
 
-                 <!-- Founder Info Card -->
-             <div class="founder-info-card">
-                <h3 class="founder-name">Uzi Arif</h3>
-                <!-- <div class="founder-role">Head Coach & Founder</div> -->
-                
-                <div class="founder-details">
-                    <div class="founder-detail">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Played Country Cricket For *OVER A DECADE(2008-2018)</span>
-                    </div>
-                    <div class="founder-detail">
-                        <i class="fas fa-trophy"></i>
-                        <span>Clocked 92.4mph & Nicknamed "The Rocketman"</span>
-                    </div>
-                    <div class="founder-detail">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Assistant Bowling Coach Bangladesh Premier League (Chattogram Challengers)</span>
-                    </div>
-                    <div class="founder-detail">
-                        <i class="fas fa-users"></i>
-                        <span>Highest wickets in a game</span>
-                    </div>
-                    <div class="founder-detail">
-                        <i class="fas fa-building"></i>
-                        <span>11 Wickets for-73 runs against Northamptonshire CCC</span>
-                    </div>
-                </div>
                 
                 <!-- <div class="founder-achievements">
                     <div class="achievement-badge" data-tooltip="National Coaching Award 2018">
@@ -2932,174 +2842,35 @@
             
                 <!-- Letter Content Column -->
                 <div class="letter-content-column">
-                   
-
                     <div class="letter-content-scroll">
                         <div class="letter-text">
                             <p>Dear Cricket Community,</p>
-
-                            <p>Hello and welcome to Masterclass Cricket! I’m Uzi Arif, the founder of this academy, and
-                                I’d like to share a bit about the journey that led me to create something truly special
-                                for cricketers.
-
-
-                            </p>
-
+                
+                            <p>Hello and welcome to Masterclass Cricket! I’m Uzi Arif, the founder of this academy, and I’d like to share a bit about the journey that led me to create something truly special for cricketers.</p>
+                
                             <div class="cricket-quote">
-                                Cricket teaches us resilience, teamwork, and the delicate balance between personal
-                                achievement and collective success – values that extend far beyond the boundary rope.
+                                Cricket teaches us resilience, teamwork, and the delicate balance between personal achievement and collective success – values that extend far beyond the boundary rope.
                             </div>
-                            <p>
-                                From a young age, cricket was my passion. Growing up in the north-west of London, I
-                                spent countless hours playing tape-ball cricket in the parks, watching the likes of
-                                Shoaib Akhtar and Waqar Younis bowl at lightning speed. That fuelled my dream to bowl
-                                fast and compete at the highest level.
-
-                            </p>
-
-
-                            <p>
-                                I played over 200 county games, had trials with multiple counties, and experienced the
-                                highs and lows of professional cricket. But despite the setbacks, rejection, and
-                                injuries, one thing never changed: my unwavering commitment to the game. Cricket taught
-                                me more than just how to bowl fast—it taught me resilience, mental strength, and the
-                                importance of never giving up, no matter the obstacles.
-
-                            </p>
-                            <p>
-                                That’s why Masterclass Cricket isn’t just about teaching cricket—it’s about developing
-                                complete players who understand the game, both on and off the field. At Masterclass, we
-                                aim to create not only skillful cricketers but also strong individuals who are ready to
-                                face life’s challenges head-on.
-
-                            </p>
-
-                            <p>
-                                We don’t just focus on the technical side of the game; we believe in holistic
-                                development. We want our players to develop a strong mental game, emotional
-                                intelligence, and physical readiness, all while fostering an understanding of the
-                                lifestyle that leads to success.
-
-                            </p>
-                            <p>
-                                I’ve experienced the rollercoaster ride of professional cricket, and I know what it
-                                takes to reach the top. That’s why I’m here, to give every cricketer the opportunity I
-                                never had: to train smarter, develop deeper, and play harder.
-
-                            </p>
-
-                            <strong>
-                                OUR MISSION
-                            </strong>
-                            <p>
-
-                                To create well-rounded cricketers who excel in skill, mindset, and resilience, both on
-                                and off the field. At Masterclass Cricket, we aim to help our players unlock their full
-                                potential and make lasting contributions to the game.
-
-                            </p>
-
+                
+                            <p>From a young age, cricket was my passion. Growing up in the north-west of London, I spent countless hours playing tape-ball cricket in the parks, watching the likes of Shoaib Akhtar and Waqar Younis bowl at lightning speed. That fuelled my dream to bowl fast and compete at the highest level.</p>
+                
+                            <p>I played over 200 county games, had trials with multiple counties, and experienced the highs and lows of professional cricket. But despite the setbacks, rejection, and injuries, one thing never changed: my unwavering commitment to the game. Cricket taught me more than just how to bowl fast—it taught me resilience, mental strength, and the importance of never giving up, no matter the obstacles.</p>
+                
+                            <p>That’s why Masterclass Cricket isn’t just about teaching cricket—it’s about developing complete players who understand the game, both on and off the field. At Masterclass, we aim to create not only skillful cricketers but also strong individuals who are ready to face life’s challenges head-on.</p>
+                
+                            <p>We don’t just focus on the technical side of the game; we believe in holistic development. We want our players to develop a strong mental game, emotional intelligence, and physical readiness, all while fostering an understanding of the lifestyle that leads to success.</p>
+                
+                            <p>I’ve experienced the rollercoaster ride of professional cricket, and I know what it takes to reach the top. That’s why I’m here, to give every cricketer the opportunity I never had: to train smarter, develop deeper, and play harder.</p>
+                
+                            <strong>OUR MISSION</strong>
+                            <p>To create well-rounded cricketers who excel in skill, mindset, and resilience, both on and off the field. At Masterclass Cricket, we aim to help our players unlock their full potential and make lasting contributions to the game.</p>
+                
                             <strong>OUR VISION</strong>
-                            <p>To be a leading force in the cricketing world, empowering the next generation of
-                                cricketers with innovative coaching, tailored to each individual’s journey. We focus on
-                                the fundamentals of cricket, while ensuring personal growth through every aspect of the
-                                sport.
-                            </p>
-                            <strong>
-                                THE MASTERCLASS APPROACH
-
-                            </strong>
-                            <p>
-                                At Masterclass Cricket, we don’t just build players—we shape athletes of character. Our
-                                unique approach blends the six pillars that will help you become a complete player and a
-                                stronger individual.
-
-                            </p>
-
-                            <strong>
-                                Technical Mastery
-
-                            </strong>
-                            <p>
-                                Your technique is the foundation of your game. We help you perfect your skills, so
-                                they’re consistent and effective, regardless of the situation.
-
-                            </p>
-                            <strong>
-                                Mental Toughness
-
-                            </strong>
-                            <p>
-                                Cricket is as much a mental game as it is physical. We focus on developing your mindset,
-                                helping you manage pressure, and ensuring you are ready for anything the game throws
-                                your way.
-
-                            </p>
-                            <strong>
-                                Emotional Intelligence
-
-
-                            </strong>
-                            <p>
-                                Understanding and managing your emotions is key to peak performance. We teach our
-                                players how to use their feelings to their advantage, rather than allowing them to
-                                dictate their performance.
-
-                            </p>
-                            <strong>
-                                Physical Conditioning
-
-                            </strong>
-                            <p>
-                                Cricket demands stamina, strength, and agility. We focus on getting you physically
-                                prepared to perform your best, no matter the conditions or length of the match.
-
-                            </p>
-                            <strong>
-                                Life Skills
-
-                            </strong>
-                            <p>
-                                Cricket is a game of life lessons. Our academy instills values that extend beyond the
-                                field, helping you build habits and behaviours that set you up for success both in and
-                                outside of sport.
-
-                            </p>
-                            <strong>
-                                Strategic Vision
-
-                            </strong>
-                            <p>
-                                Understanding the game at a deeper level allows you to read situations, make smarter
-                                decisions, and play with a clear focus. We help you develop your tactical awareness so
-                                you can look at the game from a broader perspective.
-
-                            </p>
-                            <strong>
-                                JOIN US AT MASTERCLASS CRICKET
-
-                            </strong>
-                            <p>
-                                At Masterclass Cricket, we are more than just coaches—we are mentors dedicated to
-                                helping you become the best version of yourself. Whether you’re a beginner looking to
-                                develop your skills or an elite player aiming to take your game to the next level, we
-                                are here to guide you every step of the way.
-
-                            </p>
-                            <i>Let’s take your cricket to the next level, and together, let’s achieve greatness—on and
-                                off the field.</i>
-                            <div class="letter-sign">
-                                <!-- <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Cpath d='M10,50 C30,20 60,70 80,40 C100,10 120,80 140,50 C160,20 180,70 200,40 C220,10 240,60 290,50' stroke='black' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
-                                    alt="Signature" class="letter-signature"> -->
-                                <div class="letter-name">Uzi Arif</div>
-                                <div class="letter-role">Head Coach & Founder</div>
-                            </div>
+                            <p>To be a leading force in the cricketing world, empowering the next generation of cricketers with innovative coaching, tailored to each individual’s journey. We focus on nurturing players to be successful on the field and influential off it, carrying the spirit of cricket wherever they go.</p>
                         </div>
-
-                        <!-- Scroll indicator -->
-                        <div class="scroll-indicator"></div>
                     </div>
                 </div>
+                
             </div>
         </section>
          <!-- Contact Us Section -->
