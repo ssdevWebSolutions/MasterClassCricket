@@ -3077,12 +3077,12 @@ animation: floatBall 18s infinite ease-in-out reverse;
      <script>
         // Counter animation function
         const counterElements = document.querySelectorAll('.social-stat-number');
-
+    
         // Options for the Intersection Observer
         const options = {
             threshold: 0.5
         };
-
+    
         // Callback function for the Intersection Observer
         const callback = (entries, observer) => {
             entries.forEach(entry => {
@@ -3091,58 +3091,61 @@ animation: floatBall 18s infinite ease-in-out reverse;
                     const counterElement = entry.target;
                     const duration = 2000; // 2 seconds
                     const step = 30; // Update interval in ms
-
+    
                     let current = 0;
                     const increment = Math.ceil(target / (duration / step));
-                    const displaySuffix = target >= 1000 ? "K+" : "+";
-
+    
                     const counterAnimation = setInterval(() => {
                         current += increment;
-
+    
                         if (current >= target) {
-                            counterElement.textContent = target >= 1000 ?
-                                Math.floor(target / 1000) + displaySuffix :
-                                target + displaySuffix;
+                            const formatted = target >= 1000
+                                ? (target / 1000).toFixed(1).replace(/\.0$/, '') + "K+"
+                                : target + "+";
+    
+                            counterElement.textContent = formatted;
                             clearInterval(counterAnimation);
                         } else {
-                            counterElement.textContent = current >= 1000 ?
-                                Math.floor(current / 1000) + displaySuffix :
-                                current + displaySuffix;
+                            const formatted = current >= 1000
+                                ? (current / 1000).toFixed(1).replace(/\.0$/, '') + "K+"
+                                : current + "+";
+    
+                            counterElement.textContent = formatted;
                         }
-
+    
                         counterElement.style.animation = "countUp 0.3s ease forwards";
                     }, step);
-
+    
                     // Once animated, unobserve the element
                     observer.unobserve(entry.target);
                 }
             });
         };
-
+    
         // Create a new Intersection Observer
         const observer1 = new IntersectionObserver(callback, options);
-
+    
         // Observe each counter element
         counterElements.forEach(counter => {
             observer1.observe(counter);
         });
-
+    
         // Add hover effect for cricket elements
         const cricketElements = document.querySelectorAll('.cricket-element-1, .cricket-element-2, .cricket-element-3, .cricket-element-4');
-
+    
         function randomAnimateElements() {
             const randomElement = cricketElements[Math.floor(Math.random() * cricketElements.length)];
-
+    
             randomElement.style.transition = 'transform 0.5s ease';
             randomElement.style.transform = 'scale(1.2)';
-
+    
             setTimeout(() => {
                 randomElement.style.transform = 'scale(1)';
             }, 500);
-
+    
             setTimeout(randomAnimateElements, 3000);
         }
-
+    
         // Start random animations
         randomAnimateElements();
     </script>
